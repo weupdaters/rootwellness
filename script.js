@@ -51,18 +51,29 @@ window.addEventListener('scroll', () => {
 
 // Mobile Navigation Panel Toggle
 const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+const navCollapse = document.getElementById('navbarNav');
+const navbar = document.getElementById('navbar');
 
-if (mobileMenuBtn) {
-  mobileMenuBtn.addEventListener('click', () => {
-    mobileMenuBtn.classList.toggle('active');
+if (mobileMenuBtn && navCollapse) {
+  // Sync hamburger button and navbar backdrop states via Bootstrap collapse events
+  navCollapse.addEventListener('show.bs.collapse', () => {
+    mobileMenuBtn.classList.add('active');
+    if (navbar) {
+      navbar.classList.add('menu-open');
+    }
+  });
+
+  navCollapse.addEventListener('hide.bs.collapse', () => {
+    mobileMenuBtn.classList.remove('active');
+    if (navbar) {
+      navbar.classList.remove('menu-open');
+    }
   });
 
   // Close navigation menu on link click via Bootstrap collapse hide
   document.querySelectorAll('.nav-links a').forEach(link => {
     link.addEventListener('click', () => {
-      mobileMenuBtn.classList.remove('active');
-      const navCollapse = document.getElementById('navbarNav');
-      if (navCollapse && window.bootstrap) {
+      if (window.bootstrap) {
         const bsCollapse = window.bootstrap.Collapse.getInstance(navCollapse) || new window.bootstrap.Collapse(navCollapse);
         bsCollapse.hide();
       }

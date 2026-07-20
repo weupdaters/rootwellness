@@ -20,7 +20,7 @@
   <script src="https://unpkg.com/lucide@latest"></script>
   
   <!-- Custom Stylesheet -->
-  <link rel="stylesheet" href="style.css?v=2026.31">
+  <link rel="stylesheet" href="style.css?v=2026.39">
 </head>
 <body>
 
@@ -52,7 +52,7 @@
         <!-- Sign Me Up Link -->
         <a href="#order" class="nav-signup-link">
           <i data-lucide="user-plus" style="width:16px;height:16px;"></i>
-          <span>Sign Me Up!</span>
+          <span class="d-none d-sm-inline">Sign Me Up!</span>
         </a>
         <!-- Hamburger Menu toggle (visible on mobile) -->
         <button class="mobile-menu-btn d-lg-none" id="mobile-menu-btn" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle Menu">
@@ -70,7 +70,7 @@
     <div class="magic-dot-pattern"></div>
 
     <!-- Desktop absolute-positioned background video (only active on desktop) -->
-    <video autoplay loop muted playsinline class="hero-bg-video-desktop">
+    <video autoplay loop muted playsinline poster="assets/hero_bg.png" class="hero-bg-video-desktop">
       <source src="assets/download.mp4" type="video/mp4">
     </video>
     
@@ -89,7 +89,7 @@
             Nature's Best, <br><span>Science's Finest</span>
           </h1>
           <p class="hero-description mb-0 text-start" style="font-size: 1.02rem; line-height: 1.7; color: var(--text-secondary);">
-            Rooton Wellness Fifty One is a complete daily wellness formula — plant-rooted, science-backed nutrition designed to support your body, mind and future, every single day.
+            Plant-rooted, science-backed daily wellness.
           </p>
           
           <!-- 4 Bottom Icons with subtitles -->
@@ -130,17 +130,17 @@
         
         <!-- Right Column: CTA Buttons & Features -->
         <div class="col-12 col-lg-4 reveal-right d-flex flex-column align-items-start align-items-lg-end text-start text-lg-end">
-          <div class="d-flex flex-column flex-sm-row gap-3 justify-content-start justify-content-lg-end w-100" style="max-width: 500px;">
-            <a href="#order" class="btn btn-secondary flex-grow-1" style="display: flex; justify-content: space-between; align-items: center; padding: 1.1rem 1.75rem; border-radius: 50px; font-size: 0.85rem;">
-              Consultation <i data-lucide="arrow-right" class="ms-2" style="width:16px;height:16px;"></i>
+          <div class="d-flex flex-column flex-sm-row gap-3 justify-content-start justify-content-lg-end w-100" style="max-width: 350px;">
+            <a href="#order" class="btn btn-secondary flex-grow-1" style="display: flex; justify-content: space-between; align-items: center; padding: 0.75rem 1.35rem; border-radius: 50px; font-size: 0.82rem;">
+              Consultation <i data-lucide="arrow-right" class="ms-2" style="width:14px;height:14px;"></i>
             </a>
-            <a href="#ingredients" class="btn btn-primary flex-grow-1" style="display: flex; justify-content: space-between; align-items: center; padding: 1.1rem 1.75rem; border-radius: 50px; font-size: 0.85rem;">
-              Buy Now <i data-lucide="arrow-right" class="ms-2" style="width:16px;height:16px;"></i>
+            <a href="#ingredients" class="btn btn-primary flex-grow-1" style="display: flex; justify-content: space-between; align-items: center; padding: 0.75rem 1.35rem; border-radius: 50px; font-size: 0.82rem;">
+              Buy Now <i data-lucide="arrow-right" class="ms-2" style="width:14px;height:14px;"></i>
             </a>
           </div>
           
           <!-- 3 Features List with icons and subtitles -->
-          <div class="d-flex flex-column gap-3 mt-4 pt-3 border-top border-white border-opacity-10 w-100" style="max-width: 320px;">
+          <div class="d-flex flex-column gap-3 mt-4 pt-3 border-top border-white border-opacity-10 w-100" style="max-width: 350px;">
             <!-- Item 1 -->
             <div class="d-flex align-items-center gap-3 w-100 justify-content-start justify-content-lg-end">
               <div class="text-start text-lg-end">
@@ -199,7 +199,7 @@
 
       <!-- Centered Description -->
       <p class="hero-mobile-desc">
-        Rooton Wellness Fifty One is a complete daily wellness formula — plant-rooted, science-backed nutrition designed to support your body, mind and future, every single day.
+        Plant-rooted, science-backed daily wellness.
       </p>
 
       <!-- Stacked Buttons -->
