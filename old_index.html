@@ -20,7 +20,7 @@
   <script src="https://unpkg.com/lucide@latest"></script>
   
   <!-- Custom Stylesheet -->
-  <link rel="stylesheet" href="style.css?v=2026.47">
+  <link rel="stylesheet" href="style.css?v=2026.31">
 </head>
 <body>
 
@@ -52,7 +52,7 @@
         <!-- Sign Me Up Link -->
         <a href="#order" class="nav-signup-link">
           <i data-lucide="user-plus" style="width:16px;height:16px;"></i>
-          <span class="d-none d-sm-inline">Sign Me Up!</span>
+          <span>Sign Me Up!</span>
         </a>
         <!-- Hamburger Menu toggle (visible on mobile) -->
         <button class="mobile-menu-btn d-lg-none" id="mobile-menu-btn" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle Menu">
@@ -70,7 +70,7 @@
     <div class="magic-dot-pattern"></div>
 
     <!-- Desktop absolute-positioned background video (only active on desktop) -->
-    <video autoplay loop muted playsinline poster="assets/hero_bg.png" class="hero-bg-video-desktop">
+    <video autoplay loop muted playsinline class="hero-bg-video-desktop">
       <source src="assets/download.mp4" type="video/mp4">
     </video>
     
@@ -89,7 +89,7 @@
             Nature's Best, <br><span>Science's Finest</span>
           </h1>
           <p class="hero-description mb-0 text-start" style="font-size: 1.02rem; line-height: 1.7; color: var(--text-secondary);">
-            Plant-rooted, science-backed daily wellness.
+            Rooton Wellness Fifty One is a complete daily wellness formula — plant-rooted, science-backed nutrition designed to support your body, mind and future, every single day.
           </p>
           
           <!-- 4 Bottom Icons with subtitles -->
@@ -130,17 +130,17 @@
         
         <!-- Right Column: CTA Buttons & Features -->
         <div class="col-12 col-lg-4 reveal-right d-flex flex-column align-items-start align-items-lg-end text-start text-lg-end">
-          <div class="d-flex flex-column flex-sm-row gap-3 justify-content-start justify-content-lg-end w-100" style="max-width: 350px;">
-            <a href="#order" class="btn btn-secondary flex-grow-1" style="display: flex; justify-content: space-between; align-items: center; padding: 0.75rem 1.35rem; border-radius: 50px; font-size: 0.82rem;">
-              Consultation <i data-lucide="arrow-right" class="ms-2" style="width:14px;height:14px;"></i>
+          <div class="d-flex flex-column flex-sm-row gap-3 justify-content-start justify-content-lg-end w-100" style="max-width: 500px;">
+            <a href="#order" class="btn btn-secondary flex-grow-1" style="display: flex; justify-content: space-between; align-items: center; padding: 1.1rem 1.75rem; border-radius: 50px; font-size: 0.85rem;">
+              Consultation <i data-lucide="arrow-right" class="ms-2" style="width:16px;height:16px;"></i>
             </a>
-            <a href="#ingredients" class="btn btn-primary flex-grow-1" style="display: flex; justify-content: space-between; align-items: center; padding: 0.75rem 1.35rem; border-radius: 50px; font-size: 0.82rem;">
-              Buy Now <i data-lucide="arrow-right" class="ms-2" style="width:14px;height:14px;"></i>
+            <a href="#ingredients" class="btn btn-primary flex-grow-1" style="display: flex; justify-content: space-between; align-items: center; padding: 1.1rem 1.75rem; border-radius: 50px; font-size: 0.85rem;">
+              Buy Now <i data-lucide="arrow-right" class="ms-2" style="width:16px;height:16px;"></i>
             </a>
           </div>
           
           <!-- 3 Features List with icons and subtitles -->
-          <div class="d-flex flex-column gap-3 mt-4 pt-3 border-top border-white border-opacity-10 w-100" style="max-width: 350px;">
+          <div class="d-flex flex-column gap-3 mt-4 pt-3 border-top border-white border-opacity-10 w-100" style="max-width: 320px;">
             <!-- Item 1 -->
             <div class="d-flex align-items-center gap-3 w-100 justify-content-start justify-content-lg-end">
               <div class="text-start text-lg-end">
@@ -199,7 +199,7 @@
 
       <!-- Centered Description -->
       <p class="hero-mobile-desc">
-        Plant-rooted, science-backed daily wellness.
+        Rooton Wellness Fifty One is a complete daily wellness formula — plant-rooted, science-backed nutrition designed to support your body, mind and future, every single day.
       </p>
 
       <!-- Stacked Buttons -->
@@ -236,66 +236,89 @@
 
   <hr class="premium-divider">
 
-    <!-- Mission Section -->
-  <section class="section" id="mission" style="background-color: var(--bg-secondary); overflow: hidden; position: relative; padding: 6rem 0;">
+  <!-- Mission Section -->
+  <section class="section" id="mission" style="background-color: var(--bg-secondary); overflow: hidden; position: relative;">
     <!-- Magic UI Dot Background Pattern -->
     <div class="magic-dot-pattern"></div>
 
-    <div class="container px-4" style="position: relative; z-index: 1; max-width: 1400px; margin: 0 auto;">
-      <div class="row align-items-center">
-        <!-- LEFT COLUMN: Content -->
-        <div class="col-xl-4 col-lg-5 mb-5 mb-lg-0">
-          <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 1rem;">
-            <i data-lucide="leaf" style="color: var(--primary-gold); width: 20px; height: 20px;"></i>
-            <span style="color: var(--primary-gold); font-size: 0.85rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase;">OUR MISSION</span>
-          </div>
-          <h2 class="mission-anim-heading" style="font-family: var(--font-heading); font-size: 3.2rem; font-weight: 700; color: #fff; line-height: 1.1; margin-bottom: 1.5rem;">
-            A better world through <span style="color: var(--primary-gold);">natural wellness</span> solutions.
+    <div class="container" style="position: relative; z-index: 1;">
+      <div class="mission-grid">
+        <!-- Content -->
+        <div class="mission-content reveal-left">
+          <span class="sec-eyebrow"><i data-lucide="leaf"></i> OUR MISSION</span>
+          <h2 class="sec-title">
+            Rooted in <span class="gold">Purpose</span>
           </h2>
-          <p class="mission-anim-text" style="color: #a0aab2; font-size: 1.05rem; line-height: 1.6; margin-bottom: 3rem;">
-            A world where everyone has access to natural, effective and trustworthy wellness solutions for a better, healthier and happier life.
+          <div class="sec-divider"><i data-lucide="leaf"></i></div>
+          <p class="sec-subtitle" style="text-align:left; margin:0 0 1.5rem;">
+            Nature and science working together for better wellness.
           </p>
           
-          <!-- 4 Pillars Grid (1 row on desktop) -->
-          <div class="mission-anim-grid" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.8rem; text-align: center;">
-            <div style="background: rgba(255,255,255,0.02); padding: 1rem 0.5rem; border-radius: 12px; border: 1px solid rgba(255,255,255,0.05); transition: all 0.3s ease;">
-               <div style="width: 44px; height: 44px; border-radius: 50%; background: rgba(212,175,55,0.1); display: flex; align-items: center; justify-content: center; margin: 0 auto 0.8rem auto; border: 1px solid rgba(212,175,55,0.2);">
-                 <i data-lucide="globe-2" style="color: var(--primary-gold); width: 20px; height: 20px;"></i>
-               </div>
-               <h4 style="color: #fff; font-size: 0.75rem; font-weight: 700; margin-bottom: 0.3rem; text-transform: uppercase; font-family: var(--font-sans);">Global<br>Vision</h4>
-               <p style="color: #a0aab2; font-size: 0.7rem; line-height: 1.3; margin: 0;">Think Global<br>Act Local</p>
+          <!-- Trust Cards Grid -->
+          <div class="mission-cards-grid">
+            <!-- Card 1 -->
+            <div class="mission-trust-card spotlight-card">
+              <div class="spotlight-card-content">
+                <div class="mission-card-icon-box"><i data-lucide="sprout" style="width:20px;height:20px;"></i></div>
+                <div class="mission-card-text">
+                  <h5>Pure Ingredients</h5>
+                  <p>Premium botanical extracts.</p>
+                </div>
+              </div>
             </div>
-            <div style="background: rgba(255,255,255,0.02); padding: 1rem 0.5rem; border-radius: 12px; border: 1px solid rgba(255,255,255,0.05); transition: all 0.3s ease;">
-               <div style="width: 44px; height: 44px; border-radius: 50%; background: rgba(212,175,55,0.1); display: flex; align-items: center; justify-content: center; margin: 0 auto 0.8rem auto; border: 1px solid rgba(212,175,55,0.2);">
-                 <i data-lucide="bar-chart-3" style="color: var(--primary-gold); width: 20px; height: 20px;"></i>
-               </div>
-               <h4 style="color: #fff; font-size: 0.75rem; font-weight: 700; margin-bottom: 0.3rem; text-transform: uppercase; font-family: var(--font-sans);">Building<br>Millions</h4>
-               <p style="color: #a0aab2; font-size: 0.7rem; line-height: 1.3; margin: 0;">Building Wealth<br>Building Futures</p>
+            <!-- Card 2 -->
+            <div class="mission-trust-card spotlight-card">
+              <div class="spotlight-card-content">
+                <div class="mission-card-icon-box"><i data-lucide="flask-conical" style="width:20px;height:20px;"></i></div>
+                <div class="mission-card-text">
+                  <h5>Science Backed</h5>
+                  <p>Research-driven formulation.</p>
+                </div>
+              </div>
             </div>
-            <div style="background: rgba(255,255,255,0.02); padding: 1rem 0.5rem; border-radius: 12px; border: 1px solid rgba(255,255,255,0.05); transition: all 0.3s ease;">
-               <div style="width: 44px; height: 44px; border-radius: 50%; background: rgba(212,175,55,0.1); display: flex; align-items: center; justify-content: center; margin: 0 auto 0.8rem auto; border: 1px solid rgba(212,175,55,0.2);">
-                 <i data-lucide="sprout" style="color: var(--primary-gold); width: 20px; height: 20px;"></i>
-               </div>
-               <h4 style="color: #fff; font-size: 0.75rem; font-weight: 700; margin-bottom: 0.3rem; text-transform: uppercase; font-family: var(--font-sans);">Better<br>Tomorrow</h4>
-               <p style="color: #a0aab2; font-size: 0.7rem; line-height: 1.3; margin: 0;">Together for a<br>Better World</p>
+            <!-- Card 3 -->
+            <div class="mission-trust-card spotlight-card">
+              <div class="spotlight-card-content">
+                <div class="mission-card-icon-box"><i data-lucide="droplet" style="width:20px;height:20px;"></i></div>
+                <div class="mission-card-text">
+                  <h5>No Fillers</h5>
+                  <p>Nothing unnecessary.</p>
+                </div>
+              </div>
+            </div>
+            <!-- Card 4 -->
+            <div class="mission-trust-card spotlight-card">
+              <div class="spotlight-card-content">
+                <div class="mission-card-icon-box"><i data-lucide="shield-check" style="width:20px;height:20px;"></i></div>
+                <div class="mission-card-text">
+                  <h5>Quality Assured</h5>
+                  <p>Trusted manufacturing.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Bottom Full Width Card -->
+          <div class="mission-explore-card spotlight-card">
+            <div class="spotlight-card-content explore-card-inner">
+              <div class="explore-card-left">
+                <img src="assets/complete_nutrition.jpg" alt="Capsules Bottle Collage" class="explore-card-leaf-img" style="border-radius: 12px; object-fit: cover; width: 100%; height: 100%;">
+              </div>
+              <div class="explore-card-right">
+                <h4>Daily Wellness Formula</h4>
+                <p>51 natural ingredients. One capsule daily.</p>
+                <a href="#ingredients" class="btn-explore-formula">
+                  Explore Formula &rarr;
+                </a>
+              </div>
             </div>
           </div>
         </div>
-        <!-- CENTER COLUMN: Orbit Wheel -->
-        <div class="col-xl-4 col-lg-7 mb-5 mb-lg-0 d-flex justify-content-center align-items-center flex-column position-relative">
-          <!-- Inject the Wheel HTML here -->
-          <div style="position: absolute; top: -40px; width: 100%; text-align: center; z-index: 10;">
-             <div style="display: flex; align-items: center; justify-content: center; gap: 0.5rem; margin-bottom: 0.3rem;">
-               <i data-lucide="leaf" style="color: var(--primary-gold); width: 24px; height: 24px;"></i>
-               <h3 style="color: #fff; font-size: 1.5rem; font-weight: 700; margin: 0; letter-spacing: 0.05em;">51 POWERFUL INGREDIENTS</h3>
-               <i data-lucide="leaf" style="color: var(--primary-gold); width: 24px; height: 24px; transform: scaleX(-1);"></i>
-             </div>
-             <p style="color: var(--primary-gold); font-size: 0.8rem; letter-spacing: 0.15em; font-weight: 600; text-transform: uppercase; margin: 0;">Nature &bull; Science &bull; Complete Nutrition</p>
-          </div>
-          
-          <div style="margin-top: 10px; width: 100%; display: flex; justify-content: center; position: relative;">
-             <div class="wheel-scaler">
-            <div class="ingredient-wheel wheel-visible">
+        
+        <!-- Orbital Visual Badge Canvas -->
+        <div class="mission-visual-wrap reveal-right" style="display: flex; align-items: center; justify-content: center; overflow: visible;">
+          <div class="wheel-scaler">
+            <div class="ingredient-wheel">
               <!-- Ambient Light Rays -->
               <div class="wheel-light-rays"></div>
 
@@ -481,256 +504,146 @@
             </div> <!-- Closes .wheel-interactive-wrap -->
           </div> <!-- Closes .ingredient-wheel -->
         </div> <!-- Closes .wheel-scaler -->
-          </div>
-          
-          <div style="margin-top: -30px; text-align: center; z-index: 10;">
-            <a href="#ingredients" class="btn-explore-formula" style="display: inline-flex; align-items: center; justify-content: center; transition: all 0.3s ease;">
-              EXPLORE INGREDIENTS <i data-lucide="arrow-right" style="margin-left: 8px; width: 18px; height: 18px;"></i>
-            </a>
-          </div>
-        </div>
-
-        <!-- RIGHT COLUMN: Stats Blocks -->
-        <div class="col-xl-4 col-lg-12 right-stats-col">
-          <div class="stats-panel mission-anim-panel" style="background: linear-gradient(145deg, rgba(212,175,55,0.06), rgba(0,255,135,0.01)); border: 1px solid rgba(212,175,55,0.2); border-radius: 16px; padding: 2rem 1rem; margin-bottom: 1.2rem; backdrop-filter: blur(15px); display: flex; justify-content: space-around; text-align: center; box-shadow: 0 15px 35px rgba(0,0,0,0.4), inset 0 0 20px rgba(255,255,255,0.02);">
-             <div>
-                <i data-lucide="brain" style="color: var(--primary-gold); width: 28px; height: 28px; margin-bottom: 0.8rem; filter: drop-shadow(0 0 8px rgba(212,175,55,0.4));"></i>
-                <h3 style="color: #fff; font-size: 1.8rem; font-weight: 700; margin: 0 0 0.2rem 0; font-family: var(--font-heading);"><span class="mission-stat" data-target="17">0</span>+</h3>
-                <p style="color: #a0aab2; font-size: 0.65rem; text-transform: uppercase; font-weight: 600; margin: 0; line-height: 1.3; letter-spacing: 0.5px;">Vitamins &<br>Minerals</p>
-             </div>
-             <div style="width: 1px; background: linear-gradient(to bottom, transparent, rgba(255,255,255,0.1), transparent);"></div>
-             <div>
-                <i data-lucide="leaf" style="color: var(--primary-gold); width: 28px; height: 28px; margin-bottom: 0.8rem; filter: drop-shadow(0 0 8px rgba(212,175,55,0.4));"></i>
-                <h3 style="color: #fff; font-size: 1.8rem; font-weight: 700; margin: 0 0 0.2rem 0; font-family: var(--font-heading);"><span class="mission-stat" data-target="16">0</span>+</h3>
-                <p style="color: #a0aab2; font-size: 0.65rem; text-transform: uppercase; font-weight: 600; margin: 0; line-height: 1.3; letter-spacing: 0.5px;">Plant Based<br>Extracts</p>
-             </div>
-             <div style="width: 1px; background: linear-gradient(to bottom, transparent, rgba(255,255,255,0.1), transparent);"></div>
-             <div>
-                <i data-lucide="sparkles" style="color: var(--primary-gold); width: 28px; height: 28px; margin-bottom: 0.8rem; filter: drop-shadow(0 0 8px rgba(212,175,55,0.4));"></i>
-                <h3 style="color: #fff; font-size: 1.8rem; font-weight: 700; margin: 0 0 0.2rem 0; font-family: var(--font-heading);"><span class="mission-stat" data-target="12">0</span>+</h3>
-                <p style="color: #a0aab2; font-size: 0.65rem; text-transform: uppercase; font-weight: 600; margin: 0; line-height: 1.3; letter-spacing: 0.5px;">Antioxidant<br>Superfoods</p>
-             </div>
-          </div>
-
-          <div class="stats-panel mission-anim-panel" style="background: linear-gradient(145deg, rgba(212,175,55,0.06), rgba(0,255,135,0.01)); border: 1px solid rgba(212,175,55,0.2); border-radius: 16px; padding: 2rem 0.5rem; margin-bottom: 1.2rem; backdrop-filter: blur(15px); display: flex; justify-content: space-around; text-align: center; box-shadow: 0 15px 35px rgba(0,0,0,0.4), inset 0 0 20px rgba(255,255,255,0.02);">
-             <div>
-                <i data-lucide="dna" style="color: var(--primary-gold); width: 24px; height: 24px; margin-bottom: 0.8rem; filter: drop-shadow(0 0 8px rgba(212,175,55,0.4));"></i>
-                <h3 style="color: #fff; font-size: 1.6rem; font-weight: 700; margin: 0 0 0.2rem 0; font-family: var(--font-heading);"><span class="mission-stat" data-target="6">0</span>+</h3>
-                <p style="color: #a0aab2; font-size: 0.6rem; text-transform: uppercase; font-weight: 600; margin: 0; line-height: 1.3; letter-spacing: 0.5px;">Amino Acids<br>& Enzymes</p>
-             </div>
-             <div style="width: 1px; background: linear-gradient(to bottom, transparent, rgba(255,255,255,0.1), transparent);"></div>
-             <div>
-                <i data-lucide="activity" style="color: var(--primary-gold); width: 24px; height: 24px; margin-bottom: 0.8rem; filter: drop-shadow(0 0 8px rgba(212,175,55,0.4));"></i>
-                <h3 style="color: #fff; font-size: 1.6rem; font-weight: 700; margin: 0 0 0.2rem 0; font-family: var(--font-heading);"><span class="mission-stat" data-target="8">0</span>+</h3>
-                <p style="color: #a0aab2; font-size: 0.6rem; text-transform: uppercase; font-weight: 600; margin: 0; line-height: 1.3; letter-spacing: 0.5px;">Digestive<br>Supports</p>
-             </div>
-             <div style="width: 1px; background: linear-gradient(to bottom, transparent, rgba(255,255,255,0.1), transparent);"></div>
-             <div>
-                <i data-lucide="dumbbell" style="color: var(--primary-gold); width: 24px; height: 24px; margin-bottom: 0.8rem; filter: drop-shadow(0 0 8px rgba(212,175,55,0.4));"></i>
-                <h3 style="color: #fff; font-size: 1.6rem; font-weight: 700; margin: 0 0 0.2rem 0; font-family: var(--font-heading);"><span class="mission-stat" data-target="7">0</span>+</h3>
-                <p style="color: #a0aab2; font-size: 0.6rem; text-transform: uppercase; font-weight: 600; margin: 0; line-height: 1.3; letter-spacing: 0.5px;">Performance<br>Boosters</p>
-             </div>
-             <div style="width: 1px; background: linear-gradient(to bottom, transparent, rgba(255,255,255,0.1), transparent);"></div>
-             <div>
-                <i data-lucide="flower2" style="color: var(--primary-gold); width: 24px; height: 24px; margin-bottom: 0.8rem; filter: drop-shadow(0 0 8px rgba(212,175,55,0.4));"></i>
-                <h3 style="color: #fff; font-size: 1.6rem; font-weight: 700; margin: 0 0 0.2rem 0; font-family: var(--font-heading);"><span class="mission-stat" data-target="3">0</span>+</h3>
-                <p style="color: #a0aab2; font-size: 0.6rem; text-transform: uppercase; font-weight: 600; margin: 0; line-height: 1.3; letter-spacing: 0.5px;">Specialty<br>Nutrients</p>
-             </div>
-          </div>
-
-          <div class="stats-panel mission-anim-panel" style="background: linear-gradient(145deg, rgba(212,175,55,0.06), rgba(0,255,135,0.01)); border: 1px solid rgba(212,175,55,0.2); border-radius: 16px; padding: 1.5rem 0.5rem; backdrop-filter: blur(15px); display: flex; justify-content: space-around; text-align: center; box-shadow: 0 15px 35px rgba(0,0,0,0.4), inset 0 0 20px rgba(255,255,255,0.02);">
-             <div>
-                <i data-lucide="leaf" style="color: var(--primary-gold); width: 20px; height: 20px; margin-bottom: 0.5rem; filter: drop-shadow(0 0 8px rgba(212,175,55,0.4));"></i>
-                <h3 style="color: #fff; font-size: 1.2rem; font-weight: 700; margin: 0 0 0.2rem 0; font-family: var(--font-heading);"><span class="mission-stat" data-target="100">0</span>%</h3>
-                <p style="color: #a0aab2; font-size: 0.6rem; text-transform: uppercase; font-weight: 600; margin: 0; line-height: 1.3; letter-spacing: 0.5px;">Natural</p>
-             </div>
-             <div>
-                <i data-lucide="medal" style="color: var(--primary-gold); width: 20px; height: 20px; margin-bottom: 0.5rem; filter: drop-shadow(0 0 8px rgba(212,175,55,0.4));"></i>
-                <h3 style="color: #fff; font-size: 1.2rem; font-weight: 700; margin: 0 0 0.2rem 0; font-family: var(--font-heading);">1<span style="font-size: 0.7rem; vertical-align: top;">st</span></h3>
-                <p style="color: #a0aab2; font-size: 0.6rem; text-transform: uppercase; font-weight: 600; margin: 0; line-height: 1.3; letter-spacing: 0.5px;">Premium<br>Quality</p>
-             </div>
-             <div>
-                <i data-lucide="flask-conical" style="color: var(--primary-gold); width: 20px; height: 20px; margin-bottom: 0.5rem; filter: drop-shadow(0 0 8px rgba(212,175,55,0.4));"></i>
-                <h3 style="color: #fff; font-size: 1.2rem; font-weight: 700; margin: 0 0 0.2rem 0; font-family: var(--font-heading);"><span class="mission-stat" data-target="10">0</span>x</h3>
-                <p style="color: #a0aab2; font-size: 0.6rem; text-transform: uppercase; font-weight: 600; margin: 0; line-height: 1.3; letter-spacing: 0.5px;">Science<br>Backed</p>
-             </div>
-             <div>
-                <i data-lucide="sprout" style="color: var(--primary-gold); width: 20px; height: 20px; margin-bottom: 0.5rem; filter: drop-shadow(0 0 8px rgba(212,175,55,0.4));"></i>
-                <h3 style="color: #fff; font-size: 1.2rem; font-weight: 700; margin: 0 0 0.2rem 0; font-family: var(--font-heading);">A+</h3>
-                <p style="color: #a0aab2; font-size: 0.6rem; text-transform: uppercase; font-weight: 600; margin: 0; line-height: 1.3; letter-spacing: 0.5px;">Nature's<br>Finest</p>
-             </div>
-          </div>
-        </div>
       </div>
     </div>
-    
-    <!-- Mission Animations Script -->
-    <script>
-      document.addEventListener("DOMContentLoaded", () => {
-        if(typeof gsap !== 'undefined' && typeof ScrollTrigger !== 'undefined') {
-          gsap.registerPlugin(ScrollTrigger);
-          
-          // Animate left side text
-          gsap.from(".mission-anim-heading", {
-            scrollTrigger: {
-              trigger: "#mission",
-              start: "top 70%"
-            },
-            y: 30,
-            opacity: 0,
-            duration: 1,
-            ease: "power3.out"
-          });
-          
-          gsap.from(".mission-anim-text", {
-            scrollTrigger: {
-              trigger: "#mission",
-              start: "top 65%"
-            },
-            y: 20,
-            opacity: 0,
-            duration: 1,
-            delay: 0.2,
-            ease: "power3.out"
-          });
-          
-          gsap.from(".mission-anim-grid > div", {
-            scrollTrigger: {
-              trigger: "#mission",
-              start: "top 60%"
-            },
-            y: 20,
-            opacity: 0,
-            duration: 0.8,
-            stagger: 0.1,
-            ease: "power2.out"
-          });
-          
-          // Animate right side panels
-          gsap.from(".mission-anim-panel", {
-            scrollTrigger: {
-              trigger: "#mission",
-              start: "top 60%"
-            },
-            x: 30,
-            opacity: 0,
-            duration: 1,
-            stagger: 0.2,
-            ease: "power3.out"
-          });
-          
-          // Animate numbers
-          const stats = document.querySelectorAll(".mission-stat");
-          stats.forEach(stat => {
-            const target = parseInt(stat.getAttribute("data-target"));
-            ScrollTrigger.create({
-              trigger: stat,
-              start: "top 80%",
-              onEnter: () => {
-                let count = 0;
-                let duration = 2000; // 2 seconds
-                let stepTime = Math.abs(Math.floor(duration / target));
-                if(stepTime < 20) stepTime = 20; // max 50fps
-                
-                let timer = setInterval(() => {
-                  count++;
-                  stat.innerText = count;
-                  if(count >= target) {
-                    clearInterval(timer);
-                    stat.innerText = target;
-                  }
-                }, stepTime);
-              }
-            });
-          });
-        }
-      });
-    </script>
   </section>
 
   <hr class="premium-divider">
 
   <!-- Crisis Section -->
-  <section class="section crisis-section" id="crisis" style="background: #040A06; position: relative; overflow: hidden; padding: 6rem 0; min-height: 800px;">
+  <!-- Pure Nutrition. Real Results Section (Badeyan / Rooton Organics Reference Layout) -->
+  <section class="section" id="crisis" style="background: #040A06; position: relative; overflow: hidden; padding: 8rem 0;">
+    <!-- Background leaf ambient watermark -->
+    <div class="pure-bg-leaf-left"></div>
+    <div class="pure-bg-leaf-right"></div>
     
-    <!-- Centered Header -->
-    <div class="container crisis-header-container" style="position: relative; z-index: 2; text-align: center; max-width: 800px; margin: 0 auto 4rem auto;">
-      <div style="color: var(--primary-gold); font-size: 0.75rem; letter-spacing: 0.15em; text-transform: uppercase; font-weight: 700; margin-bottom: 1rem; display: flex; align-items: center; justify-content: center; gap: 0.8rem;">
-        <span style="display: inline-block; width: 40px; height: 1px; background: var(--primary-gold);"></span> THE MODERN HEALTH CRISIS <span style="display: inline-block; width: 40px; height: 1px; background: var(--primary-gold);"></span>
+    <div class="container" style="position: relative; z-index: 2;">
+      
+      <!-- Section Header -->
+      <div class="sec-header">
+        <span class="sec-eyebrow"><i data-lucide="sprout"></i> ROOTON ORGANICS</span>
+        <h2 class="sec-title">
+          Pure Nutrition. <span class="gold">Real Results.</span>
+        </h2>
+        <div class="sec-divider"><i data-lucide="leaf"></i></div>
+        <p class="sec-subtitle">
+          Nature-backed supplements crafted to support your energy, immunity, focus &amp; overall well-being — every single day.
+        </p>
       </div>
-      <h2 class="crisis-hero-title" style="font-family: var(--font-heading); font-size: 3.5rem; margin-top: 0; color: #fff; line-height: 1.1; font-weight: 700;">
-        Why Do We Feel <span style="color: var(--primary-gold);">Tired</span> Everyday?
-      </h2>
-      <p class="crisis-hero-desc" style="color: #a0aab2; font-size: 1.05rem; margin-top: 1.5rem; margin-bottom: 0; line-height: 1.6;">
-        Modern lifestyle is silently draining your health.<br>
-        Fifty One fills the <span style="color: var(--primary-gold);">nutritional gaps</span> your body needs.
-      </p>
-    </div>
-
-    <div class="container crisis-content-container" style="position: relative; z-index: 2; display: flex; align-items: center; justify-content: center; max-width: 1400px; width: 95%; gap: 3rem;">
+      
+      <!-- Main Grid: Left Tall Product Card + Right 6 Feature Cards Grid -->
+      <div class="pure-main-grid">
         
-        <!-- Right Side Visuals (Tired Man + Cards) -->
-        <div class="crisis-visual-area" style="flex: 0 0 100%; position: relative; min-height: 600px; display: flex; align-items: center; justify-content: center; max-width: 650px;">
+        <!-- LEFT TALL BOTTLE & PROMISE CARD -->
+        <div class="pure-left-card">
+          <div class="pure-bottle-img-wrap">
+            <img src="assets/moringa_bottle.jpg" alt="Moringa Nutritional Support Bottle" class="pure-bottle-img">
+          </div>
+          <div class="pure-promise-block">
+            <h4 class="promise-title">Our Promise</h4>
+            <p class="promise-text">
+              We use premium, natural ingredients sourced responsibly and backed by science — because your health deserves nothing less.
+            </p>
+          </div>
+        </div>
+        
+        <!-- RIGHT 6 FEATURE CARDS GRID (3x2) -->
+        <div class="pure-right-cards-grid">
           
-          <!-- The background image of the man (popping out of ring) -->
-          <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -45%); width: 110%; height: 120%; z-index: 3; display: flex; align-items: center; justify-content: center; -webkit-mask-image: linear-gradient(to bottom, black 75%, transparent 100%); mask-image: linear-gradient(to bottom, black 75%, transparent 100%);">
-              <img src="assets/crisis_bg.png" alt="Tired man background" style="width: 100%; height: 100%; object-fit: contain; filter: brightness(1.25) drop-shadow(0 -10px 40px rgba(212, 175, 55, 0.25));">
+          <!-- Card 01: Boosts Immunity -->
+          <div class="pure-feature-card">
+            <div class="card-content-left">
+              <div class="card-header-badge">
+                <div class="badge-icon-circle"><i data-lucide="shield-check"></i></div>
+                <span class="badge-num-pill">01</span>
+              </div>
+              <h4 class="card-title">Boosts Immunity</h4>
+              <p class="card-desc">Strengthens your body's natural defenses with essential vitamins &amp; antioxidants.</p>
+            </div>
+            <div class="card-img-right">
+              <img src="assets/immunity_bowl.jpg" alt="Immunity Ingredients">
+            </div>
           </div>
           
-          <!-- Glowing Ring -->
-          <div class="glowing-ring" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 75%; aspect-ratio: 1; border: 1px solid rgba(212, 175, 55, 0.4); border-radius: 50%; box-shadow: 0 0 20px rgba(212, 175, 55, 0.2), inset 0 0 20px rgba(212, 175, 55, 0.2); z-index: 2;"></div>
-
-          <!-- Left Side Floating Cards -->
-          <!-- Top Left: Poor Sleep -->
-          <div class="crisis-circle-card" style="position: absolute; top: 5%; left: 8%; width: 110px; text-align: center; z-index: 5; animation: floatCard 4s ease-in-out infinite;">
-            <div style="width: 70px; height: 70px; margin: 0 auto 0.5rem auto; border: 2px solid var(--primary-gold); border-radius: 50%; display: flex; align-items: center; justify-content: center; background: rgba(0,0,0,0.6); box-shadow: 0 0 15px rgba(212, 175, 55, 0.4); backdrop-filter: blur(5px);">
-              <i data-lucide="moon" style="width: 32px; height: 32px; color: var(--primary-gold);"></i>
+          <!-- Card 02: Natural Energy -->
+          <div class="pure-feature-card">
+            <div class="card-content-left">
+              <div class="card-header-badge">
+                <div class="badge-icon-circle"><i data-lucide="zap"></i></div>
+                <span class="badge-num-pill">02</span>
+              </div>
+              <h4 class="card-title">Natural Energy</h4>
+              <p class="card-desc">Fights fatigue and supports daily energy without caffeine or jitters.</p>
             </div>
-            <h4 style="font-family: var(--font-heading); font-size: 0.75rem; font-weight: 700; color: #fff; margin: 0; text-transform: uppercase; letter-spacing: 0.5px; line-height: 1.3;">Poor<br>Sleep</h4>
+            <div class="card-img-right">
+              <img src="assets/energy_bowl.jpg" alt="Natural Energy Ingredients">
+            </div>
           </div>
-
-          <!-- Middle Left: Low Energy -->
-          <div class="crisis-circle-card" style="position: absolute; top: 40%; left: -2%; width: 110px; text-align: center; z-index: 5; animation: floatCard 4s ease-in-out 1s infinite;">
-            <div style="width: 70px; height: 70px; margin: 0 auto 0.5rem auto; border: 2px solid var(--primary-gold); border-radius: 50%; display: flex; align-items: center; justify-content: center; background: rgba(0,0,0,0.6); box-shadow: 0 0 15px rgba(212, 175, 55, 0.4); backdrop-filter: blur(5px);">
-              <i data-lucide="battery-low" style="width: 32px; height: 32px; color: var(--primary-gold);"></i>
+          
+          <!-- Card 03: Improves Focus -->
+          <div class="pure-feature-card">
+            <div class="card-content-left">
+              <div class="card-header-badge">
+                <div class="badge-icon-circle"><i data-lucide="brain"></i></div>
+                <span class="badge-num-pill">03</span>
+              </div>
+              <h4 class="card-title">Improves Focus</h4>
+              <p class="card-desc">Enhances mental clarity, concentration &amp; memory for better productivity.</p>
             </div>
-            <h4 style="font-family: var(--font-heading); font-size: 0.75rem; font-weight: 700; color: #fff; margin: 0; text-transform: uppercase; letter-spacing: 0.5px; line-height: 1.3;">Low<br>Energy</h4>
+            <div class="card-img-right">
+              <img src="assets/focus_bowl.jpg" alt="Focus Ingredients">
+            </div>
           </div>
-
-          <!-- Bottom Left: Pollution & Toxins -->
-          <div class="crisis-circle-card" style="position: absolute; bottom: 5%; left: 8%; width: 110px; text-align: center; z-index: 5; animation: floatCard 4s ease-in-out 2s infinite;">
-            <div style="width: 70px; height: 70px; margin: 0 auto 0.5rem auto; border: 2px solid var(--primary-gold); border-radius: 50%; display: flex; align-items: center; justify-content: center; background: rgba(0,0,0,0.6); box-shadow: 0 0 15px rgba(212, 175, 55, 0.4); backdrop-filter: blur(5px);">
-              <i data-lucide="flask-conical" style="width: 32px; height: 32px; color: var(--primary-gold);"></i>
+          
+          <!-- Card 04: Supports Digestion -->
+          <div class="pure-feature-card">
+            <div class="card-content-left">
+              <div class="card-header-badge">
+                <div class="badge-icon-circle"><i data-lucide="activity"></i></div>
+                <span class="badge-num-pill">04</span>
+              </div>
+              <h4 class="card-title">Supports Digestion</h4>
+              <p class="card-desc">Promotes gut health, reduces bloating &amp; improves nutrient absorption.</p>
             </div>
-            <h4 style="font-family: var(--font-heading); font-size: 0.75rem; font-weight: 700; color: #fff; margin: 0; text-transform: uppercase; letter-spacing: 0.5px; line-height: 1.3;">Pollution<br>& Toxins</h4>
+            <div class="card-img-right">
+              <img src="assets/digestion_bowl.jpg" alt="Digestion Ingredients">
+            </div>
           </div>
-
-          <!-- Right Side Floating Cards -->
-          <!-- Top Right: Stress & Anxiety -->
-          <div class="crisis-circle-card" style="position: absolute; top: 5%; right: 8%; width: 110px; text-align: center; z-index: 5; animation: floatCard 4s ease-in-out 0.5s infinite;">
-            <div style="width: 70px; height: 70px; margin: 0 auto 0.5rem auto; border: 2px solid var(--primary-gold); border-radius: 50%; display: flex; align-items: center; justify-content: center; background: rgba(0,0,0,0.6); box-shadow: 0 0 15px rgba(212, 175, 55, 0.4); backdrop-filter: blur(5px);">
-              <i data-lucide="brain" style="width: 32px; height: 32px; color: var(--primary-gold);"></i>
+          
+          <!-- Card 05: Heart Wellness -->
+          <div class="pure-feature-card">
+            <div class="card-content-left">
+              <div class="card-header-badge">
+                <div class="badge-icon-circle"><i data-lucide="heart"></i></div>
+                <span class="badge-num-pill">05</span>
+              </div>
+              <h4 class="card-title">Heart Wellness</h4>
+              <p class="card-desc">Helps maintain healthy cholesterol levels &amp; supports overall heart function.</p>
             </div>
-            <h4 style="font-family: var(--font-heading); font-size: 0.75rem; font-weight: 700; color: #fff; margin: 0; text-transform: uppercase; letter-spacing: 0.5px; line-height: 1.3;">Stress &<br>Anxiety</h4>
+            <div class="card-img-right">
+              <img src="assets/heart_bowl.jpg" alt="Heart Wellness Ingredients">
+            </div>
           </div>
-
-          <!-- Middle Right: Excess Screen Time -->
-          <div class="crisis-circle-card" style="position: absolute; top: 40%; right: -2%; width: 110px; text-align: center; z-index: 5; animation: floatCard 4s ease-in-out 1.5s infinite;">
-            <div style="width: 70px; height: 70px; margin: 0 auto 0.5rem auto; border: 2px solid var(--primary-gold); border-radius: 50%; display: flex; align-items: center; justify-content: center; background: rgba(0,0,0,0.6); box-shadow: 0 0 15px rgba(212, 175, 55, 0.4); backdrop-filter: blur(5px);">
-              <i data-lucide="smartphone" style="width: 32px; height: 32px; color: var(--primary-gold);"></i>
+          
+          <!-- Card 06: Detox & Rejuvenate -->
+          <div class="pure-feature-card">
+            <div class="card-content-left">
+              <div class="card-header-badge">
+                <div class="badge-icon-circle"><i data-lucide="sparkles"></i></div>
+                <span class="badge-num-pill">06</span>
+              </div>
+              <h4 class="card-title">Detox &amp; Rejuvenate</h4>
+              <p class="card-desc">Helps remove toxins, purify the body &amp; promote natural well-being.</p>
             </div>
-            <h4 style="font-family: var(--font-heading); font-size: 0.75rem; font-weight: 700; color: #fff; margin: 0; text-transform: uppercase; letter-spacing: 0.5px; line-height: 1.3;">Excess<br>Screen Time</h4>
-          </div>
-
-          <!-- Bottom Right: Poor Nutrition -->
-          <div class="crisis-circle-card" style="position: absolute; bottom: 5%; right: 8%; width: 110px; text-align: center; z-index: 5; animation: floatCard 4s ease-in-out 2.5s infinite;">
-            <div style="width: 70px; height: 70px; margin: 0 auto 0.5rem auto; border: 2px solid var(--primary-gold); border-radius: 50%; display: flex; align-items: center; justify-content: center; background: rgba(0,0,0,0.6); box-shadow: 0 0 15px rgba(212, 175, 55, 0.4); backdrop-filter: blur(5px);">
-              <i data-lucide="cookie" style="width: 32px; height: 32px; color: var(--primary-gold);"></i>
+            <div class="card-img-right">
+              <img src="assets/complete_nutrition.jpg" alt="Detox Ingredients">
             </div>
-            <h4 style="font-family: var(--font-heading); font-size: 0.75rem; font-weight: 700; color: #fff; margin: 0; text-transform: uppercase; letter-spacing: 0.5px; line-height: 1.3;">Poor<br>Nutrition</h4>
           </div>
           
         </div>
+        
+      </div>
+
     </div>
   </section>
 
