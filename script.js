@@ -257,36 +257,33 @@ if (typeof gsap !== 'undefined') {
       ease: "back.out(2)"
     }, "-=0.8");
 
-    // Scroll trigger to slowly blur and fade out hero text as you scroll down
-    gsap.to(".hero .reveal-left, .hero .reveal-right", {
-      scrollTrigger: {
-        trigger: "#hero",
-        start: "top top",
-        end: "bottom 30%",
-        scrub: true,
-        pin: false
-      },
-      opacity: 0,
-      filter: "blur(12px)",
-      y: -40,
-      ease: "none"
-    });
   });
 
   // Mobile Animations (screens < 992px)
   mm.add("(max-width: 991px)", () => {
-    const heroTL = gsap.timeline();
+    // Start timeline with a delay of 3 seconds to match desktop cinematic timing
+    const heroTL = gsap.timeline({ delay: 3 });
     
-    // Show the mobile layout content immediately with a clean fade-in
+    // 1. Blur the mobile background video so text stands out sharply
+    heroTL.to(".hero-bg-video-desktop", {
+      filter: "blur(10px)",
+      scale: 1.05,
+      duration: 1.2,
+      ease: "power2.out"
+    }, 0);
+
+    // 2. Show the mobile layout content after 3 seconds with a clean fade-in and blur resolve
     heroTL.fromTo(".hero-mobile-layout", {
       opacity: 0,
-      y: 30
+      y: 30,
+      filter: "blur(15px)"
     }, {
       opacity: 1,
       y: 0,
+      filter: "blur(0px)",
       duration: 1.2,
       ease: "power3.out"
-    });
+    }, 0);
   });
 
   // 2. Ingredients Staggered Entrance Timeline on Scroll

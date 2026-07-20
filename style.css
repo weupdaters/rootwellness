@@ -184,6 +184,11 @@ img {
   filter: blur(15px);
 }
 
+.js-enabled .hero-mobile-layout {
+  opacity: 0;
+  filter: blur(15px);
+}
+
 
 
 .js-enabled .reveal-scale {
@@ -2827,7 +2832,7 @@ img {
     margin: 0;
   }
   .hero-bg-video-desktop {
-    display: none !important;
+    display: block !important;
   }
   .hero-video-overlay-desktop {
     display: block !important;
