@@ -205,6 +205,53 @@ if (typeof gsap !== 'undefined') {
   // Register ScrollTrigger plugin
   gsap.registerPlugin(ScrollTrigger);
 
+  // Cinematic Hero Scroll-Linked Animations (Video scale up and Content blur out)
+  if (window.innerWidth > 991) {
+    gsap.to(".hero-bg-video-desktop", {
+      scrollTrigger: {
+        trigger: "#hero",
+        start: "top top",
+        end: "bottom 30%",
+        scrub: true
+      },
+      xPercent: -50,
+      yPercent: -50,
+      left: "50%",
+      top: "50%",
+      scale: 1,
+      opacity: 1,
+      borderRadius: 0,
+      ease: "none"
+    });
+
+    gsap.to(".hero .reveal-left, .hero .reveal-right", {
+      scrollTrigger: {
+        trigger: "#hero",
+        start: "top top",
+        end: "bottom 40%",
+        scrub: true
+      },
+      opacity: 0,
+      filter: "blur(12px)",
+      y: -80,
+      ease: "none"
+    });
+  } else {
+    // Mobile layout content blurs and fades out on scroll
+    gsap.to(".hero-mobile-layout", {
+      scrollTrigger: {
+        trigger: "#hero",
+        start: "top top",
+        end: "bottom 40%",
+        scrub: true
+      },
+      opacity: 0,
+      filter: "blur(12px)",
+      y: -80,
+      ease: "none"
+    });
+  }
+
   // 1. Hero Page-Load Animations
   const heroTL = gsap.timeline();
   // Animate left column content elements
