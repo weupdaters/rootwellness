@@ -210,8 +210,8 @@ if (typeof gsap !== 'undefined') {
 
   // Desktop Animations (screens >= 992px)
   mm.add("(min-width: 992px)", () => {
-    // Start timeline with a delay of 1 second so background video is shown alone first
-    const heroTL = gsap.timeline({ delay: 1 });
+    // Start timeline with a delay of 3 seconds so background video is shown alone first
+    const heroTL = gsap.timeline({ delay: 3 });
 
     // Fade-in and blur resolve left column content
     heroTL.fromTo(".hero .reveal-left", {
