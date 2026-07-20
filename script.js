@@ -205,98 +205,89 @@ if (typeof gsap !== 'undefined') {
   // Register ScrollTrigger plugin
   gsap.registerPlugin(ScrollTrigger);
 
-  // Cinematic Hero Scroll-Linked Animations (Video scale up and Content blur out)
-  if (window.innerWidth > 991) {
-    gsap.to(".hero-bg-video-desktop", {
-      scrollTrigger: {
-        trigger: "#hero",
-        start: "top top",
-        end: "bottom 30%",
-        scrub: true
-      },
-      xPercent: -50,
-      yPercent: -50,
-      left: "50%",
-      top: "50%",
-      scale: 1,
+  // 1. Hero Cinematic Page-Load & Scroll Animations
+  const mm = gsap.matchMedia();
+
+  // Desktop Animations (screens >= 992px)
+  mm.add("(min-width: 992px)", () => {
+    // Start timeline with a delay of 1 second so background video is shown alone first
+    const heroTL = gsap.timeline({ delay: 1 });
+
+    // Fade-in and blur resolve left column content
+    heroTL.fromTo(".hero .reveal-left", {
+      x: -50,
+      opacity: 0,
+      filter: "blur(15px)"
+    }, {
+      x: 0,
       opacity: 1,
-      borderRadius: 0,
-      ease: "none"
+      filter: "blur(0px)",
+      duration: 1.2,
+      ease: "power4.out"
     });
 
+    // Fade-in and blur resolve right column content
+    heroTL.fromTo(".hero .reveal-right", {
+      x: 50,
+      opacity: 0,
+      filter: "blur(15px)"
+    }, {
+      x: 0,
+      opacity: 1,
+      filter: "blur(0px)",
+      duration: 1.2,
+      ease: "power4.out"
+    }, "-=1.2");
+
+    // Left column small feature icons stagger
+    heroTL.from(".hero-feat-icon-box", {
+      scale: 0,
+      opacity: 0,
+      stagger: 0.1,
+      duration: 0.6,
+      ease: "back.out(2)"
+    }, "-=0.8");
+
+    // Right column features stagger
+    heroTL.from(".hero-list-icon-box", {
+      scale: 0,
+      opacity: 0,
+      stagger: 0.1,
+      duration: 0.6,
+      ease: "back.out(2)"
+    }, "-=0.8");
+
+    // Scroll trigger to slowly blur and fade out hero text as you scroll down
     gsap.to(".hero .reveal-left, .hero .reveal-right", {
       scrollTrigger: {
         trigger: "#hero",
         start: "top top",
-        end: "bottom 40%",
-        scrub: true
+        end: "bottom 30%",
+        scrub: true,
+        pin: false
       },
       opacity: 0,
       filter: "blur(12px)",
-      y: -80,
+      y: -40,
       ease: "none"
     });
-  } else {
-    // Mobile layout content blurs and fades out on scroll
-    gsap.to(".hero-mobile-layout", {
-      scrollTrigger: {
-        trigger: "#hero",
-        start: "top top",
-        end: "bottom 40%",
-        scrub: true
-      },
-      opacity: 0,
-      filter: "blur(12px)",
-      y: -80,
-      ease: "none"
-    });
-  }
-
-  // 1. Hero Page-Load Animations
-  const heroTL = gsap.timeline();
-  // Animate left column content elements
-  heroTL.fromTo(".hero .reveal-left", {
-    x: -50,
-    opacity: 0
-  }, {
-    x: 0,
-    opacity: 1,
-    duration: 1.2,
-    ease: "power4.out"
   });
-  // Animate middle mobile video wrapper
-  heroTL.from(".hero-col-center", {
-    y: 40,
-    opacity: 0,
-    duration: 1.2,
-    ease: "power3.out"
-  }, "-=1");
-  // Animate right column content elements
-  heroTL.fromTo(".hero .reveal-right", {
-    x: 50,
-    opacity: 0
-  }, {
-    x: 0,
-    opacity: 1,
-    duration: 1.2,
-    ease: "power4.out"
-  }, "-=1.2");
-  // Left column small feature icons stagger
-  heroTL.from(".hero-feat-icon-box", {
-    scale: 0,
-    opacity: 0,
-    stagger: 0.1,
-    duration: 0.6,
-    ease: "back.out(2)"
-  }, "-=0.8");
-  // Right column features stagger
-  heroTL.from(".hero-list-icon-box", {
-    scale: 0,
-    opacity: 0,
-    stagger: 0.1,
-    duration: 0.6,
-    ease: "back.out(2)"
-  }, "-=0.8");
+
+  // Mobile Animations (screens < 992px)
+  mm.add("(max-width: 991px)", () => {
+    const heroTL = gsap.timeline();
+    
+    // Show the mobile layout content immediately with a clean fade-in
+    heroTL.fromTo(".hero-mobile-layout", {
+      opacity: 0,
+      y: 30
+    }, {
+      opacity: 1,
+      y: 0,
+      duration: 1.2,
+      ease: "power3.out"
+    });
+  });
 
   // 2. Ingredients Staggered Entrance Timeline on Scroll
   const ingredientsTL = gsap.timeline({
