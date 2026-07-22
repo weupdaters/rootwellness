@@ -247,8 +247,8 @@ if (typeof gsap !== 'undefined') {
 
   // Desktop Animations (screens >= 992px)
   mm.add("(min-width: 992px)", () => {
-    // Start timeline with a delay of 3 seconds so background video is shown alone first
-    const heroTL = gsap.timeline({ delay: 3 });
+    // Start timeline with a delay of 0.3 seconds so background video is shown alone first
+    const heroTL = gsap.timeline({ delay: 0.3 });
 
     // Fade-in and blur resolve left column content
     heroTL.fromTo(".hero .reveal-left", {
@@ -298,8 +298,8 @@ if (typeof gsap !== 'undefined') {
 
   // Mobile Animations (screens < 992px)
   mm.add("(max-width: 991px)", () => {
-    // Start timeline with a delay of 3 seconds to match desktop cinematic timing
-    const heroTL = gsap.timeline({ delay: 3 });
+    // Start timeline with a delay of 0.3 seconds to match desktop cinematic timing
+    const heroTL = gsap.timeline({ delay: 0.3 });
     
     // 1. Blur the mobile background video so text stands out sharply
     heroTL.to(".hero-bg-video-desktop", {
@@ -463,29 +463,71 @@ if (typeof gsap !== 'undefined') {
   }, "-=0.5");
 
   // 6. How to Use Section Scroll Trigger
-  const storyTL = gsap.timeline({
-    scrollTrigger: {
-      trigger: "#story",
-      start: "top 75%",
-      toggleActions: "play none none none"
-    }
+  const mmStory = gsap.matchMedia();
+
+  // Desktop step cards animation (staggered in single row)
+  mmStory.add("(min-width: 769px)", () => {
+    const storyTL = gsap.timeline({
+      scrollTrigger: {
+        trigger: "#story",
+        start: "top 75%",
+        toggleActions: "play none none none"
+      }
+    });
+    storyTL.from("#story .section-title-serif", {
+      y: 30,
+      opacity: 0,
+      duration: 0.8,
+      ease: "power3.out"
+    });
+    storyTL.fromTo("#story .step-wellness-card", {
+      y: 45,
+      opacity: 0
+    }, {
+      y: 0,
+      opacity: 1,
+      stagger: 0.15,
+      duration: 0.9,
+      ease: "power3.out"
+    }, "-=0.5");
   });
-  storyTL.from("#story .section-title-serif", {
-    y: 30,
-    opacity: 0,
-    duration: 0.8,
-    ease: "power3.out"
+
+  // Mobile step cards animation (each card animates in as scrolled into view)
+  mmStory.add("(max-width: 768px)", () => {
+    gsap.from("#story .section-title-serif", {
+      y: 30,
+      opacity: 0,
+      duration: 0.8,
+      ease: "power3.out",
+      scrollTrigger: {
+        trigger: "#story",
+        start: "top 85%",
+        toggleActions: "play none none none"
+      }
+    });
+
+    const stepCards = gsap.utils.toArray("#story .step-wellness-card");
+    stepCards.forEach((card) => {
+      gsap.fromTo(card, {
+        y: 45,
+        opacity: 0,
+        scale: 0.88,
+        filter: "blur(4px)"
+      }, {
+        y: 0,
+        opacity: 1,
+        scale: 1,
+        filter: "blur(0px)",
+        duration: 0.75,
+        ease: "back.out(1.3)",
+        scrollTrigger: {
+          trigger: card,
+          start: "top 85%",
+          toggleActions: "play none none none"
+        }
+      });
+    });
   });
-  storyTL.fromTo("#story .step-wellness-card", {
-    y: 45,
-    opacity: 0
-  }, {
-    y: 0,
-    opacity: 1,
-    stagger: 0.15,
-    duration: 0.9,
-    ease: "power3.out"
-  }, "-=0.5");
 
   // 7. Reviews & Trust Section Scroll Trigger
   const reviewsTL = gsap.timeline({
@@ -533,6 +575,32 @@ if (typeof gsap !== 'undefined') {
       start: "top 80%",
       toggleActions: "play none none none"
     }
+  });
+
+
+  // 9. Mission Section - Stat Counters only (no entrance animations)
+  const missionStats = document.querySelectorAll(".mission-stat");
+  missionStats.forEach(stat => {
+    const target = parseInt(stat.getAttribute("data-target"));
+    if (isNaN(target)) return;
+    ScrollTrigger.create({
+      trigger: stat,
+      start: "top 80%",
+      onEnter: () => {
+        let count = { value: 0 };
+        gsap.to(count, {
+          value: target,
+          duration: 2,
+          ease: "power1.out",
+          onUpdate: () => {
+            stat.innerText = Math.floor(count.value);
+          },
+          onComplete: () => {
+            stat.innerText = target;
+          }
+        });
+      }
+    });
   });
 
 
@@ -964,21 +1032,28 @@ document.addEventListener('mousemove', (e) => {
       }
     }
 
-    // 7. Responsive Scaling Calculations
-    function resizeIngredientWheel() {
-      const parentWidth = scaler.parentElement.clientWidth;
-      let scale = 1;
-      
-      if (parentWidth < 850) {
-        scale = parentWidth / 850;
+    // 7. Responsive Scaling Calculations using ResizeObserver (robust and immediate)
+    const resizeObserver = new ResizeObserver((entries) => {
+      for (let entry of entries) {
+        const parentWidth = entry.contentRect.width;
+        let scale = 1;
+        
+        if (parentWidth < 850) {
+          if (parentWidth < 768) {
+            // Zoom in on mobile to make the wheel and its items/text highly visible
+            scale = Math.min(0.85, (parentWidth / 850) * 1.3);
+          } else {
+            scale = parentWidth / 850;
+          }
+        }
+        
+        scaler.style.transform = `scale(${scale})`;
       }
-      
-      scaler.style.transform = `scale(${scale})`;
+    });
+
+    if (scaler.parentElement) {
+      resizeObserver.observe(scaler.parentElement);
     }
-    
-    window.addEventListener('resize', resizeIngredientWheel);
-    setTimeout(resizeIngredientWheel, 300);
-    setTimeout(resizeIngredientWheel, 600);
 
     // 8. Intersection Observer for Scroll Entrance reveals (no GSAP!)
     const missionSection = document.getElementById('mission');
@@ -1303,4 +1378,117 @@ document.addEventListener('mousemove', (e) => {
     drawFireflies();
   });
 })();
+
+// --- Premium Scroll Text Color-Fill Animation ---
+(function() {
+  document.addEventListener('DOMContentLoaded', () => {
+    // Avoid running if users prefer reduced motion
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (prefersReducedMotion) return;
+
+    // Target every h1, h2, and .section-title
+    // Exclude .center-number (ingredient count) and any elements that are already processed or shouldn't be animated
+    const headings = Array.from(document.querySelectorAll('h1, h2, .section-title')).filter(el => {
+      return !el.classList.contains('center-number') && 
+             !el.closest('.wheel-center-disc') && 
+             !el.classList.contains('text-fill-container') &&
+             !el.classList.contains('mission-anim-heading');
+    });
+
+    headings.forEach(heading => {
+      // 1. Double layer setup
+      const originalHTML = heading.innerHTML;
+      heading.classList.add('text-fill-container');
+
+      const baseSpan = document.createElement('span');
+      baseSpan.className = 'text-fill-base';
+      baseSpan.innerHTML = originalHTML;
+
+      const overlaySpan = document.createElement('span');
+      overlaySpan.className = 'text-fill-overlay';
+      overlaySpan.setAttribute('aria-hidden', 'true');
+      overlaySpan.innerHTML = originalHTML;
+
+      // Clear the element and insert the two layers
+      heading.innerHTML = '';
+      heading.appendChild(baseSpan);
+      heading.appendChild(overlaySpan);
+    });
+
+    // 2. Animation Initialization
+    if (typeof gsap !== 'undefined' && typeof ScrollTrigger !== 'undefined') {
+      // Use GSAP ScrollTrigger
+      headings.forEach(heading => {
+        gsap.fromTo(heading, {
+          '--fill-progress': '0%'
+        }, {
+          '--fill-progress': '100%',
+          ease: 'none',
+          scrollTrigger: {
+            trigger: heading,
+            start: 'top 75%', // Starts when heading top reaches 75% of viewport height
+            end: 'top 30%',   // Finishes when heading top reaches 30% of viewport height
+            scrub: true,
+            invalidateOnRefresh: true
+          }
+        });
+      });
+    } else {
+      // Fallback: Optimized IntersectionObserver + requestAnimationFrame
+      const activeHeadings = new Set();
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            activeHeadings.add(entry.target);
+            updateProgress(entry.target);
+          } else {
+            activeHeadings.delete(entry.target);
+          }
+        });
+      }, {
+        root: null,
+        rootMargin: '0px',
+        threshold: Array.from({ length: 101 }, (_, i) => i / 100)
+      });
+
+      headings.forEach(heading => {
+        observer.observe(heading);
+      });
+
+      let ticking = false;
+      const handleScroll = () => {
+        if (!ticking) {
+          window.requestAnimationFrame(() => {
+            activeHeadings.forEach(heading => {
+              updateProgress(heading);
+            });
+            ticking = false;
+          });
+          ticking = true;
+        }
+      };
+
+      window.addEventListener('scroll', handleScroll, { passive: true });
+      window.addEventListener('resize', handleScroll, { passive: true });
+
+      function updateProgress(element) {
+        const rect = element.getBoundingClientRect();
+        const viewportHeight = window.innerHeight;
+
+        const startPoint = viewportHeight * 0.75; // Trigger at 75% from viewport top
+        const endPoint = viewportHeight * 0.30;   // Complete at 30% from viewport top
+
+        const distance = startPoint - endPoint;
+        const currentPos = startPoint - rect.top;
+        
+        let progress = currentPos / distance;
+        progress = Math.max(0, Math.min(1, progress));
+
+        element.style.setProperty('--fill-progress', `${progress * 100}%`);
+      }
+    }
+  });
+})();
+
 
