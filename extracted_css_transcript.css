@@ -1,0 +1,58 @@
+Created At: 2026-07-22T01:31:44+05:30
+Completed At: 2026-07-22T01:31:44+05:30
+File Path: `file:///Applications/XAMPP/xamppfiles/htdocs/herbal_product/style.css`
+Total Lines: 7150
+Total Bytes: 158490
+Showing lines 1 to 50
+The following code has been modified to include a line number before every line, in the format: <line_number>: <original_line>. Please note that any changes targeting the original code should remove the line number, colon, and leading space.
+1: @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=DM+Serif+Display:ital@0;1&family=Inter:wght@100..900&family=Manrope:wght@200..800&display=swap');
+2: 
+3: :root {
+4:   /* Bottle Theme Colors - Predominantly Black & Gold */
+5:   --bg-primary: #030504; /* Pitch black background */
+6:   --bg-secondary: #080a09; /* Very dark slate-black */
+7:   --bg-card: rgba(12, 15, 13, 0.75); /* Deep dark glass card */
+8:   --forest-green: #ffcf40; /* High-pop metallic gold accent */
+9:   --forest-green-rgb: 255, 207, 64;
+10:   --forest-green-hover: #e5b020;
+11:   
+12:   --primary-gold: #d4af37; /* Warm metallic gold */
+13:   --primary-gold-rgb: 212, 175, 55;
+14:   --light-green: rgba(212, 175, 55, 0.08); /* Light gold card tints */
+15:   
+16:   --border-color: rgba(212, 175, 55, 0.15); /* Transparent gold border */
+17:   --border-glow: rgba(212, 175, 55, 0.35); /* Glowing gold hover borders */
+18:   
+19:   --text-primary: #ffffff; /* Crisp white */
+20:   --text-secondary: #b0bfb5; /* Soft silver-sage text */
+21:   --text-muted: #5e6d63;
+22: 
+23:   /* Theme-specific gradient and hero variables */
+24:   --bg-gradient-section: linear-gradient(180deg, #030504 0%, #0f1f15 50%, #030504 100%);
+25:   --bg-hero: #030504;
+26:   --hero-overlay-opacity: 0.15;
+27:   --hero-overlay-dark: rgba(3, 5, 4, 0.88);
+28:   
+29:   /* Fonts */
+30:   --font-hero: 'Cormorant Garamond', serif;
+31:   --font-heading: 'DM Serif Display', serif;
+32:   --font-subheading: 'Manrope', sans-serif;
+33:   --font-body: 'Manrope', sans-serif;
+34:   --font-numbers: 'Inter', sans-serif;
+35:   
+36:   /* Layout */
+37:   --nav-height: 85px;
+38:   --container-max: 1400px;
+39:   
+40:   /* Transitions */
+41:   --transition-fast: 0.2s ease;
+42:   --transition-normal: 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+43:   --card-shadow: 0 10px 30px rgba(0, 0, 0, 0.65), 0 1px 8px rgba(212, 175, 55, 0.03);
+44:   --card-shadow-hover: 0 20px 40px rgba(0, 0, 0, 0.8), 0 1px 12px rgba(212, 175, 55, 0.06);
+45: }
+46: 
+47: [data-theme="light"] {
+48:   --bg-primary: #f4f7f5; /* Light cream forest-white */
+49:   --bg-secondary: #e6ede8; /* Soft light sage-grey */
+50:   --bg-card: rgba(255, 255, 255, 0.85); /* Pure white glass card */
+The above content does NOT show the entire file contents. If you need to view any lines of the file which were not shown to complete your task, call this tool again to view those lines.

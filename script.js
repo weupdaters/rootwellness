@@ -81,6 +81,43 @@ if (mobileMenuBtn && navCollapse) {
   });
 }
 
+// Mobile Bottom Navigation Click Handling
+const bottomNavItems = document.querySelectorAll('.mobile-bottom-nav .nav-item');
+bottomNavItems.forEach(item => {
+  item.addEventListener('click', function(e) {
+    // Optional: Smooth scroll handling could be added here if needed, 
+    // but default anchor behavior works fine.
+    
+    // Remove active class from all
+    bottomNavItems.forEach(nav => nav.classList.remove('active'));
+    
+    // Add active class to clicked item
+    this.classList.add('active');
+  });
+});
+
+// Update bottom nav active state based on scroll position
+window.addEventListener('scroll', () => {
+  const scrollPos = window.scrollY + 150;
+  
+  // Find all sections we care about
+  const sections = ['hero', 'mission', 'ingredients', 'order'];
+  
+  for (let i = sections.length - 1; i >= 0; i--) {
+    const id = sections[i];
+    const el = document.getElementById(id);
+    if (el && el.offsetTop <= scrollPos) {
+      bottomNavItems.forEach(nav => {
+        nav.classList.remove('active');
+        if (nav.getAttribute('href') === '#' + id || (id === 'hero' && nav.getAttribute('href') === '#')) {
+          nav.classList.add('active');
+        }
+      });
+      break; // Found the active section, stop checking
+    }
+  }
+});
+
 // 3D Tilt Effect on Hero Bottle
 const bottleWrap = document.getElementById('hero-bottle');
 if (bottleWrap) {
@@ -317,21 +354,7 @@ if (typeof gsap !== 'undefined') {
     ease: "back.out(1.5)"
   }, "-=0.6");
 
-  ingredientsTL.from(".orbit-circle", {
-    scale: 0,
-    opacity: 0,
-    stagger: 0.1,
-    duration: 1,
-    ease: "power2.out"
-  }, "-=0.8");
 
-  ingredientsTL.from(".orbit-node", {
-    scale: 0,
-    opacity: 0,
-    stagger: 0.08,
-    duration: 0.8,
-    ease: "back.out(2)"
-  }, "-=0.6");
 
   // Staggered slide-in from left for left column cards
   ingredientsTL.fromTo(".luxury-ingredients-grid .reveal-left", {
@@ -453,7 +476,7 @@ if (typeof gsap !== 'undefined') {
     duration: 0.8,
     ease: "power3.out"
   });
-  storyTL.fromTo("#story .step-new-card", {
+  storyTL.fromTo("#story .step-wellness-card", {
     y: 45,
     opacity: 0
   }, {

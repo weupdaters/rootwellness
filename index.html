@@ -1,27 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <script>document.documentElement.classList.add('js-enabled');</script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Rooton Wellness — Fifty One | Complete Daily Wellness Formula</title>
-  <meta name="description" content="Rooton Wellness Fifty One — 51 powerful ingredients, complete nutrition for body and mind. Building a better tomorrow, together.">
-  
+  <meta name="description"
+    content="Rooton Wellness Fifty One — 51 powerful ingredients, complete nutrition for body and mind. Building a better tomorrow, together.">
+
   <!-- FontAwesome for Vector Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  
+
   <!-- Bootstrap 5 CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-  
+
   <!-- Lordicon (Lottie Player) -->
   <script src="https://cdn.lordicon.com/lordicon.js"></script>
-  
+
   <!-- Lucide Icons -->
   <script src="https://unpkg.com/lucide@latest"></script>
-  
+
   <!-- Custom Stylesheet -->
   <link rel="stylesheet" href="style.css?v=2026.47">
+  <!-- Mobile Hero — Separate, zero-conflict file -->
+  <link rel="stylesheet" href="mobile-hero.css?v=1.0">
+  <!-- Mobile Bottom Nav -->
+  <link rel="stylesheet" href="mobile-bottom-nav.css?v=1.0">
 </head>
+
 <body>
 
   <!-- Navigation Bar -->
@@ -31,7 +38,7 @@
       <a href="#" class="logo navbar-brand d-flex align-items-center">
         <img src="assets/logo-green-gold.png" alt="Rooton Wellness Logo" class="nav-logo-img">
       </a>
-      
+
       <!-- Collapsible Menu links (Desktop center capsule / Mobile dropdown) -->
       <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
         <div class="nav-capsule">
@@ -55,7 +62,8 @@
           <span class="d-none d-sm-inline">Sign Me Up!</span>
         </a>
         <!-- Hamburger Menu toggle (visible on mobile) -->
-        <button class="mobile-menu-btn d-lg-none" id="mobile-menu-btn" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle Menu">
+        <button class="mobile-menu-btn d-lg-none" id="mobile-menu-btn" data-bs-toggle="collapse"
+          data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle Menu">
           <span></span>
           <span></span>
           <span></span>
@@ -64,8 +72,29 @@
     </div>
   </header>
 
+  <!-- Mobile Bottom Navigation (Only visible on max-width: 991px) -->
+  <nav class="mobile-bottom-nav">
+    <a href="#hero" class="nav-item active" data-target="hero">
+      <i data-lucide="home"></i>
+      <span class="nav-text">Home</span>
+    </a>
+    <a href="#mission" class="nav-item" data-target="mission">
+      <i data-lucide="heart"></i>
+      <span class="nav-text">Mission</span>
+    </a>
+    <a href="#ingredients" class="nav-item" data-target="ingredients">
+      <i data-lucide="search"></i>
+      <span class="nav-text">Search</span>
+    </a>
+    <a href="#order" class="nav-item" data-target="order">
+      <i data-lucide="user"></i>
+      <span class="nav-text">Account</span>
+    </a>
+  </nav>
+
   <!-- Hero Section -->
-  <section class="hero" id="hero" style="position: relative; overflow: hidden; background-color: var(--bg-primary); margin: 0;">
+  <section class="hero" id="hero"
+    style="position: relative; overflow: hidden; background-color: var(--bg-primary); margin: 0;">
     <!-- Magic UI Dot Background Pattern -->
     <div class="magic-dot-pattern"></div>
 
@@ -73,10 +102,10 @@
     <video autoplay loop muted playsinline poster="assets/hero_bg.png" class="hero-bg-video-desktop">
       <source src="assets/download.mp4" type="video/mp4">
     </video>
-    
+
     <!-- Gradient Overlay for desktop text contrast -->
     <div class="hero-video-overlay-desktop"></div>
-    
+
     <!-- Foreground content wrapper: Desktop (LG and above) -->
     <div class="container py-5 my-sm-5 position-relative z-3 d-none d-lg-block">
       <div class="row align-items-center gy-5">
@@ -85,49 +114,62 @@
           <div class="hero-section-badge mb-3 d-inline-flex align-items-center" style="gap: 0.5rem;">
             <i data-lucide="shield-check" style="width:16px;height:16px;"></i> TRUSTED &amp; CERTIFIED
           </div>
-          <h1 class="hero-section-title mb-3 text-start" style="font-size: 3.8rem; line-height: 1.15; font-family: var(--font-heading);">
+          <h1 class="hero-section-title mb-3 text-start"
+            style="font-size: 3.8rem; line-height: 1.15; font-family: var(--font-heading);">
             Nature's Best, <br><span>Science's Finest</span>
           </h1>
           <p class="hero-description mb-0 text-start" style="font-size: 1.02rem; line-height: 1.7; color: var(--text-secondary);">
             Plant-rooted, science-backed daily wellness.
           </p>
-          
+
           <!-- 4 Bottom Icons with subtitles -->
           <div class="row row-cols-2 row-cols-sm-4 g-3 mt-4 pt-3 border-top border-white border-opacity-10">
             <!-- Feature 1 -->
             <div class="col text-start d-flex flex-column align-items-start gap-2">
-              <div class="hero-feat-icon-box" style="width: 42px; height: 42px; border-radius: 50%; border: 1.5px solid rgba(212, 175, 55, 0.25); display: flex; align-items: center; justify-content: center; background: rgba(212, 175, 55, 0.04); color: var(--primary-gold); font-size: 0.95rem;">
+              <div class="hero-feat-icon-box"
+                style="width: 42px; height: 42px; border-radius: 50%; border: 1.5px solid rgba(212, 175, 55, 0.25); display: flex; align-items: center; justify-content: center; background: rgba(212, 175, 55, 0.04); color: var(--primary-gold); font-size: 0.95rem;">
                 <i data-lucide="sprout" style="width:16px;height:16px;"></i>
               </div>
-              <span class="hero-feat-text" style="font-family: var(--font-subheading); font-size: 0.72rem; font-weight: 600; color: #ffffff; line-height: 1.25;">Plant-Based Goodness</span>
+              <span class="hero-feat-text"
+                style="font-family: var(--font-subheading); font-size: 0.72rem; font-weight: 600; color: #ffffff; line-height: 1.25;">Plant-Based
+                Goodness</span>
             </div>
             <!-- Feature 2 -->
             <div class="col text-start d-flex flex-column align-items-start gap-2">
-              <div class="hero-feat-icon-box" style="width: 42px; height: 42px; border-radius: 50%; border: 1.5px solid rgba(212, 175, 55, 0.25); display: flex; align-items: center; justify-content: center; background: rgba(212, 175, 55, 0.04); color: var(--primary-gold); font-size: 0.95rem;">
+              <div class="hero-feat-icon-box"
+                style="width: 42px; height: 42px; border-radius: 50%; border: 1.5px solid rgba(212, 175, 55, 0.25); display: flex; align-items: center; justify-content: center; background: rgba(212, 175, 55, 0.04); color: var(--primary-gold); font-size: 0.95rem;">
                 <i data-lucide="flask-conical" style="width:16px;height:16px;"></i>
               </div>
-              <span class="hero-feat-text" style="font-family: var(--font-subheading); font-size: 0.72rem; font-weight: 600; color: #ffffff; line-height: 1.25;">Science-Backed Formula</span>
+              <span class="hero-feat-text"
+                style="font-family: var(--font-subheading); font-size: 0.72rem; font-weight: 600; color: #ffffff; line-height: 1.25;">Science-Backed
+                Formula</span>
             </div>
             <!-- Feature 3 -->
             <div class="col text-start d-flex flex-column align-items-start gap-2">
-              <div class="hero-feat-icon-box" style="width: 42px; height: 42px; border-radius: 50%; border: 1.5px solid rgba(212, 175, 55, 0.25); display: flex; align-items: center; justify-content: center; background: rgba(212, 175, 55, 0.04); color: var(--primary-gold); font-size: 0.95rem;">
+              <div class="hero-feat-icon-box"
+                style="width: 42px; height: 42px; border-radius: 50%; border: 1.5px solid rgba(212, 175, 55, 0.25); display: flex; align-items: center; justify-content: center; background: rgba(212, 175, 55, 0.04); color: var(--primary-gold); font-size: 0.95rem;">
                 <i data-lucide="shield" style="width:16px;height:16px;"></i>
               </div>
-              <span class="hero-feat-text" style="font-family: var(--font-subheading); font-size: 0.72rem; font-weight: 600; color: #ffffff; line-height: 1.25;">Trusted &amp; Safe</span>
+              <span class="hero-feat-text"
+                style="font-family: var(--font-subheading); font-size: 0.72rem; font-weight: 600; color: #ffffff; line-height: 1.25;">Trusted
+                &amp; Safe</span>
             </div>
             <!-- Feature 4 -->
             <div class="col text-start d-flex flex-column align-items-start gap-2">
-              <div class="hero-feat-icon-box" style="width: 42px; height: 42px; border-radius: 50%; border: 1.5px solid rgba(212, 175, 55, 0.25); display: flex; align-items: center; justify-content: center; background: rgba(212, 175, 55, 0.04); color: var(--primary-gold); font-size: 0.95rem;">
+              <div class="hero-feat-icon-box"
+                style="width: 42px; height: 42px; border-radius: 50%; border: 1.5px solid rgba(212, 175, 55, 0.25); display: flex; align-items: center; justify-content: center; background: rgba(212, 175, 55, 0.04); color: var(--primary-gold); font-size: 0.95rem;">
                 <i data-lucide="user-check" style="width:16px;height:16px;"></i>
               </div>
-              <span class="hero-feat-text" style="font-family: var(--font-subheading); font-size: 0.72rem; font-weight: 600; color: #ffffff; line-height: 1.25;">For a Better Tomorrow</span>
+              <span class="hero-feat-text"
+                style="font-family: var(--font-subheading); font-size: 0.72rem; font-weight: 600; color: #ffffff; line-height: 1.25;">For
+                a Better Tomorrow</span>
             </div>
           </div>
         </div>
-        
+
         <!-- Center Column: Empty space on desktop -->
         <div class="col-12 col-lg-4 hero-col-center"></div>
-        
+
         <!-- Right Column: CTA Buttons & Features -->
         <div class="col-12 col-lg-4 reveal-right d-flex flex-column align-items-start align-items-lg-end text-start text-lg-end">
           <div class="d-flex flex-column flex-sm-row gap-3 justify-content-start justify-content-lg-end w-100" style="max-width: 350px;">
@@ -138,36 +180,51 @@
               Buy Now <i data-lucide="arrow-right" class="ms-2" style="width:14px;height:14px;"></i>
             </a>
           </div>
-          
+
           <!-- 3 Features List with icons and subtitles -->
           <div class="d-flex flex-column gap-3 mt-4 pt-3 border-top border-white border-opacity-10 w-100" style="max-width: 350px;">
             <!-- Item 1 -->
             <div class="d-flex align-items-center gap-3 w-100 justify-content-start justify-content-lg-end">
               <div class="text-start text-lg-end">
-                <span class="d-block" style="font-family: var(--font-subheading); font-size: 0.8rem; font-weight: 700; color: var(--primary-gold); line-height: 1.2;">Daily Support</span>
-                <span class="d-block" style="font-family: var(--font-subheading); font-size: 0.68rem; font-weight: 500; color: rgba(255,255,255,0.6); line-height: 1.2;">For a Stronger You</span>
+                <span class="d-block"
+                  style="font-family: var(--font-subheading); font-size: 0.8rem; font-weight: 700; color: var(--primary-gold); line-height: 1.2;">Daily
+                  Support</span>
+                <span class="d-block"
+                  style="font-family: var(--font-subheading); font-size: 0.68rem; font-weight: 500; color: rgba(255,255,255,0.6); line-height: 1.2;">For
+                  a Stronger You</span>
               </div>
-              <div class="hero-list-icon-box" style="width: 38px; height: 38px; border-radius: 50%; border: 1.5px solid rgba(212, 175, 55, 0.25); display: flex; align-items: center; justify-content: center; background: rgba(212, 175, 55, 0.04); color: var(--primary-gold); font-size: 0.85rem; flex-shrink: 0;">
+              <div class="hero-list-icon-box"
+                style="width: 38px; height: 38px; border-radius: 50%; border: 1.5px solid rgba(212, 175, 55, 0.25); display: flex; align-items: center; justify-content: center; background: rgba(212, 175, 55, 0.04); color: var(--primary-gold); font-size: 0.85rem; flex-shrink: 0;">
                 <i data-lucide="dumbbell" style="width:16px;height:16px;"></i>
               </div>
             </div>
             <!-- Item 2 -->
             <div class="d-flex align-items-center gap-3 w-100 justify-content-start justify-content-lg-end">
               <div class="text-start text-lg-end">
-                <span class="d-block" style="font-family: var(--font-subheading); font-size: 0.8rem; font-weight: 700; color: var(--primary-gold); line-height: 1.2;">Holistic Wellness</span>
-                <span class="d-block" style="font-family: var(--font-subheading); font-size: 0.68rem; font-weight: 500; color: rgba(255,255,255,0.6); line-height: 1.2;">Body, Mind &amp; Beyond</span>
+                <span class="d-block"
+                  style="font-family: var(--font-subheading); font-size: 0.8rem; font-weight: 700; color: var(--primary-gold); line-height: 1.2;">Holistic
+                  Wellness</span>
+                <span class="d-block"
+                  style="font-family: var(--font-subheading); font-size: 0.68rem; font-weight: 500; color: rgba(255,255,255,0.6); line-height: 1.2;">Body,
+                  Mind &amp; Beyond</span>
               </div>
-              <div class="hero-list-icon-box" style="width: 38px; height: 38px; border-radius: 50%; border: 1.5px solid rgba(212, 175, 55, 0.25); display: flex; align-items: center; justify-content: center; background: rgba(212, 175, 55, 0.04); color: var(--primary-gold); font-size: 0.85rem; flex-shrink: 0;">
+              <div class="hero-list-icon-box"
+                style="width: 38px; height: 38px; border-radius: 50%; border: 1.5px solid rgba(212, 175, 55, 0.25); display: flex; align-items: center; justify-content: center; background: rgba(212, 175, 55, 0.04); color: var(--primary-gold); font-size: 0.85rem; flex-shrink: 0;">
                 <i data-lucide="flower2" style="width:16px;height:16px;"></i>
               </div>
             </div>
             <!-- Item 3 -->
             <div class="d-flex align-items-center gap-3 w-100 justify-content-start justify-content-lg-end">
               <div class="text-start text-lg-end">
-                <span class="d-block" style="font-family: var(--font-subheading); font-size: 0.8rem; font-weight: 700; color: var(--primary-gold); line-height: 1.2;">Made for Everyone</span>
-                <span class="d-block" style="font-family: var(--font-subheading); font-size: 0.68rem; font-weight: 500; color: rgba(255,255,255,0.6); line-height: 1.2;">Your Wellness, Our Promise</span>
+                <span class="d-block"
+                  style="font-family: var(--font-subheading); font-size: 0.8rem; font-weight: 700; color: var(--primary-gold); line-height: 1.2;">Made
+                  for Everyone</span>
+                <span class="d-block"
+                  style="font-family: var(--font-subheading); font-size: 0.68rem; font-weight: 500; color: rgba(255,255,255,0.6); line-height: 1.2;">Your
+                  Wellness, Our Promise</span>
               </div>
-              <div class="hero-list-icon-box" style="width: 38px; height: 38px; border-radius: 50%; border: 1.5px solid rgba(212, 175, 55, 0.25); display: flex; align-items: center; justify-content: center; background: rgba(212, 175, 55, 0.04); color: var(--primary-gold); font-size: 0.85rem; flex-shrink: 0;">
+              <div class="hero-list-icon-box"
+                style="width: 38px; height: 38px; border-radius: 50%; border: 1.5px solid rgba(212, 175, 55, 0.25); display: flex; align-items: center; justify-content: center; background: rgba(212, 175, 55, 0.04); color: var(--primary-gold); font-size: 0.85rem; flex-shrink: 0;">
                 <i data-lucide="users" style="width:16px;height:16px;"></i>
               </div>
             </div>
@@ -232,12 +289,95 @@
         </div>
       </div>
     </div>
+    <!-- =====================================================
+         NEW MOBILE HERO (mh2026) — shown only on <768px
+         CSS is in mobile-hero.css — ZERO conflict with style.css
+         ===================================================== -->
+    <div class="mh2026-mobile-wrapper">
+
+      <!-- VIDEO on top — cinematic full-width -->
+      <div class="mh2026-video-block">
+        <video autoplay loop muted playsinline preload="none">
+          <source src="assets/mobile-video.mp4" type="video/mp4">
+        </video>
+      </div>
+
+      <!-- CONTENT below video -->
+      <div class="mh2026-content">
+
+        <!-- Badge -->
+        <div class="mh2026-badge">
+          <i data-lucide="leaf"></i>
+          <span>100% PLANT BASED</span>
+        </div>
+
+        <!-- Headline -->
+        <h1 class="mh2026-headline">
+          Nature's Best,<br>
+          <span class="mh2026-gold">Science's Finest.</span>
+        </h1>
+
+        <!-- Divider -->
+        <div class="mh2026-divider">
+          <i data-lucide="leaf"></i>
+        </div>
+
+        <!-- Description -->
+        <p class="mh2026-desc">
+          Rooton Wellness Fifty One is a complete daily wellness formula — plant-rooted, science-backed nutrition
+          designed to support your body, mind and future, every single day.
+        </p>
+
+        <!-- Trust Badges -->
+        <div class="mh2026-trust">
+          <div class="mh2026-trust-item">
+            <div class="mh2026-trust-icon"><i data-lucide="sprout"></i></div>
+            <span class="mh2026-trust-label">Plant-Based<br>Goodness</span>
+          </div>
+          <div class="mh2026-trust-item">
+            <div class="mh2026-trust-icon"><i data-lucide="flask-conical"></i></div>
+            <span class="mh2026-trust-label">Science-Backed<br>Formula</span>
+          </div>
+          <div class="mh2026-trust-item">
+            <div class="mh2026-trust-icon"><i data-lucide="shield-check"></i></div>
+            <span class="mh2026-trust-label">Trusted<br>&amp; Safe</span>
+          </div>
+        </div>
+
+        <!-- CTA Buttons -->
+        <div class="mh2026-buttons">
+          <a href="#order" class="mh2026-btn-primary">
+            <span>Buy Now</span>
+            <i data-lucide="arrow-right"></i>
+          </a>
+          <a href="#story" class="mh2026-btn-secondary">
+            <i data-lucide="play-circle"></i>
+            <span>Watch Story</span>
+          </a>
+        </div>
+
+        <!-- Scroll Indicator -->
+        <div class="mh2026-scroll">
+          <div class="mh2026-scroll-mouse">
+            <div class="mh2026-scroll-wheel"></div>
+          </div>
+          <div class="mh2026-scroll-chevrons">
+            <i data-lucide="chevron-down" class="mh2026-chev-1"></i>
+            <i data-lucide="chevron-down" class="mh2026-chev-2"></i>
+          </div>
+        </div>
+
+      </div>
+    </div>
+    <!-- END NEW MOBILE HERO -->
+
   </section>
 
   <hr class="premium-divider">
 
-    <!-- Mission Section -->
-  <section class="section" id="mission" style="background-color: var(--bg-secondary); overflow: hidden; position: relative; padding: 6rem 0;">
+  <!-- Mission Section -->
+  <section class="section" id="mission"
+    style="background-color: var(--bg-secondary); overflow: hidden; position: relative; padding: 6rem 0;">
     <!-- Magic UI Dot Background Pattern -->
     <div class="magic-dot-pattern"></div>
 
@@ -247,244 +387,277 @@
         <div class="col-xl-4 col-lg-5 mb-5 mb-lg-0">
           <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 1rem;">
             <i data-lucide="leaf" style="color: var(--primary-gold); width: 20px; height: 20px;"></i>
-            <span style="color: var(--primary-gold); font-size: 0.85rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase;">OUR MISSION</span>
+            <span
+              style="color: var(--primary-gold); font-size: 0.85rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase;">OUR
+              MISSION</span>
           </div>
-          <h2 class="mission-anim-heading" style="font-family: var(--font-heading); font-size: 3.2rem; font-weight: 700; color: #fff; line-height: 1.1; margin-bottom: 1.5rem;">
+          <h2 class="mission-anim-heading"
+            style="font-family: var(--font-heading); font-size: 3.2rem; font-weight: 700; color: #fff; line-height: 1.1; margin-bottom: 1.5rem;">
             A better world through <span style="color: var(--primary-gold);">natural wellness</span> solutions.
           </h2>
-          <p class="mission-anim-text" style="color: #a0aab2; font-size: 1.05rem; line-height: 1.6; margin-bottom: 3rem;">
-            A world where everyone has access to natural, effective and trustworthy wellness solutions for a better, healthier and happier life.
+          <p class="mission-anim-text"
+            style="color: #a0aab2; font-size: 1.05rem; line-height: 1.6; margin-bottom: 3rem;">
+            A world where everyone has access to natural, effective and trustworthy wellness solutions for a better,
+            healthier and happier life.
           </p>
-          
+
           <!-- 4 Pillars Grid (1 row on desktop) -->
-          <div class="mission-anim-grid" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.8rem; text-align: center;">
-            <div style="background: rgba(255,255,255,0.02); padding: 1rem 0.5rem; border-radius: 12px; border: 1px solid rgba(255,255,255,0.05); transition: all 0.3s ease;">
-               <div style="width: 44px; height: 44px; border-radius: 50%; background: rgba(212,175,55,0.1); display: flex; align-items: center; justify-content: center; margin: 0 auto 0.8rem auto; border: 1px solid rgba(212,175,55,0.2);">
-                 <i data-lucide="globe-2" style="color: var(--primary-gold); width: 20px; height: 20px;"></i>
-               </div>
-               <h4 style="color: #fff; font-size: 0.75rem; font-weight: 700; margin-bottom: 0.3rem; text-transform: uppercase; font-family: var(--font-sans);">Global<br>Vision</h4>
-               <p style="color: #a0aab2; font-size: 0.7rem; line-height: 1.3; margin: 0;">Think Global<br>Act Local</p>
+          <div class="mission-anim-grid"
+            style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.8rem; text-align: center;">
+            <div
+              style="background: rgba(255,255,255,0.02); padding: 1rem 0.5rem; border-radius: 12px; border: 1px solid rgba(255,255,255,0.05); transition: all 0.3s ease;">
+              <div
+                style="width: 44px; height: 44px; border-radius: 50%; background: rgba(212,175,55,0.1); display: flex; align-items: center; justify-content: center; margin: 0 auto 0.8rem auto; border: 1px solid rgba(212,175,55,0.2);">
+                <i data-lucide="globe-2" style="color: var(--primary-gold); width: 20px; height: 20px;"></i>
+              </div>
+              <h4
+                style="color: #fff; font-size: 0.75rem; font-weight: 700; margin-bottom: 0.3rem; text-transform: uppercase; font-family: var(--font-sans);">
+                Global<br>Vision</h4>
+              <p style="color: #a0aab2; font-size: 0.7rem; line-height: 1.3; margin: 0;">Think Global<br>Act Local</p>
             </div>
-            <div style="background: rgba(255,255,255,0.02); padding: 1rem 0.5rem; border-radius: 12px; border: 1px solid rgba(255,255,255,0.05); transition: all 0.3s ease;">
-               <div style="width: 44px; height: 44px; border-radius: 50%; background: rgba(212,175,55,0.1); display: flex; align-items: center; justify-content: center; margin: 0 auto 0.8rem auto; border: 1px solid rgba(212,175,55,0.2);">
-                 <i data-lucide="bar-chart-3" style="color: var(--primary-gold); width: 20px; height: 20px;"></i>
-               </div>
-               <h4 style="color: #fff; font-size: 0.75rem; font-weight: 700; margin-bottom: 0.3rem; text-transform: uppercase; font-family: var(--font-sans);">Building<br>Millions</h4>
-               <p style="color: #a0aab2; font-size: 0.7rem; line-height: 1.3; margin: 0;">Building Wealth<br>Building Futures</p>
+            <div
+              style="background: rgba(255,255,255,0.02); padding: 1rem 0.5rem; border-radius: 12px; border: 1px solid rgba(255,255,255,0.05); transition: all 0.3s ease;">
+              <div
+                style="width: 44px; height: 44px; border-radius: 50%; background: rgba(212,175,55,0.1); display: flex; align-items: center; justify-content: center; margin: 0 auto 0.8rem auto; border: 1px solid rgba(212,175,55,0.2);">
+                <i data-lucide="bar-chart-3" style="color: var(--primary-gold); width: 20px; height: 20px;"></i>
+              </div>
+              <h4
+                style="color: #fff; font-size: 0.75rem; font-weight: 700; margin-bottom: 0.3rem; text-transform: uppercase; font-family: var(--font-sans);">
+                Building<br>Millions</h4>
+              <p style="color: #a0aab2; font-size: 0.7rem; line-height: 1.3; margin: 0;">Building Wealth<br>Building
+                Futures</p>
             </div>
-            <div style="background: rgba(255,255,255,0.02); padding: 1rem 0.5rem; border-radius: 12px; border: 1px solid rgba(255,255,255,0.05); transition: all 0.3s ease;">
-               <div style="width: 44px; height: 44px; border-radius: 50%; background: rgba(212,175,55,0.1); display: flex; align-items: center; justify-content: center; margin: 0 auto 0.8rem auto; border: 1px solid rgba(212,175,55,0.2);">
-                 <i data-lucide="sprout" style="color: var(--primary-gold); width: 20px; height: 20px;"></i>
-               </div>
-               <h4 style="color: #fff; font-size: 0.75rem; font-weight: 700; margin-bottom: 0.3rem; text-transform: uppercase; font-family: var(--font-sans);">Better<br>Tomorrow</h4>
-               <p style="color: #a0aab2; font-size: 0.7rem; line-height: 1.3; margin: 0;">Together for a<br>Better World</p>
+            <div
+              style="background: rgba(255,255,255,0.02); padding: 1rem 0.5rem; border-radius: 12px; border: 1px solid rgba(255,255,255,0.05); transition: all 0.3s ease;">
+              <div
+                style="width: 44px; height: 44px; border-radius: 50%; background: rgba(212,175,55,0.1); display: flex; align-items: center; justify-content: center; margin: 0 auto 0.8rem auto; border: 1px solid rgba(212,175,55,0.2);">
+                <i data-lucide="sprout" style="color: var(--primary-gold); width: 20px; height: 20px;"></i>
+              </div>
+              <h4
+                style="color: #fff; font-size: 0.75rem; font-weight: 700; margin-bottom: 0.3rem; text-transform: uppercase; font-family: var(--font-sans);">
+                Better<br>Tomorrow</h4>
+              <p style="color: #a0aab2; font-size: 0.7rem; line-height: 1.3; margin: 0;">Together for a<br>Better World
+              </p>
             </div>
           </div>
         </div>
         <!-- CENTER COLUMN: Orbit Wheel -->
-        <div class="col-xl-4 col-lg-7 mb-5 mb-lg-0 d-flex justify-content-center align-items-center flex-column position-relative">
+        <div
+          class="col-xl-4 col-lg-7 mb-5 mb-lg-0 d-flex justify-content-center align-items-center flex-column position-relative">
           <!-- Inject the Wheel HTML here -->
           <div style="position: absolute; top: -40px; width: 100%; text-align: center; z-index: 10;">
-             <div style="display: flex; align-items: center; justify-content: center; gap: 0.5rem; margin-bottom: 0.3rem;">
-               <i data-lucide="leaf" style="color: var(--primary-gold); width: 24px; height: 24px;"></i>
-               <h3 style="color: #fff; font-size: 1.5rem; font-weight: 700; margin: 0; letter-spacing: 0.05em;">51 POWERFUL INGREDIENTS</h3>
-               <i data-lucide="leaf" style="color: var(--primary-gold); width: 24px; height: 24px; transform: scaleX(-1);"></i>
-             </div>
-             <p style="color: var(--primary-gold); font-size: 0.8rem; letter-spacing: 0.15em; font-weight: 600; text-transform: uppercase; margin: 0;">Nature &bull; Science &bull; Complete Nutrition</p>
+            <div
+              style="display: flex; align-items: center; justify-content: center; gap: 0.5rem; margin-bottom: 0.3rem;">
+              <i data-lucide="leaf" style="color: var(--primary-gold); width: 24px; height: 24px;"></i>
+              <h3 style="color: #fff; font-size: 1.5rem; font-weight: 700; margin: 0; letter-spacing: 0.05em;">51
+                POWERFUL INGREDIENTS</h3>
+              <i data-lucide="leaf"
+                style="color: var(--primary-gold); width: 24px; height: 24px; transform: scaleX(-1);"></i>
+            </div>
+            <p
+              style="color: var(--primary-gold); font-size: 0.8rem; letter-spacing: 0.15em; font-weight: 600; text-transform: uppercase; margin: 0;">
+              Nature &bull; Science &bull; Complete Nutrition</p>
           </div>
-          
+
           <div style="margin-top: 10px; width: 100%; display: flex; justify-content: center; position: relative;">
-             <div class="wheel-scaler">
-            <div class="ingredient-wheel wheel-visible">
-              <!-- Ambient Light Rays -->
-              <div class="wheel-light-rays"></div>
+            <div class="wheel-scaler">
+              <div class="ingredient-wheel wheel-visible">
+                <!-- Ambient Light Rays -->
+                <div class="wheel-light-rays"></div>
 
-              <!-- Background glow layer -->
-              <div class="wheel-bg-glow"></div>
+                <!-- Background glow layer -->
+                <div class="wheel-bg-glow"></div>
 
-              <!-- Background Floating Particles container -->
-              <div class="wheel-particles"></div>
+                <!-- Background Floating Particles container -->
+                <div class="wheel-particles"></div>
 
-              <!-- Three Concentric Dash Orbit Lines -->
-              <div class="wheel-orbit-line orbit-line-1"></div>
-              <div class="wheel-orbit-line orbit-line-2"></div>
-              <div class="wheel-orbit-line orbit-line-3"></div>
+                <!-- Three Concentric Dash Orbit Lines -->
+                <div class="wheel-orbit-line orbit-line-1"></div>
+                <div class="wheel-orbit-line orbit-line-2"></div>
+                <div class="wheel-orbit-line orbit-line-3"></div>
 
-              <!-- Single traveling gold orbit sparkle node -->
-              <div class="orbit-traveler-wrap">
-                <div class="orbit-traveler-node"></div>
-              </div>
-
-              <!-- Interactive container that handles parallax tilts -->
-              <div class="wheel-interactive-wrap" style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; pointer-events: none; z-index: 5; transform-style: preserve-3d; will-change: transform;">
-                
-                <!-- Large Center Disc Wrapper with breathing animation -->
-                <div class="wheel-center-wrap">
-                  <div class="wheel-center-disc">
-                    <div class="center-mouse-glow"></div>
-                    <div class="center-border-sweep"></div>
-                    <div class="center-content-inner" id="wheel-center-content">
-                      <!-- Default State View -->
-                      <h2 class="center-number">51</h2>
-                      <div class="center-divider"></div>
-                      <div class="center-title">Powerful</div>
-                      <div class="center-subtitle">Ingredients</div>
-                    </div>
-                  </div>
+                <!-- Single traveling gold orbit sparkle node -->
+                <div class="orbit-traveler-wrap">
+                  <div class="orbit-traveler-node"></div>
                 </div>
 
-                <!-- Rotating Orbit containing 11 Ingredients cards -->
-                <div class="wheel-items-orbit">
-                  <!-- Card 1: Shilajit -->
-                <div class="wheel-item" style="--angle: 270deg;" data-name="Shilajit" data-benefit="Vital Energy">
-                  <div class="wheel-item-inner">
-                    <div class="wheel-item-floating">
-                      <div class="wheel-item-float-wrapper" style="--float-delay: 0s; --float-duration: 4.8s;">
-                        <div class="glass-highlight"></div>
-                        <img class="wheel-item-img" src="images/wheel/shilajit.jpg" alt="Shilajit">
+                <!-- Interactive container that handles parallax tilts -->
+                <div class="wheel-interactive-wrap"
+                  style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; pointer-events: none; z-index: 5; transform-style: preserve-3d; will-change: transform;">
+
+                  <!-- Large Center Disc Wrapper with breathing animation -->
+                  <div class="wheel-center-wrap">
+                    <div class="wheel-center-disc">
+                      <div class="center-mouse-glow"></div>
+                      <div class="center-border-sweep"></div>
+                      <div class="center-content-inner" id="wheel-center-content">
+                        <!-- Default State View -->
+                        <h2 class="center-number">51</h2>
+                        <div class="center-divider"></div>
+                        <div class="center-title">Powerful</div>
+                        <div class="center-subtitle">Ingredients</div>
                       </div>
-                      <div class="wheel-tooltip">Shilajit</div>
                     </div>
                   </div>
-                </div>
 
-                <!-- Card 2: Brahmi -->
-                <div class="wheel-item" style="--angle: 302.7deg;" data-name="Brahmi" data-benefit="Memory Boost">
-                  <div class="wheel-item-inner">
-                    <div class="wheel-item-floating">
-                      <div class="wheel-item-float-wrapper" style="--float-delay: -0.8s; --float-duration: 5.4s;">
-                        <div class="glass-highlight"></div>
-                        <img class="wheel-item-img" src="images/wheel/brahmi.jpg" alt="Brahmi">
+                  <!-- Rotating Orbit containing 11 Ingredients cards -->
+                  <div class="wheel-items-orbit">
+                    <!-- Card 1: Shilajit -->
+                    <div class="wheel-item" style="--angle: 270deg;" data-name="Shilajit" data-benefit="Vital Energy">
+                      <div class="wheel-item-inner">
+                        <div class="wheel-item-floating">
+                          <div class="wheel-item-float-wrapper" style="--float-delay: 0s; --float-duration: 4.8s;">
+                            <div class="glass-highlight"></div>
+                            <img class="wheel-item-img" src="images/wheel/shilajit.jpg" alt="Shilajit">
+                          </div>
+                          <div class="wheel-tooltip">Shilajit</div>
+                        </div>
                       </div>
-                      <div class="wheel-tooltip">Brahmi</div>
                     </div>
-                  </div>
-                </div>
 
-                <!-- Card 3: Ashwagandha -->
-                <div class="wheel-item" style="--angle: 335.5deg;" data-name="Ashwagandha" data-benefit="Stress Relief">
-                  <div class="wheel-item-inner">
-                    <div class="wheel-item-floating">
-                      <div class="wheel-item-float-wrapper" style="--float-delay: -1.6s; --float-duration: 4.6s;">
-                        <div class="glass-highlight"></div>
-                        <img class="wheel-item-img" src="images/wheel/ashwagandha.jpg" alt="Ashwagandha">
+                    <!-- Card 2: Brahmi -->
+                    <div class="wheel-item" style="--angle: 302.7deg;" data-name="Brahmi" data-benefit="Memory Boost">
+                      <div class="wheel-item-inner">
+                        <div class="wheel-item-floating">
+                          <div class="wheel-item-float-wrapper" style="--float-delay: -0.8s; --float-duration: 5.4s;">
+                            <div class="glass-highlight"></div>
+                            <img class="wheel-item-img" src="images/wheel/brahmi.jpg" alt="Brahmi">
+                          </div>
+                          <div class="wheel-tooltip">Brahmi</div>
+                        </div>
                       </div>
-                      <div class="wheel-tooltip">Ashwagandha</div>
                     </div>
-                  </div>
-                </div>
 
-                <!-- Card 4: Moringa -->
-                <div class="wheel-item" style="--angle: 8.2deg;" data-name="Moringa" data-benefit="Nutrient Dense">
-                  <div class="wheel-item-inner">
-                    <div class="wheel-item-floating">
-                      <div class="wheel-item-float-wrapper" style="--float-delay: -2.4s; --float-duration: 6.2s;">
-                        <div class="glass-highlight"></div>
-                        <img class="wheel-item-img" src="images/wheel/moringa.jpg" alt="Moringa">
+                    <!-- Card 3: Ashwagandha -->
+                    <div class="wheel-item" style="--angle: 335.5deg;" data-name="Ashwagandha"
+                      data-benefit="Stress Relief">
+                      <div class="wheel-item-inner">
+                        <div class="wheel-item-floating">
+                          <div class="wheel-item-float-wrapper" style="--float-delay: -1.6s; --float-duration: 4.6s;">
+                            <div class="glass-highlight"></div>
+                            <img class="wheel-item-img" src="images/wheel/ashwagandha.jpg" alt="Ashwagandha">
+                          </div>
+                          <div class="wheel-tooltip">Ashwagandha</div>
+                        </div>
                       </div>
-                      <div class="wheel-tooltip">Moringa</div>
                     </div>
-                  </div>
-                </div>
 
-                <!-- Card 5: Cordyceps -->
-                <div class="wheel-item" style="--angle: 40.9deg;" data-name="Cordyceps" data-benefit="Oxygen Flow">
-                  <div class="wheel-item-inner">
-                    <div class="wheel-item-floating">
-                      <div class="wheel-item-float-wrapper" style="--float-delay: -3.2s; --float-duration: 5.1s;">
-                        <div class="glass-highlight"></div>
-                        <img class="wheel-item-img" src="images/wheel/cordyceps.jpg" alt="Cordyceps">
+                    <!-- Card 4: Moringa -->
+                    <div class="wheel-item" style="--angle: 8.2deg;" data-name="Moringa" data-benefit="Nutrient Dense">
+                      <div class="wheel-item-inner">
+                        <div class="wheel-item-floating">
+                          <div class="wheel-item-float-wrapper" style="--float-delay: -2.4s; --float-duration: 6.2s;">
+                            <div class="glass-highlight"></div>
+                            <img class="wheel-item-img" src="images/wheel/moringa.jpg" alt="Moringa">
+                          </div>
+                          <div class="wheel-tooltip">Moringa</div>
+                        </div>
                       </div>
-                      <div class="wheel-tooltip">Cordyceps</div>
                     </div>
-                  </div>
-                </div>
 
-                <!-- Card 6: Rhodiola -->
-                <div class="wheel-item" style="--angle: 73.6deg;" data-name="Rhodiola" data-benefit="Endurance">
-                  <div class="wheel-item-inner">
-                    <div class="wheel-item-floating">
-                      <div class="wheel-item-float-wrapper" style="--float-delay: -4s; --float-duration: 5.8s;">
-                        <div class="glass-highlight"></div>
-                        <img class="wheel-item-img" src="images/wheel/rhodiola.jpg" alt="Rhodiola">
+                    <!-- Card 5: Cordyceps -->
+                    <div class="wheel-item" style="--angle: 40.9deg;" data-name="Cordyceps" data-benefit="Oxygen Flow">
+                      <div class="wheel-item-inner">
+                        <div class="wheel-item-floating">
+                          <div class="wheel-item-float-wrapper" style="--float-delay: -3.2s; --float-duration: 5.1s;">
+                            <div class="glass-highlight"></div>
+                            <img class="wheel-item-img" src="images/wheel/cordyceps.jpg" alt="Cordyceps">
+                          </div>
+                          <div class="wheel-tooltip">Cordyceps</div>
+                        </div>
                       </div>
-                      <div class="wheel-tooltip">Rhodiola</div>
                     </div>
-                  </div>
-                </div>
 
-                <!-- Card 7: Wheat Grass -->
-                <div class="wheel-item" style="--angle: 106.4deg;" data-name="Wheat Grass" data-benefit="Pure Cleansing">
-                  <div class="wheel-item-inner">
-                    <div class="wheel-item-floating">
-                      <div class="wheel-item-float-wrapper" style="--float-delay: -4.8s; --float-duration: 4.5s;">
-                        <div class="glass-highlight"></div>
-                        <img class="wheel-item-img" src="images/wheel/wheatgrass.jpg" alt="Wheat Grass">
+                    <!-- Card 6: Rhodiola -->
+                    <div class="wheel-item" style="--angle: 73.6deg;" data-name="Rhodiola" data-benefit="Endurance">
+                      <div class="wheel-item-inner">
+                        <div class="wheel-item-floating">
+                          <div class="wheel-item-float-wrapper" style="--float-delay: -4s; --float-duration: 5.8s;">
+                            <div class="glass-highlight"></div>
+                            <img class="wheel-item-img" src="images/wheel/rhodiola.jpg" alt="Rhodiola">
+                          </div>
+                          <div class="wheel-tooltip">Rhodiola</div>
+                        </div>
                       </div>
-                      <div class="wheel-tooltip">Wheat Grass</div>
                     </div>
-                  </div>
-                </div>
 
-                <!-- Card 8: Ginkgo Biloba -->
-                <div class="wheel-item" style="--angle: 139.1deg;" data-name="Ginkgo Biloba" data-benefit="Brain Flow">
-                  <div class="wheel-item-inner">
-                    <div class="wheel-item-floating">
-                      <div class="wheel-item-float-wrapper" style="--float-delay: -5.6s; --float-duration: 6.5s;">
-                        <div class="glass-highlight"></div>
-                        <img class="wheel-item-img" src="images/wheel/ginkgo.jpg" alt="Ginkgo Biloba">
+                    <!-- Card 7: Wheat Grass -->
+                    <div class="wheel-item" style="--angle: 106.4deg;" data-name="Wheat Grass"
+                      data-benefit="Pure Cleansing">
+                      <div class="wheel-item-inner">
+                        <div class="wheel-item-floating">
+                          <div class="wheel-item-float-wrapper" style="--float-delay: -4.8s; --float-duration: 4.5s;">
+                            <div class="glass-highlight"></div>
+                            <img class="wheel-item-img" src="images/wheel/wheatgrass.jpg" alt="Wheat Grass">
+                          </div>
+                          <div class="wheel-tooltip">Wheat Grass</div>
+                        </div>
                       </div>
-                      <div class="wheel-tooltip">Ginkgo Biloba</div>
                     </div>
-                  </div>
-                </div>
 
-                <!-- Card 9: Arjuna Biloba -->
-                <div class="wheel-item" style="--angle: 171.8deg;" data-name="Arjuna Biloba" data-benefit="Heart Health">
-                  <div class="wheel-item-inner">
-                    <div class="wheel-item-floating">
-                      <div class="wheel-item-float-wrapper" style="--float-delay: -0.4s; --float-duration: 4.9s;">
-                        <div class="glass-highlight"></div>
-                        <img class="wheel-item-img" src="images/wheel/arjuna.jpg" alt="Arjuna">
+                    <!-- Card 8: Ginkgo Biloba -->
+                    <div class="wheel-item" style="--angle: 139.1deg;" data-name="Ginkgo Biloba"
+                      data-benefit="Brain Flow">
+                      <div class="wheel-item-inner">
+                        <div class="wheel-item-floating">
+                          <div class="wheel-item-float-wrapper" style="--float-delay: -5.6s; --float-duration: 6.5s;">
+                            <div class="glass-highlight"></div>
+                            <img class="wheel-item-img" src="images/wheel/ginkgo.jpg" alt="Ginkgo Biloba">
+                          </div>
+                          <div class="wheel-tooltip">Ginkgo Biloba</div>
+                        </div>
                       </div>
-                      <div class="wheel-tooltip">Arjuna Biloba</div>
                     </div>
-                  </div>
-                </div>
 
-                <!-- Card 10: Turmeric -->
-                <div class="wheel-item" style="--angle: 204.5deg;" data-name="Turmeric" data-benefit="Joint Health">
-                  <div class="wheel-item-inner">
-                    <div class="wheel-item-floating">
-                      <div class="wheel-item-float-wrapper" style="--float-delay: -1.2s; --float-duration: 5.7s;">
-                        <div class="glass-highlight"></div>
-                        <img class="wheel-item-img" src="images/wheel/turmeric.jpg" alt="Turmeric">
+                    <!-- Card 9: Arjuna Biloba -->
+                    <div class="wheel-item" style="--angle: 171.8deg;" data-name="Arjuna Biloba"
+                      data-benefit="Heart Health">
+                      <div class="wheel-item-inner">
+                        <div class="wheel-item-floating">
+                          <div class="wheel-item-float-wrapper" style="--float-delay: -0.4s; --float-duration: 4.9s;">
+                            <div class="glass-highlight"></div>
+                            <img class="wheel-item-img" src="images/wheel/arjuna.jpg" alt="Arjuna">
+                          </div>
+                          <div class="wheel-tooltip">Arjuna Biloba</div>
+                        </div>
                       </div>
-                      <div class="wheel-tooltip">Turmeric</div>
                     </div>
-                  </div>
-                </div>
 
-                <!-- Card 11: Broccoli -->
-                <div class="wheel-item" style="--angle: 237.3deg;" data-name="Broccoli" data-benefit="Cellular Defense">
-                  <div class="wheel-item-inner">
-                    <div class="wheel-item-floating">
-                      <div class="wheel-item-float-wrapper" style="--float-delay: -2s; --float-duration: 4.4s;">
-                        <div class="glass-highlight"></div>
-                        <img class="wheel-item-img" src="images/wheel/broccoli.jpg" alt="Broccoli">
+                    <!-- Card 10: Turmeric -->
+                    <div class="wheel-item" style="--angle: 204.5deg;" data-name="Turmeric" data-benefit="Joint Health">
+                      <div class="wheel-item-inner">
+                        <div class="wheel-item-floating">
+                          <div class="wheel-item-float-wrapper" style="--float-delay: -1.2s; --float-duration: 5.7s;">
+                            <div class="glass-highlight"></div>
+                            <img class="wheel-item-img" src="images/wheel/turmeric.jpg" alt="Turmeric">
+                          </div>
+                          <div class="wheel-tooltip">Turmeric</div>
+                        </div>
                       </div>
-                      <div class="wheel-tooltip">Broccoli</div>
                     </div>
-                  </div>
-                </div>
-              </div> <!-- Closes .wheel-items-orbit -->
-            </div> <!-- Closes .wheel-interactive-wrap -->
-          </div> <!-- Closes .ingredient-wheel -->
-        </div> <!-- Closes .wheel-scaler -->
+
+                    <!-- Card 11: Broccoli -->
+                    <div class="wheel-item" style="--angle: 237.3deg;" data-name="Broccoli"
+                      data-benefit="Cellular Defense">
+                      <div class="wheel-item-inner">
+                        <div class="wheel-item-floating">
+                          <div class="wheel-item-float-wrapper" style="--float-delay: -2s; --float-duration: 4.4s;">
+                            <div class="glass-highlight"></div>
+                            <img class="wheel-item-img" src="images/wheel/broccoli.jpg" alt="Broccoli">
+                          </div>
+                          <div class="wheel-tooltip">Broccoli</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div> <!-- Closes .wheel-items-orbit -->
+                </div> <!-- Closes .wheel-interactive-wrap -->
+              </div> <!-- Closes .ingredient-wheel -->
+            </div> <!-- Closes .wheel-scaler -->
           </div>
-          
+
           <div style="margin-top: -30px; text-align: center; z-index: 10;">
-            <a href="#ingredients" class="btn-explore-formula" style="display: inline-flex; align-items: center; justify-content: center; transition: all 0.3s ease;">
+            <a href="#ingredients" class="btn-explore-formula"
+              style="display: inline-flex; align-items: center; justify-content: center; transition: all 0.3s ease;">
               EXPLORE INGREDIENTS <i data-lucide="arrow-right" style="margin-left: 8px; width: 18px; height: 18px;"></i>
             </a>
           </div>
@@ -492,133 +665,206 @@
 
         <!-- RIGHT COLUMN: Stats Blocks -->
         <div class="col-xl-4 col-lg-12 right-stats-col">
-          <div class="stats-panel mission-anim-panel" style="background: linear-gradient(145deg, rgba(212,175,55,0.06), rgba(0,255,135,0.01)); border: 1px solid rgba(212,175,55,0.2); border-radius: 16px; padding: 2rem 1rem; margin-bottom: 1.2rem; backdrop-filter: blur(15px); display: flex; justify-content: space-around; text-align: center; box-shadow: 0 15px 35px rgba(0,0,0,0.4), inset 0 0 20px rgba(255,255,255,0.02);">
-             <div>
-                <i data-lucide="brain" style="color: var(--primary-gold); width: 28px; height: 28px; margin-bottom: 0.8rem; filter: drop-shadow(0 0 8px rgba(212,175,55,0.4));"></i>
-                <h3 style="color: #fff; font-size: 1.8rem; font-weight: 700; margin: 0 0 0.2rem 0; font-family: var(--font-heading);"><span class="mission-stat" data-target="17">0</span>+</h3>
-                <p style="color: #a0aab2; font-size: 0.65rem; text-transform: uppercase; font-weight: 600; margin: 0; line-height: 1.3; letter-spacing: 0.5px;">Vitamins &<br>Minerals</p>
-             </div>
-             <div style="width: 1px; background: linear-gradient(to bottom, transparent, rgba(255,255,255,0.1), transparent);"></div>
-             <div>
-                <i data-lucide="leaf" style="color: var(--primary-gold); width: 28px; height: 28px; margin-bottom: 0.8rem; filter: drop-shadow(0 0 8px rgba(212,175,55,0.4));"></i>
-                <h3 style="color: #fff; font-size: 1.8rem; font-weight: 700; margin: 0 0 0.2rem 0; font-family: var(--font-heading);"><span class="mission-stat" data-target="16">0</span>+</h3>
-                <p style="color: #a0aab2; font-size: 0.65rem; text-transform: uppercase; font-weight: 600; margin: 0; line-height: 1.3; letter-spacing: 0.5px;">Plant Based<br>Extracts</p>
-             </div>
-             <div style="width: 1px; background: linear-gradient(to bottom, transparent, rgba(255,255,255,0.1), transparent);"></div>
-             <div>
-                <i data-lucide="sparkles" style="color: var(--primary-gold); width: 28px; height: 28px; margin-bottom: 0.8rem; filter: drop-shadow(0 0 8px rgba(212,175,55,0.4));"></i>
-                <h3 style="color: #fff; font-size: 1.8rem; font-weight: 700; margin: 0 0 0.2rem 0; font-family: var(--font-heading);"><span class="mission-stat" data-target="12">0</span>+</h3>
-                <p style="color: #a0aab2; font-size: 0.65rem; text-transform: uppercase; font-weight: 600; margin: 0; line-height: 1.3; letter-spacing: 0.5px;">Antioxidant<br>Superfoods</p>
-             </div>
+          <div class="stats-panel mission-anim-panel"
+            style="background: linear-gradient(145deg, rgba(212,175,55,0.06), rgba(0,255,135,0.01)); border: 1px solid rgba(212,175,55,0.2); border-radius: 16px; padding: 2rem 1rem; margin-bottom: 1.2rem; backdrop-filter: blur(15px); display: flex; justify-content: space-around; text-align: center; box-shadow: 0 15px 35px rgba(0,0,0,0.4), inset 0 0 20px rgba(255,255,255,0.02);">
+            <div>
+              <i data-lucide="brain"
+                style="color: var(--primary-gold); width: 28px; height: 28px; margin-bottom: 0.8rem; filter: drop-shadow(0 0 8px rgba(212,175,55,0.4));"></i>
+              <h3
+                style="color: #fff; font-size: 1.8rem; font-weight: 700; margin: 0 0 0.2rem 0; font-family: var(--font-heading);">
+                <span class="mission-stat" data-target="17">0</span>+</h3>
+              <p
+                style="color: #a0aab2; font-size: 0.65rem; text-transform: uppercase; font-weight: 600; margin: 0; line-height: 1.3; letter-spacing: 0.5px;">
+                Vitamins &<br>Minerals</p>
+            </div>
+            <div
+              style="width: 1px; background: linear-gradient(to bottom, transparent, rgba(255,255,255,0.1), transparent);">
+            </div>
+            <div>
+              <i data-lucide="leaf"
+                style="color: var(--primary-gold); width: 28px; height: 28px; margin-bottom: 0.8rem; filter: drop-shadow(0 0 8px rgba(212,175,55,0.4));"></i>
+              <h3
+                style="color: #fff; font-size: 1.8rem; font-weight: 700; margin: 0 0 0.2rem 0; font-family: var(--font-heading);">
+                <span class="mission-stat" data-target="16">0</span>+</h3>
+              <p
+                style="color: #a0aab2; font-size: 0.65rem; text-transform: uppercase; font-weight: 600; margin: 0; line-height: 1.3; letter-spacing: 0.5px;">
+                Plant Based<br>Extracts</p>
+            </div>
+            <div
+              style="width: 1px; background: linear-gradient(to bottom, transparent, rgba(255,255,255,0.1), transparent);">
+            </div>
+            <div>
+              <i data-lucide="sparkles"
+                style="color: var(--primary-gold); width: 28px; height: 28px; margin-bottom: 0.8rem; filter: drop-shadow(0 0 8px rgba(212,175,55,0.4));"></i>
+              <h3
+                style="color: #fff; font-size: 1.8rem; font-weight: 700; margin: 0 0 0.2rem 0; font-family: var(--font-heading);">
+                <span class="mission-stat" data-target="12">0</span>+</h3>
+              <p
+                style="color: #a0aab2; font-size: 0.65rem; text-transform: uppercase; font-weight: 600; margin: 0; line-height: 1.3; letter-spacing: 0.5px;">
+                Antioxidant<br>Superfoods</p>
+            </div>
           </div>
 
-          <div class="stats-panel mission-anim-panel" style="background: linear-gradient(145deg, rgba(212,175,55,0.06), rgba(0,255,135,0.01)); border: 1px solid rgba(212,175,55,0.2); border-radius: 16px; padding: 2rem 0.5rem; margin-bottom: 1.2rem; backdrop-filter: blur(15px); display: flex; justify-content: space-around; text-align: center; box-shadow: 0 15px 35px rgba(0,0,0,0.4), inset 0 0 20px rgba(255,255,255,0.02);">
-             <div>
-                <i data-lucide="dna" style="color: var(--primary-gold); width: 24px; height: 24px; margin-bottom: 0.8rem; filter: drop-shadow(0 0 8px rgba(212,175,55,0.4));"></i>
-                <h3 style="color: #fff; font-size: 1.6rem; font-weight: 700; margin: 0 0 0.2rem 0; font-family: var(--font-heading);"><span class="mission-stat" data-target="6">0</span>+</h3>
-                <p style="color: #a0aab2; font-size: 0.6rem; text-transform: uppercase; font-weight: 600; margin: 0; line-height: 1.3; letter-spacing: 0.5px;">Amino Acids<br>& Enzymes</p>
-             </div>
-             <div style="width: 1px; background: linear-gradient(to bottom, transparent, rgba(255,255,255,0.1), transparent);"></div>
-             <div>
-                <i data-lucide="activity" style="color: var(--primary-gold); width: 24px; height: 24px; margin-bottom: 0.8rem; filter: drop-shadow(0 0 8px rgba(212,175,55,0.4));"></i>
-                <h3 style="color: #fff; font-size: 1.6rem; font-weight: 700; margin: 0 0 0.2rem 0; font-family: var(--font-heading);"><span class="mission-stat" data-target="8">0</span>+</h3>
-                <p style="color: #a0aab2; font-size: 0.6rem; text-transform: uppercase; font-weight: 600; margin: 0; line-height: 1.3; letter-spacing: 0.5px;">Digestive<br>Supports</p>
-             </div>
-             <div style="width: 1px; background: linear-gradient(to bottom, transparent, rgba(255,255,255,0.1), transparent);"></div>
-             <div>
-                <i data-lucide="dumbbell" style="color: var(--primary-gold); width: 24px; height: 24px; margin-bottom: 0.8rem; filter: drop-shadow(0 0 8px rgba(212,175,55,0.4));"></i>
-                <h3 style="color: #fff; font-size: 1.6rem; font-weight: 700; margin: 0 0 0.2rem 0; font-family: var(--font-heading);"><span class="mission-stat" data-target="7">0</span>+</h3>
-                <p style="color: #a0aab2; font-size: 0.6rem; text-transform: uppercase; font-weight: 600; margin: 0; line-height: 1.3; letter-spacing: 0.5px;">Performance<br>Boosters</p>
-             </div>
-             <div style="width: 1px; background: linear-gradient(to bottom, transparent, rgba(255,255,255,0.1), transparent);"></div>
-             <div>
-                <i data-lucide="flower2" style="color: var(--primary-gold); width: 24px; height: 24px; margin-bottom: 0.8rem; filter: drop-shadow(0 0 8px rgba(212,175,55,0.4));"></i>
-                <h3 style="color: #fff; font-size: 1.6rem; font-weight: 700; margin: 0 0 0.2rem 0; font-family: var(--font-heading);"><span class="mission-stat" data-target="3">0</span>+</h3>
-                <p style="color: #a0aab2; font-size: 0.6rem; text-transform: uppercase; font-weight: 600; margin: 0; line-height: 1.3; letter-spacing: 0.5px;">Specialty<br>Nutrients</p>
-             </div>
+          <div class="stats-panel mission-anim-panel"
+            style="background: linear-gradient(145deg, rgba(212,175,55,0.06), rgba(0,255,135,0.01)); border: 1px solid rgba(212,175,55,0.2); border-radius: 16px; padding: 2rem 0.5rem; margin-bottom: 1.2rem; backdrop-filter: blur(15px); display: flex; justify-content: space-around; text-align: center; box-shadow: 0 15px 35px rgba(0,0,0,0.4), inset 0 0 20px rgba(255,255,255,0.02);">
+            <div>
+              <i data-lucide="dna"
+                style="color: var(--primary-gold); width: 24px; height: 24px; margin-bottom: 0.8rem; filter: drop-shadow(0 0 8px rgba(212,175,55,0.4));"></i>
+              <h3
+                style="color: #fff; font-size: 1.6rem; font-weight: 700; margin: 0 0 0.2rem 0; font-family: var(--font-heading);">
+                <span class="mission-stat" data-target="6">0</span>+</h3>
+              <p
+                style="color: #a0aab2; font-size: 0.6rem; text-transform: uppercase; font-weight: 600; margin: 0; line-height: 1.3; letter-spacing: 0.5px;">
+                Amino Acids<br>& Enzymes</p>
+            </div>
+            <div
+              style="width: 1px; background: linear-gradient(to bottom, transparent, rgba(255,255,255,0.1), transparent);">
+            </div>
+            <div>
+              <i data-lucide="activity"
+                style="color: var(--primary-gold); width: 24px; height: 24px; margin-bottom: 0.8rem; filter: drop-shadow(0 0 8px rgba(212,175,55,0.4));"></i>
+              <h3
+                style="color: #fff; font-size: 1.6rem; font-weight: 700; margin: 0 0 0.2rem 0; font-family: var(--font-heading);">
+                <span class="mission-stat" data-target="8">0</span>+</h3>
+              <p
+                style="color: #a0aab2; font-size: 0.6rem; text-transform: uppercase; font-weight: 600; margin: 0; line-height: 1.3; letter-spacing: 0.5px;">
+                Digestive<br>Supports</p>
+            </div>
+            <div
+              style="width: 1px; background: linear-gradient(to bottom, transparent, rgba(255,255,255,0.1), transparent);">
+            </div>
+            <div>
+              <i data-lucide="dumbbell"
+                style="color: var(--primary-gold); width: 24px; height: 24px; margin-bottom: 0.8rem; filter: drop-shadow(0 0 8px rgba(212,175,55,0.4));"></i>
+              <h3
+                style="color: #fff; font-size: 1.6rem; font-weight: 700; margin: 0 0 0.2rem 0; font-family: var(--font-heading);">
+                <span class="mission-stat" data-target="7">0</span>+</h3>
+              <p
+                style="color: #a0aab2; font-size: 0.6rem; text-transform: uppercase; font-weight: 600; margin: 0; line-height: 1.3; letter-spacing: 0.5px;">
+                Performance<br>Boosters</p>
+            </div>
+            <div
+              style="width: 1px; background: linear-gradient(to bottom, transparent, rgba(255,255,255,0.1), transparent);">
+            </div>
+            <div>
+              <i data-lucide="flower2"
+                style="color: var(--primary-gold); width: 24px; height: 24px; margin-bottom: 0.8rem; filter: drop-shadow(0 0 8px rgba(212,175,55,0.4));"></i>
+              <h3
+                style="color: #fff; font-size: 1.6rem; font-weight: 700; margin: 0 0 0.2rem 0; font-family: var(--font-heading);">
+                <span class="mission-stat" data-target="3">0</span>+</h3>
+              <p
+                style="color: #a0aab2; font-size: 0.6rem; text-transform: uppercase; font-weight: 600; margin: 0; line-height: 1.3; letter-spacing: 0.5px;">
+                Specialty<br>Nutrients</p>
+            </div>
           </div>
 
-          <div class="stats-panel mission-anim-panel" style="background: linear-gradient(145deg, rgba(212,175,55,0.06), rgba(0,255,135,0.01)); border: 1px solid rgba(212,175,55,0.2); border-radius: 16px; padding: 1.5rem 0.5rem; backdrop-filter: blur(15px); display: flex; justify-content: space-around; text-align: center; box-shadow: 0 15px 35px rgba(0,0,0,0.4), inset 0 0 20px rgba(255,255,255,0.02);">
-             <div>
-                <i data-lucide="leaf" style="color: var(--primary-gold); width: 20px; height: 20px; margin-bottom: 0.5rem; filter: drop-shadow(0 0 8px rgba(212,175,55,0.4));"></i>
-                <h3 style="color: #fff; font-size: 1.2rem; font-weight: 700; margin: 0 0 0.2rem 0; font-family: var(--font-heading);"><span class="mission-stat" data-target="100">0</span>%</h3>
-                <p style="color: #a0aab2; font-size: 0.6rem; text-transform: uppercase; font-weight: 600; margin: 0; line-height: 1.3; letter-spacing: 0.5px;">Natural</p>
-             </div>
-             <div>
-                <i data-lucide="medal" style="color: var(--primary-gold); width: 20px; height: 20px; margin-bottom: 0.5rem; filter: drop-shadow(0 0 8px rgba(212,175,55,0.4));"></i>
-                <h3 style="color: #fff; font-size: 1.2rem; font-weight: 700; margin: 0 0 0.2rem 0; font-family: var(--font-heading);">1<span style="font-size: 0.7rem; vertical-align: top;">st</span></h3>
-                <p style="color: #a0aab2; font-size: 0.6rem; text-transform: uppercase; font-weight: 600; margin: 0; line-height: 1.3; letter-spacing: 0.5px;">Premium<br>Quality</p>
-             </div>
-             <div>
-                <i data-lucide="flask-conical" style="color: var(--primary-gold); width: 20px; height: 20px; margin-bottom: 0.5rem; filter: drop-shadow(0 0 8px rgba(212,175,55,0.4));"></i>
-                <h3 style="color: #fff; font-size: 1.2rem; font-weight: 700; margin: 0 0 0.2rem 0; font-family: var(--font-heading);"><span class="mission-stat" data-target="10">0</span>x</h3>
-                <p style="color: #a0aab2; font-size: 0.6rem; text-transform: uppercase; font-weight: 600; margin: 0; line-height: 1.3; letter-spacing: 0.5px;">Science<br>Backed</p>
-             </div>
-             <div>
-                <i data-lucide="sprout" style="color: var(--primary-gold); width: 20px; height: 20px; margin-bottom: 0.5rem; filter: drop-shadow(0 0 8px rgba(212,175,55,0.4));"></i>
-                <h3 style="color: #fff; font-size: 1.2rem; font-weight: 700; margin: 0 0 0.2rem 0; font-family: var(--font-heading);">A+</h3>
-                <p style="color: #a0aab2; font-size: 0.6rem; text-transform: uppercase; font-weight: 600; margin: 0; line-height: 1.3; letter-spacing: 0.5px;">Nature's<br>Finest</p>
-             </div>
+          <div class="stats-panel mission-anim-panel"
+            style="background: linear-gradient(145deg, rgba(212,175,55,0.06), rgba(0,255,135,0.01)); border: 1px solid rgba(212,175,55,0.2); border-radius: 16px; padding: 1.5rem 0.5rem; backdrop-filter: blur(15px); display: flex; justify-content: space-around; text-align: center; box-shadow: 0 15px 35px rgba(0,0,0,0.4), inset 0 0 20px rgba(255,255,255,0.02);">
+            <div>
+              <i data-lucide="leaf"
+                style="color: var(--primary-gold); width: 20px; height: 20px; margin-bottom: 0.5rem; filter: drop-shadow(0 0 8px rgba(212,175,55,0.4));"></i>
+              <h3
+                style="color: #fff; font-size: 1.2rem; font-weight: 700; margin: 0 0 0.2rem 0; font-family: var(--font-heading);">
+                <span class="mission-stat" data-target="100">0</span>%</h3>
+              <p
+                style="color: #a0aab2; font-size: 0.6rem; text-transform: uppercase; font-weight: 600; margin: 0; line-height: 1.3; letter-spacing: 0.5px;">
+                Natural</p>
+            </div>
+            <div>
+              <i data-lucide="medal"
+                style="color: var(--primary-gold); width: 20px; height: 20px; margin-bottom: 0.5rem; filter: drop-shadow(0 0 8px rgba(212,175,55,0.4));"></i>
+              <h3
+                style="color: #fff; font-size: 1.2rem; font-weight: 700; margin: 0 0 0.2rem 0; font-family: var(--font-heading);">
+                1<span style="font-size: 0.7rem; vertical-align: top;">st</span></h3>
+              <p
+                style="color: #a0aab2; font-size: 0.6rem; text-transform: uppercase; font-weight: 600; margin: 0; line-height: 1.3; letter-spacing: 0.5px;">
+                Premium<br>Quality</p>
+            </div>
+            <div>
+              <i data-lucide="flask-conical"
+                style="color: var(--primary-gold); width: 20px; height: 20px; margin-bottom: 0.5rem; filter: drop-shadow(0 0 8px rgba(212,175,55,0.4));"></i>
+              <h3
+                style="color: #fff; font-size: 1.2rem; font-weight: 700; margin: 0 0 0.2rem 0; font-family: var(--font-heading);">
+                <span class="mission-stat" data-target="10">0</span>x</h3>
+              <p
+                style="color: #a0aab2; font-size: 0.6rem; text-transform: uppercase; font-weight: 600; margin: 0; line-height: 1.3; letter-spacing: 0.5px;">
+                Science<br>Backed</p>
+            </div>
+            <div>
+              <i data-lucide="sprout"
+                style="color: var(--primary-gold); width: 20px; height: 20px; margin-bottom: 0.5rem; filter: drop-shadow(0 0 8px rgba(212,175,55,0.4));"></i>
+              <h3
+                style="color: #fff; font-size: 1.2rem; font-weight: 700; margin: 0 0 0.2rem 0; font-family: var(--font-heading);">
+                A+</h3>
+              <p
+                style="color: #a0aab2; font-size: 0.6rem; text-transform: uppercase; font-weight: 600; margin: 0; line-height: 1.3; letter-spacing: 0.5px;">
+                Nature's<br>Finest</p>
+            </div>
           </div>
         </div>
       </div>
     </div>
-    
+
     <!-- Mission Animations Script -->
     <script>
       document.addEventListener("DOMContentLoaded", () => {
-        if(typeof gsap !== 'undefined' && typeof ScrollTrigger !== 'undefined') {
+        if (typeof gsap !== 'undefined' && typeof ScrollTrigger !== 'undefined') {
           gsap.registerPlugin(ScrollTrigger);
-          
-          // Animate left side text
+
+          // Animate left side text and grid
           gsap.from(".mission-anim-heading", {
             scrollTrigger: {
               trigger: "#mission",
-              start: "top 70%"
+              start: "top 85%",
+              once: true
             },
             y: 30,
             opacity: 0,
-            duration: 1,
+            duration: 0.8,
             ease: "power3.out"
           });
-          
+
           gsap.from(".mission-anim-text", {
             scrollTrigger: {
               trigger: "#mission",
-              start: "top 65%"
-            },
-            y: 20,
-            opacity: 0,
-            duration: 1,
-            delay: 0.2,
-            ease: "power3.out"
-          });
-          
-          gsap.from(".mission-anim-grid > div", {
-            scrollTrigger: {
-              trigger: "#mission",
-              start: "top 60%"
+              start: "top 85%",
+              once: true
             },
             y: 20,
             opacity: 0,
             duration: 0.8,
+            delay: 0.15,
+            ease: "power3.out"
+          });
+
+          gsap.from(".mission-anim-grid > div", {
+            scrollTrigger: {
+              trigger: "#mission",
+              start: "top 85%",
+              once: true
+            },
+            y: 20,
+            opacity: 0,
+            duration: 0.8,
+            delay: 0.3,
             stagger: 0.1,
             ease: "power2.out"
           });
-          
+
           // Animate right side panels
           gsap.from(".mission-anim-panel", {
             scrollTrigger: {
               trigger: "#mission",
-              start: "top 60%"
+              start: "top 85%",
+              once: true
             },
             x: 30,
             opacity: 0,
-            duration: 1,
-            stagger: 0.2,
+            duration: 0.8,
+            stagger: 0.15,
             ease: "power3.out"
           });
-          
+
           // Animate numbers
           const stats = document.querySelectorAll(".mission-stat");
           stats.forEach(stat => {
@@ -630,12 +876,12 @@
                 let count = 0;
                 let duration = 2000; // 2 seconds
                 let stepTime = Math.abs(Math.floor(duration / target));
-                if(stepTime < 20) stepTime = 20; // max 50fps
-                
+                if (stepTime < 20) stepTime = 20; // max 50fps
+
                 let timer = setInterval(() => {
                   count++;
                   stat.innerText = count;
-                  if(count >= target) {
+                  if (count >= target) {
                     clearInterval(timer);
                     stat.innerText = target;
                   }
@@ -651,98 +897,1187 @@
   <hr class="premium-divider">
 
   <!-- Crisis Section -->
-  <section class="section crisis-section" id="crisis" style="background: #040A06; position: relative; overflow: hidden; padding: 6rem 0; min-height: 800px;">
-    
-    <!-- Centered Header -->
-    <div class="container crisis-header-container" style="position: relative; z-index: 2; text-align: center; max-width: 800px; margin: 0 auto 4rem auto;">
-      <div style="color: var(--primary-gold); font-size: 0.75rem; letter-spacing: 0.15em; text-transform: uppercase; font-weight: 700; margin-bottom: 1rem; display: flex; align-items: center; justify-content: center; gap: 0.8rem;">
-        <span style="display: inline-block; width: 40px; height: 1px; background: var(--primary-gold);"></span> THE MODERN HEALTH CRISIS <span style="display: inline-block; width: 40px; height: 1px; background: var(--primary-gold);"></span>
-      </div>
-      <h2 class="crisis-hero-title" style="font-family: var(--font-heading); font-size: 3.5rem; margin-top: 0; color: #fff; line-height: 1.1; font-weight: 700;">
-        Why Do We Feel <span style="color: var(--primary-gold);">Tired</span> Everyday?
-      </h2>
-      <p class="crisis-hero-desc" style="color: #a0aab2; font-size: 1.05rem; margin-top: 1.5rem; margin-bottom: 0; line-height: 1.6;">
-        Modern lifestyle is silently draining your health.<br>
-        Fifty One fills the <span style="color: var(--primary-gold);">nutritional gaps</span> your body needs.
-      </p>
-    </div>
+  <section class="section crisis-section" id="crisis">
 
-    <div class="container crisis-content-container" style="position: relative; z-index: 2; display: flex; align-items: center; justify-content: center; max-width: 1400px; width: 95%; gap: 3rem;">
-        
-        <!-- Right Side Visuals (Tired Man + Cards) -->
-        <div class="crisis-visual-area" style="flex: 0 0 100%; position: relative; min-height: 600px; display: flex; align-items: center; justify-content: center; max-width: 650px;">
-          
-          <!-- The background image of the man (popping out of ring) -->
-          <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -45%); width: 110%; height: 120%; z-index: 3; display: flex; align-items: center; justify-content: center; -webkit-mask-image: linear-gradient(to bottom, black 75%, transparent 100%); mask-image: linear-gradient(to bottom, black 75%, transparent 100%);">
-              <img src="assets/crisis_bg.png" alt="Tired man background" style="width: 100%; height: 100%; object-fit: contain; filter: brightness(1.25) drop-shadow(0 -10px 40px rgba(212, 175, 55, 0.25));">
+    <!-- Background layers -->
+    <div class="crisis-bg-radial"></div>
+    <div class="crisis-bg-vignette"></div>
+    <div class="crisis-bg-noise"></div>
+    <div class="crisis-bg-gold-beam"></div>
+
+    <div class="container crisis-wrap">
+      <div class="crisis-grid">
+
+        <!-- ========== LEFT COLUMN ========== -->
+        <div class="crisis-left">
+
+          <!-- Eyebrow Pill -->
+          <div class="crisis-eyebrow-pill crisis-anim" data-delay="0">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#d4af37" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path
+                d="M12 22C6.5 22 2 17.5 2 12C4 14 8 15 10 13C12 11 14 9 18 9C22 9 22 11.5 22 12C22 17.5 17.5 22 12 22Z" />
+              <path d="M12 2v7" />
+            </svg>
+            <span>THE MODERN HEALTH CRISIS</span>
           </div>
-          
-          <!-- Glowing Ring -->
-          <div class="glowing-ring" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 75%; aspect-ratio: 1; border: 1px solid rgba(212, 175, 55, 0.4); border-radius: 50%; box-shadow: 0 0 20px rgba(212, 175, 55, 0.2), inset 0 0 20px rgba(212, 175, 55, 0.2); z-index: 2;"></div>
 
-          <!-- Left Side Floating Cards -->
-          <!-- Top Left: Poor Sleep -->
-          <div class="crisis-circle-card" style="position: absolute; top: 5%; left: 8%; width: 110px; text-align: center; z-index: 5; animation: floatCard 4s ease-in-out infinite;">
-            <div style="width: 70px; height: 70px; margin: 0 auto 0.5rem auto; border: 2px solid var(--primary-gold); border-radius: 50%; display: flex; align-items: center; justify-content: center; background: rgba(0,0,0,0.6); box-shadow: 0 0 15px rgba(212, 175, 55, 0.4); backdrop-filter: blur(5px);">
-              <i data-lucide="moon" style="width: 32px; height: 32px; color: var(--primary-gold);"></i>
+          <!-- Heading -->
+          <h2 class="crisis-heading crisis-anim" data-delay="80">
+            Why Do We Feel<br><em class="crisis-gold">Tired</em> Everyday?
+          </h2>
+
+          <!-- Decorative Leaf Flourish Divider -->
+          <div class="crisis-divider-flourish crisis-anim" data-delay="160">
+            <span class="flourish-line"></span>
+            <svg class="flourish-leaf" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 3c0 0-4 4.5-4 9a4 4 0 0 0 8 0c0-4.5-4-9-4-9z" />
+              <path d="M12 12c-1.5-3.5-5.5-5.5-8.5-4.5a4 4 0 0 0 1.5 7.8c3.5.5 7-3.3 7-3.3z" />
+              <path d="M12 12c1.5-3.5 5.5-5.5 8.5-4.5a4 4 0 0 1-1.5 7.8c-3.5.5-7-3.3-7-3.3z" />
+            </svg>
+            <span class="flourish-line"></span>
+          </div>
+
+          <!-- Short Body Text -->
+          <p class="crisis-body crisis-anim" data-delay="220">
+            Modern lifestyle is silently draining your vital energy. From chronic stress and poor sleep to environmental
+            toxins and nutrient-depleted foods — our bodies are constantly under attack.
+          </p>
+
+          <!-- Floating Glass Card -->
+          <div class="crisis-glass-card crisis-anim" data-delay="280">
+            <p class="glass-card-desc">
+              Fifty One is meticulously formulated to break this cycle. By providing <span class="crisis-highlight">51+
+                premium, bioavailable nutrients</span>, it perfectly fills the nutritional gaps your body needs.
+            </p>
+            <p class="glass-card-desc">
+              Experience restored energy, sharper mental clarity, and a fortified immune system — from the inside out.
+            </p>
+
+            <div class="crisis-features-row">
+              <div class="crisis-feature-item">
+                <div class="crisis-feature-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2" />
+                  </svg>
+                </div>
+                <div class="crisis-feature-text">
+                  <span>Low</span>
+                  <span>Energy</span>
+                </div>
+              </div>
+
+              <div class="crisis-feature-item">
+                <div class="crisis-feature-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <path
+                      d="M9.5 2A2.5 2.5 0 0 1 12 4.5v15a2.5 2.5 0 0 1-4.96-.44 2.5 2.5 0 0 1 0-3.12 3 3 0 0 1 0-4.88A2.5 2.5 0 0 1 9.5 2z" />
+                    <path
+                      d="M14.5 2A2.5 2.5 0 0 0 12 4.5v15a2.5 2.5 0 0 0 4.96-.44 2.5 2.5 0 0 0 0-3.12 3 3 0 0 0 0-4.88A2.5 2.5 0 0 0 14.5 2z" />
+                  </svg>
+                </div>
+                <div class="crisis-feature-text">
+                  <span>Mental</span>
+                  <span>Fatigue</span>
+                </div>
+              </div>
+
+              <div class="crisis-feature-item">
+                <div class="crisis-feature-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <path d="M4.5 6.5c3 1.5 5.5 5 7.5 8.5 2-3.5 4.5-7 7.5-8.5" />
+                    <path d="M4.5 17.5c3-1.5 5.5-5 7.5-8.5 2 3.5 4.5 7 7.5 8.5" />
+                    <line x1="6" y1="9" x2="6" y2="15" />
+                    <line x1="9" y1="10.5" x2="9" y2="13.5" />
+                    <line x1="12" y1="8" x2="12" y2="16" />
+                    <line x1="15" y1="10.5" x2="15" y2="13.5" />
+                    <line x1="18" y1="9" x2="18" y2="15" />
+                  </svg>
+                </div>
+                <div class="crisis-feature-text">
+                  <span>Nutrient</span>
+                  <span>Deficiency</span>
+                </div>
+              </div>
             </div>
-            <h4 style="font-family: var(--font-heading); font-size: 0.75rem; font-weight: 700; color: #fff; margin: 0; text-transform: uppercase; letter-spacing: 0.5px; line-height: 1.3;">Poor<br>Sleep</h4>
           </div>
 
-          <!-- Middle Left: Low Energy -->
-          <div class="crisis-circle-card" style="position: absolute; top: 40%; left: -2%; width: 110px; text-align: center; z-index: 5; animation: floatCard 4s ease-in-out 1s infinite;">
-            <div style="width: 70px; height: 70px; margin: 0 auto 0.5rem auto; border: 2px solid var(--primary-gold); border-radius: 50%; display: flex; align-items: center; justify-content: center; background: rgba(0,0,0,0.6); box-shadow: 0 0 15px rgba(212, 175, 55, 0.4); backdrop-filter: blur(5px);">
-              <i data-lucide="battery-low" style="width: 32px; height: 32px; color: var(--primary-gold);"></i>
-            </div>
-            <h4 style="font-family: var(--font-heading); font-size: 0.75rem; font-weight: 700; color: #fff; margin: 0; text-transform: uppercase; letter-spacing: 0.5px; line-height: 1.3;">Low<br>Energy</h4>
+          <!-- CTA -->
+          <div class="crisis-cta-wrap crisis-anim" data-delay="340">
+            <a href="#ingredients" class="crisis-cta" id="crisis-magnetic-btn">
+              Explore the Solution
+              <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="M5 12h14M12 5l7 7-7 7" />
+              </svg>
+            </a>
           </div>
 
-          <!-- Bottom Left: Pollution & Toxins -->
-          <div class="crisis-circle-card" style="position: absolute; bottom: 5%; left: 8%; width: 110px; text-align: center; z-index: 5; animation: floatCard 4s ease-in-out 2s infinite;">
-            <div style="width: 70px; height: 70px; margin: 0 auto 0.5rem auto; border: 2px solid var(--primary-gold); border-radius: 50%; display: flex; align-items: center; justify-content: center; background: rgba(0,0,0,0.6); box-shadow: 0 0 15px rgba(212, 175, 55, 0.4); backdrop-filter: blur(5px);">
-              <i data-lucide="flask-conical" style="width: 32px; height: 32px; color: var(--primary-gold);"></i>
-            </div>
-            <h4 style="font-family: var(--font-heading); font-size: 0.75rem; font-weight: 700; color: #fff; margin: 0; text-transform: uppercase; letter-spacing: 0.5px; line-height: 1.3;">Pollution<br>& Toxins</h4>
-          </div>
-
-          <!-- Right Side Floating Cards -->
-          <!-- Top Right: Stress & Anxiety -->
-          <div class="crisis-circle-card" style="position: absolute; top: 5%; right: 8%; width: 110px; text-align: center; z-index: 5; animation: floatCard 4s ease-in-out 0.5s infinite;">
-            <div style="width: 70px; height: 70px; margin: 0 auto 0.5rem auto; border: 2px solid var(--primary-gold); border-radius: 50%; display: flex; align-items: center; justify-content: center; background: rgba(0,0,0,0.6); box-shadow: 0 0 15px rgba(212, 175, 55, 0.4); backdrop-filter: blur(5px);">
-              <i data-lucide="brain" style="width: 32px; height: 32px; color: var(--primary-gold);"></i>
-            </div>
-            <h4 style="font-family: var(--font-heading); font-size: 0.75rem; font-weight: 700; color: #fff; margin: 0; text-transform: uppercase; letter-spacing: 0.5px; line-height: 1.3;">Stress &<br>Anxiety</h4>
-          </div>
-
-          <!-- Middle Right: Excess Screen Time -->
-          <div class="crisis-circle-card" style="position: absolute; top: 40%; right: -2%; width: 110px; text-align: center; z-index: 5; animation: floatCard 4s ease-in-out 1.5s infinite;">
-            <div style="width: 70px; height: 70px; margin: 0 auto 0.5rem auto; border: 2px solid var(--primary-gold); border-radius: 50%; display: flex; align-items: center; justify-content: center; background: rgba(0,0,0,0.6); box-shadow: 0 0 15px rgba(212, 175, 55, 0.4); backdrop-filter: blur(5px);">
-              <i data-lucide="smartphone" style="width: 32px; height: 32px; color: var(--primary-gold);"></i>
-            </div>
-            <h4 style="font-family: var(--font-heading); font-size: 0.75rem; font-weight: 700; color: #fff; margin: 0; text-transform: uppercase; letter-spacing: 0.5px; line-height: 1.3;">Excess<br>Screen Time</h4>
-          </div>
-
-          <!-- Bottom Right: Poor Nutrition -->
-          <div class="crisis-circle-card" style="position: absolute; bottom: 5%; right: 8%; width: 110px; text-align: center; z-index: 5; animation: floatCard 4s ease-in-out 2.5s infinite;">
-            <div style="width: 70px; height: 70px; margin: 0 auto 0.5rem auto; border: 2px solid var(--primary-gold); border-radius: 50%; display: flex; align-items: center; justify-content: center; background: rgba(0,0,0,0.6); box-shadow: 0 0 15px rgba(212, 175, 55, 0.4); backdrop-filter: blur(5px);">
-              <i data-lucide="cookie" style="width: 32px; height: 32px; color: var(--primary-gold);"></i>
-            </div>
-            <h4 style="font-family: var(--font-heading); font-size: 0.75rem; font-weight: 700; color: #fff; margin: 0; text-transform: uppercase; letter-spacing: 0.5px; line-height: 1.3;">Poor<br>Nutrition</h4>
-          </div>
-          
         </div>
+
+        <!-- ========== RIGHT COLUMN ========== -->
+        <div class="crisis-right">
+
+          <!-- Orbit Container for central figure and orbiting nodes -->
+          <div class="crisis-orbit-container">
+            <!-- Glow cores -->
+            <div class="energy-glow-core"></div>
+            <div class="energy-glow-gold"></div>
+
+            <!-- Faint circular background trails -->
+            <div class="crisis-orbit-ring-glow"></div>
+            <div class="crisis-orbit-ring"></div>
+
+            <!-- Floating particles -->
+            <div class="ep ep-1"></div>
+            <div class="ep ep-2"></div>
+            <div class="ep ep-3"></div>
+            <div class="ep ep-4"></div>
+            <div class="ep ep-5"></div>
+            <div class="ep ep-6"></div>
+
+            <!-- Connecting gradient arcs (hidden on small viewports) -->
+            <svg class="crisis-curves" viewBox="0 0 700 600" preserveAspectRatio="none" fill="none"
+              xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <linearGradient id="cg1" x1="0%" y1="0%" x2="100%" y2="0%">
+                  <stop offset="0%" stop-color="#d4af37" stop-opacity="0.3" />
+                  <stop offset="60%" stop-color="#639e36" stop-opacity="0.15" />
+                  <stop offset="100%" stop-color="#639e36" stop-opacity="0" />
+                </linearGradient>
+                <linearGradient id="cg2" x1="0%" y1="0%" x2="100%" y2="0%">
+                  <stop offset="0%" stop-color="#639e36" stop-opacity="0.25" />
+                  <stop offset="60%" stop-color="#d4af37" stop-opacity="0.1" />
+                  <stop offset="100%" stop-color="#d4af37" stop-opacity="0" />
+                </linearGradient>
+              </defs>
+              <path d="M0,180 C150,100 300,280 500,240 S700,200 700,180" stroke="url(#cg1)" stroke-width="1.5"
+                stroke-dasharray="5 9" />
+              <path d="M0,420 C180,500 360,380 520,440 S700,400 700,420" stroke="url(#cg2)" stroke-width="1.5"
+                stroke-dasharray="5 9" />
+            </svg>
+
+            <!-- Central Figure -->
+            <div class="crisis-figure">
+              <img src="assets/crisis_bg.png" alt="Modern Health Crisis — Tired man" class="crisis-person-img">
+              <div class="crisis-floor-shadow"></div>
+            </div>
+
+            <!-- Orbit Nodes Wrap -->
+            <div class="crisis-orbit-nodes">
+              <!-- Node 1: POOR SLEEP (10 o'clock) -->
+              <div class="orbit-node node-poor-sleep">
+                <div class="orbit-node-circle">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <path d="M2 4v16M2 8h18a2 2 0 0 1 2 2v10M2 17h20M6 8v9" />
+                    <rect x="5" y="10" width="5" height="3" rx="1" />
+                    <path d="M14 3h3l-3 4h3M18 6h2l-2 2.5h2" stroke-width="1.3" />
+                  </svg>
+                </div>
+                <div class="orbit-node-label">POOR SLEEP</div>
+              </div>
+
+              <!-- Node 2: STRESS & ANXIETY (2 o'clock) -->
+              <div class="orbit-node node-stress-anxiety">
+                <div class="orbit-node-circle">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <path
+                      d="M9.5 2A2.5 2.5 0 0 1 12 4.5v15a2.5 2.5 0 0 1-4.96-.44 2.5 2.5 0 0 1 0-3.12 3 3 0 0 1 0-4.88A2.5 2.5 0 0 1 9.5 2z" />
+                    <path
+                      d="M14.5 2A2.5 2.5 0 0 0 12 4.5v15a2.5 2.5 0 0 0 4.96-.44 2.5 2.5 0 0 0 0-3.12 3 3 0 0 0 0-4.88A2.5 2.5 0 0 0 14.5 2z" />
+                    <path d="M6 6c-1-1-2.5-1-3.5 0M18 6c1-1 2.5-1 3.5 0M2 12h2M20 12h2" />
+                  </svg>
+                </div>
+                <div class="orbit-node-label">STRESS & ANXIETY</div>
+              </div>
+
+              <!-- Node 3: LOW ENERGY (9 o'clock) -->
+              <div class="orbit-node node-low-energy">
+                <div class="orbit-node-circle">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <rect x="2" y="7" width="16" height="10" rx="2" ry="2" />
+                    <line x1="22" y1="11" x2="22" y2="13" stroke-width="2.5" />
+                    <rect x="5" y="10" width="4" height="4" fill="currentColor" opacity="0.9" />
+                  </svg>
+                </div>
+                <div class="orbit-node-label">LOW ENERGY</div>
+              </div>
+
+              <!-- Node 4: EXCESS SCREEN TIME (3 o'clock) -->
+              <div class="orbit-node node-screen-time">
+                <div class="orbit-node-circle">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <rect x="5" y="2" width="14" height="20" rx="2" ry="2" />
+                    <line x1="12" y1="18" x2="12" y2="18" stroke-width="2.5" />
+                    <line x1="10" y1="4" x2="14" y2="4" />
+                  </svg>
+                </div>
+                <div class="orbit-node-label">EXCESS SCREEN TIME</div>
+              </div>
+
+              <!-- Node 5: POLLUTION & TOXINS (7 o'clock) -->
+              <div class="orbit-node node-pollution-toxins">
+                <div class="orbit-node-circle">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <path d="M3 21h18M6 21V10l4 3V10l4 3V7l6 4v10" />
+                    <path d="M14 4a1.5 1.5 0 0 1 3 0c0 .5-.2 1-.5 1.3M8 6a1.2 1.2 0 0 1 2.4 0" />
+                  </svg>
+                </div>
+                <div class="orbit-node-label">POLLUTION & TOXINS</div>
+              </div>
+
+              <!-- Node 6: POOR NUTRITION (5 o'clock) -->
+              <div class="orbit-node node-poor-nutrition">
+                <div class="orbit-node-circle">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <path d="M2 14a4 4 0 0 1 8 0z" />
+                    <path d="M1 14h10M2 16h8" />
+                    <path d="M2 16c0 1.5 1 2.5 3 2.5h2c2 0 3-1 3-2.5" />
+                    <path d="M13 12l1 9h4l1-9h-6" />
+                    <path d="M12.5 12h7" />
+                    <path d="M16 12l1-5h-2" />
+                  </svg>
+                </div>
+                <div class="orbit-node-label">POOR NUTRITION</div>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
     </div>
+
+    <!-- Section CSS -->
+    <style>
+      /* ---- Section container ---- */
+      .crisis-section {
+        background: #060B08;
+        position: relative;
+        overflow: hidden;
+        padding: 7rem 0 5rem;
+        min-height: 820px;
+      }
+
+      /* ---- Background layers ---- */
+      .crisis-bg-radial {
+        position: absolute;
+        inset: 0;
+        pointer-events: none;
+        background:
+          radial-gradient(ellipse 70% 60% at 72% 55%, rgba(99, 158, 54, 0.12) 0%, transparent 70%),
+          radial-gradient(ellipse 50% 50% at 22% 48%, rgba(212, 175, 55, 0.05) 0%, transparent 60%);
+      }
+
+      .crisis-bg-vignette {
+        position: absolute;
+        inset: 0;
+        pointer-events: none;
+        background: radial-gradient(ellipse 120% 100% at 50% 50%, transparent 40%, rgba(6, 11, 8, 0.85) 100%);
+      }
+
+      .crisis-bg-noise {
+        position: absolute;
+        inset: 0;
+        pointer-events: none;
+        opacity: 0.025;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23n)'/%3E%3C/svg%3E");
+        background-size: 200px;
+      }
+
+      .crisis-bg-gold-beam {
+        position: absolute;
+        pointer-events: none;
+        top: -10%;
+        left: -5%;
+        width: 55%;
+        height: 120%;
+        background: radial-gradient(ellipse 40% 80% at 0% 50%, rgba(212, 175, 55, 0.03) 0%, transparent 70%);
+      }
+
+      /* ---- Layout ---- */
+      .crisis-wrap {
+        position: relative;
+        z-index: 2;
+        max-width: 1380px;
+        width: 94%;
+      }
+
+      .crisis-grid {
+        display: grid;
+        grid-template-columns: 42% 58%;
+        align-items: center;
+        gap: 0;
+        min-height: 700px;
+      }
+
+      /* ---- LEFT ---- */
+      .crisis-left {
+        padding-right: 2.5rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+
+      /* Eyebrow */
+      .crisis-eyebrow-pill {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        background: rgba(212, 175, 55, 0.05);
+        border: 1px solid rgba(212, 175, 55, 0.2);
+        padding: 0.45rem 1.15rem;
+        border-radius: 50px;
+        margin-bottom: 1.6rem;
+        box-shadow: 0 0 18px rgba(212, 175, 55, 0.04);
+        width: fit-content;
+      }
+
+      .crisis-eyebrow-pill span {
+        color: var(--primary-gold);
+        font-family: var(--font-subheading);
+        font-size: 0.68rem;
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+        font-weight: 700;
+      }
+
+      /* Heading */
+      .crisis-heading {
+        font-family: var(--font-heading);
+        font-size: clamp(2.6rem, 3.5vw, 3.8rem);
+        font-weight: 500;
+        line-height: 1.12;
+        margin: 0 0 1.2rem;
+        background: linear-gradient(135deg, #ffffff 20%, #d1d5db 40%, #ffffff 60%, #ffffff 100%);
+        background-size: 200% auto;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        text-fill-color: transparent;
+        animation: textShine 8s linear infinite;
+      }
+
+      .crisis-gold {
+        background: linear-gradient(135deg, #d4af37 0%, #f3e5ab 25%, #ffffff 50%, #f3e5ab 75%, #d4af37 100%);
+        background-size: 200% auto;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        text-fill-color: transparent;
+        font-style: italic;
+        font-weight: 400;
+        animation: goldShine 5s linear infinite;
+      }
+
+      @keyframes textShine {
+        0% {
+          background-position: 200% center;
+        }
+
+        100% {
+          background-position: 0% center;
+        }
+      }
+
+      @keyframes goldShine {
+        0% {
+          background-position: 200% center;
+        }
+
+        100% {
+          background-position: 0% center;
+        }
+      }
+
+      /* Decorative Leaf Flourish Divider */
+      .crisis-divider-flourish {
+        display: flex;
+        align-items: center;
+        gap: 0.8rem;
+        margin-bottom: 1.8rem;
+        width: 100%;
+        max-width: 260px;
+      }
+
+      .flourish-line {
+        flex-grow: 1;
+        height: 1px;
+        background: linear-gradient(90deg, transparent, rgba(212, 175, 55, 0.4) 30%, rgba(212, 175, 55, 0.4) 70%, transparent);
+      }
+
+      .flourish-leaf {
+        width: 18px;
+        height: 18px;
+        color: var(--primary-gold);
+        filter: drop-shadow(0 0 4px rgba(212, 175, 55, 0.4));
+      }
+
+      /* Body paragraphs */
+      .crisis-body {
+        color: #9ca3af;
+        font-family: var(--font-subheading);
+        font-size: 1.02rem;
+        line-height: 1.75;
+        margin-bottom: 1.2rem;
+      }
+
+      .crisis-highlight {
+        color: var(--primary-gold);
+        font-weight: 600;
+      }
+
+      /* Glass card */
+      .crisis-glass-card {
+        background: rgba(255, 255, 255, 0.02);
+        border: 1px solid rgba(212, 175, 55, 0.14);
+        border-radius: 18px;
+        padding: 1.7rem 1.9rem;
+        margin: 0.5rem 0 3rem;
+        backdrop-filter: blur(14px);
+        -webkit-backdrop-filter: blur(14px);
+        box-shadow: 0 12px 40px rgba(0, 0, 0, 0.45), inset 0 0 24px rgba(212, 175, 55, 0.03);
+        transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1), box-shadow 0.4s ease, border-color 0.4s ease;
+      }
+
+      .crisis-glass-card:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 20px 50px rgba(0, 0, 0, 0.55), 0 0 30px rgba(212, 175, 55, 0.08), inset 0 0 30px rgba(212, 175, 55, 0.05);
+        border-color: rgba(212, 175, 55, 0.32);
+      }
+
+      .glass-card-desc {
+        color: #d1d5db;
+        font-family: var(--font-subheading);
+        font-size: 0.94rem;
+        line-height: 1.65;
+        margin-bottom: 1rem;
+      }
+
+      .glass-card-desc:last-of-type {
+        margin-bottom: 1.4rem;
+        color: #9ca3af;
+      }
+
+      /* Card horizontal features row */
+      .crisis-features-row {
+        display: flex;
+        justify-content: space-between;
+        gap: 0.8rem;
+        border-top: 1px solid rgba(255, 255, 255, 0.08);
+        padding-top: 1.3rem;
+      }
+
+      .crisis-feature-item {
+        display: flex;
+        align-items: center;
+        gap: 0.6rem;
+        flex: 1;
+      }
+
+      .crisis-feature-icon {
+        flex-shrink: 0;
+        width: 36px;
+        height: 36px;
+        border-radius: 8px;
+        background: rgba(212, 175, 55, 0.04);
+        border: 1px solid rgba(212, 175, 55, 0.22);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: var(--primary-gold);
+        transition: all 0.3s ease;
+      }
+
+      .crisis-feature-icon svg {
+        width: 18px;
+        height: 18px;
+      }
+
+      .crisis-feature-item:hover .crisis-feature-icon {
+        background: rgba(212, 175, 55, 0.12);
+        border-color: rgba(212, 175, 55, 0.55);
+        box-shadow: 0 0 10px rgba(212, 175, 55, 0.25);
+        transform: translateY(-2px);
+      }
+
+      .crisis-feature-text {
+        display: flex;
+        flex-direction: column;
+        line-height: 1.25;
+      }
+
+      .crisis-feature-text span:first-child {
+        color: #ffffff;
+        font-weight: 600;
+        font-size: 0.82rem;
+        font-family: var(--font-subheading);
+      }
+
+      .crisis-feature-text span:last-child {
+        color: #9ca3af;
+        font-size: 0.78rem;
+        font-family: var(--font-subheading);
+      }
+
+      /* CTA */
+      .crisis-cta-wrap {
+        margin-top: 1.5rem;
+      }
+
+      .crisis-cta {
+        position: relative;
+        display: inline-flex;
+        align-items: center;
+        gap: 0.75rem;
+        background: linear-gradient(135deg, #d4af37 0%, #a68420 100%);
+        color: #060B08;
+        padding: 1.1rem 2.8rem;
+        border-radius: 50px;
+        font-family: var(--font-subheading);
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.12em;
+        font-size: 0.82rem;
+        text-decoration: none;
+        box-shadow: 0 6px 30px rgba(212, 175, 55, 0.28), 0 2px 8px rgba(0, 0, 0, 0.4);
+        transition: box-shadow 0.3s ease, transform 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+        will-change: transform;
+      }
+
+      .crisis-cta:hover {
+        box-shadow: 0 12px 40px rgba(212, 175, 55, 0.45), 0 4px 12px rgba(0, 0, 0, 0.5);
+        color: #060B08;
+      }
+
+      .crisis-cta svg {
+        transition: transform 0.3s ease;
+      }
+
+      .crisis-cta:hover svg {
+        transform: translateX(4px);
+      }
+
+      /* ---- RIGHT / ORBIT COLUMN ---- */
+      .crisis-right {
+        position: relative;
+        min-height: 700px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .crisis-orbit-container {
+        position: relative;
+        width: 580px;
+        height: 580px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      /* Core Glows */
+      .energy-glow-core {
+        position: absolute;
+        width: 440px;
+        height: 440px;
+        background: radial-gradient(circle, rgba(99, 158, 54, 0.14) 0%, transparent 68%);
+        border-radius: 50%;
+        filter: blur(35px);
+        animation: coreGlow 8s infinite ease-in-out;
+        pointer-events: none;
+        z-index: 1;
+      }
+
+      .energy-glow-gold {
+        position: absolute;
+        width: 280px;
+        height: 280px;
+        background: radial-gradient(circle, rgba(212, 175, 55, 0.08) 0%, transparent 70%);
+        border-radius: 50%;
+        filter: blur(25px);
+        animation: coreGlow 11s infinite ease-in-out reverse;
+        pointer-events: none;
+        z-index: 1;
+      }
+
+      @keyframes coreGlow {
+
+        0%,
+        100% {
+          transform: scale(1);
+          opacity: 0.75;
+        }
+
+        50% {
+          transform: scale(1.12);
+          opacity: 1;
+        }
+      }
+
+      /* Glowing orbit rings */
+      .crisis-orbit-ring-glow {
+        position: absolute;
+        width: 80%;
+        height: 80%;
+        border-radius: 50%;
+        border: 1.5px solid rgba(212, 175, 55, 0.28);
+        box-shadow: 0 0 25px rgba(212, 175, 55, 0.16), inset 0 0 15px rgba(212, 175, 55, 0.08);
+        pointer-events: none;
+        z-index: 2;
+      }
+
+      .crisis-orbit-ring {
+        position: absolute;
+        width: 84%;
+        height: 84%;
+        border-radius: 50%;
+        border: 1px dashed rgba(212, 175, 55, 0.08);
+        pointer-events: none;
+        z-index: 1;
+        animation: rotateCW 120s infinite linear;
+      }
+
+      @keyframes rotateCW {
+        to {
+          transform: rotate(360deg);
+        }
+      }
+
+      @keyframes rotateCCW {
+        to {
+          transform: rotate(-360deg);
+        }
+      }
+
+      /* Floating Energy Particles */
+      .ep {
+        position: absolute;
+        border-radius: 50%;
+        z-index: 2;
+        pointer-events: none;
+      }
+
+      .ep-1 {
+        width: 7px;
+        height: 7px;
+        background: rgba(99, 158, 54, 0.7);
+        box-shadow: 0 0 12px rgba(99, 158, 54, 0.9);
+        animation: epFloat1 14s infinite linear;
+      }
+
+      .ep-2 {
+        width: 5px;
+        height: 5px;
+        background: rgba(212, 175, 55, 0.7);
+        box-shadow: 0 0 9px rgba(212, 175, 55, 0.9);
+        animation: epFloat2 17s infinite linear;
+      }
+
+      .ep-3 {
+        width: 4px;
+        height: 4px;
+        background: rgba(99, 158, 54, 0.5);
+        box-shadow: 0 0 8px rgba(99, 158, 54, 0.7);
+        animation: epFloat3 20s infinite linear;
+      }
+
+      .ep-4 {
+        width: 6px;
+        height: 6px;
+        background: rgba(212, 175, 55, 0.5);
+        box-shadow: 0 0 10px rgba(212, 175, 55, 0.7);
+        animation: epFloat4 11s infinite linear;
+      }
+
+      .ep-5 {
+        width: 3px;
+        height: 3px;
+        background: rgba(154, 205, 50, 0.6);
+        box-shadow: 0 0 7px rgba(154, 205, 50, 0.8);
+        animation: epFloat5 23s infinite linear;
+      }
+
+      .ep-6 {
+        width: 5px;
+        height: 5px;
+        background: rgba(99, 158, 54, 0.4);
+        box-shadow: 0 0 8px rgba(99, 158, 54, 0.6);
+        animation: epFloat1 19s infinite linear reverse;
+      }
+
+      @keyframes epFloat1 {
+        0% {
+          transform: translate(-140px, 180px);
+          opacity: 0
+        }
+
+        10% {
+          opacity: 1
+        }
+
+        90% {
+          opacity: 1
+        }
+
+        100% {
+          transform: translate(160px, -210px);
+          opacity: 0
+        }
+      }
+
+      @keyframes epFloat2 {
+        0% {
+          transform: translate(130px, 210px);
+          opacity: 0
+        }
+
+        15% {
+          opacity: 0.8
+        }
+
+        85% {
+          opacity: 0.8
+        }
+
+        100% {
+          transform: translate(-130px, -230px);
+          opacity: 0
+        }
+      }
+
+      @keyframes epFloat3 {
+        0% {
+          transform: translate(-60px, 260px);
+          opacity: 0
+        }
+
+        20% {
+          opacity: 0.7
+        }
+
+        80% {
+          opacity: 0.7
+        }
+
+        100% {
+          transform: translate(90px, -160px);
+          opacity: 0
+        }
+      }
+
+      @keyframes epFloat4 {
+        0% {
+          transform: translate(200px, 80px);
+          opacity: 0
+        }
+
+        12% {
+          opacity: 0.8
+        }
+
+        88% {
+          opacity: 0.8
+        }
+
+        100% {
+          transform: translate(-180px, -100px);
+          opacity: 0
+        }
+      }
+
+      @keyframes epFloat5 {
+        0% {
+          transform: translate(60px, -180px);
+          opacity: 0
+        }
+
+        18% {
+          opacity: 0.7
+        }
+
+        82% {
+          opacity: 0.7
+        }
+
+        100% {
+          transform: translate(-80px, 200px);
+          opacity: 0
+        }
+      }
+
+      /* Connecting gradient curves SVG */
+      .crisis-curves {
+        position: absolute;
+        top: 0;
+        left: -120px;
+        width: calc(100% + 120px);
+        height: 100%;
+        pointer-events: none;
+        z-index: 2;
+        overflow: visible;
+        display: none;
+      }
+
+      .crisis-curves path {
+        stroke: rgba(212, 175, 55, 0.18);
+        filter: drop-shadow(0 0 4px rgba(212, 175, 55, 0.3));
+      }
+
+      @media(min-width:992px) {
+        .crisis-curves {
+          display: block;
+        }
+      }
+
+      /* Central Figure */
+      .crisis-figure {
+        position: absolute;
+        z-index: 3;
+        width: 320px;
+        height: 320px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        pointer-events: none;
+      }
+
+      .crisis-person-img {
+        width: 100%;
+        height: auto;
+        object-fit: contain;
+        filter: brightness(1.1) contrast(1.1) drop-shadow(0 0 35px rgba(99, 158, 54, 0.06));
+        position: relative;
+        z-index: 2;
+        mask-image: linear-gradient(to bottom, black 85%, transparent 100%);
+        -webkit-mask-image: linear-gradient(to bottom, black 85%, transparent 100%);
+      }
+
+      .crisis-floor-shadow {
+        position: absolute;
+        bottom: -2%;
+        width: 75%;
+        height: 20px;
+        background: radial-gradient(ellipse, rgba(0, 0, 0, 0.95) 0%, transparent 70%);
+        filter: blur(8px);
+        z-index: 1;
+      }
+
+      /* Orbital Nodes Wrapper */
+      .crisis-orbit-nodes {
+        position: absolute;
+        inset: 0;
+        pointer-events: none;
+        z-index: 4;
+      }
+
+      /* Individual Node styling */
+      .orbit-node {
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        transform: translate(-50%, -50%);
+        z-index: 4;
+        width: 120px;
+        text-align: center;
+        pointer-events: auto;
+        /* Animation removed per user request */
+      }
+
+      /* Percentage coordinates for exact radial placement */
+      .node-poor-sleep {
+        top: 19%;
+        left: 24.5%;
+      }
+
+      .node-stress-anxiety {
+        top: 19%;
+        left: 75.5%;
+      }
+
+      .node-low-energy {
+        top: 50%;
+        left: 10%;
+      }
+
+      .node-screen-time {
+        top: 50%;
+        left: 90%;
+      }
+
+      .node-pollution-toxins {
+        top: 81%;
+        left: 24.5%;
+      }
+
+      .node-poor-nutrition {
+        top: 81%;
+        left: 75.5%;
+      }
+
+      /* Pause orbit on hover */
+      .crisis-orbit-container:hover .crisis-orbit-nodes,
+      .crisis-orbit-container:hover .orbit-node {
+        animation-play-state: paused;
+      }
+
+      @keyframes rotateOrbit {
+        from {
+          transform: rotate(0deg);
+        }
+
+        to {
+          transform: rotate(360deg);
+        }
+      }
+
+      @keyframes rotateReverse {
+        from {
+          transform: translate(-50%, -50%) rotate(0deg);
+        }
+
+        to {
+          transform: translate(-50%, -50%) rotate(-360deg);
+        }
+      }
+
+      /* Orbit circle style */
+      .orbit-node-circle {
+        width: 66px;
+        height: 66px;
+        border-radius: 50%;
+        background: rgba(6, 11, 8, 0.9);
+        border: 2px solid rgba(212, 175, 55, 0.38);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: var(--primary-gold);
+        box-shadow: 0 0 15px rgba(212, 175, 55, 0.14), inset 0 0 10px rgba(212, 175, 55, 0.08);
+        transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+        cursor: pointer;
+        margin-bottom: 0.65rem;
+      }
+
+      .orbit-node-circle svg {
+        width: 28px;
+        height: 28px;
+        transition: transform 0.4s ease, color 0.3s ease;
+      }
+
+      .orbit-node-label {
+        font-family: var(--font-subheading);
+        font-weight: 700;
+        font-size: 0.66rem;
+        letter-spacing: 0.06em;
+        color: rgba(255, 255, 255, 0.85);
+        text-transform: uppercase;
+        line-height: 1.35;
+        transition: color 0.3s ease;
+      }
+
+      /* Hover States */
+      .orbit-node:hover .orbit-node-circle {
+        transform: scale(1.12);
+        border-color: rgba(212, 175, 55, 0.95);
+        box-shadow: 0 0 25px rgba(212, 175, 55, 0.45), inset 0 0 15px rgba(212, 175, 55, 0.2);
+        color: #ffffff;
+        background: rgba(10, 18, 13, 0.95);
+      }
+
+      .orbit-node:hover .orbit-node-circle svg {
+        transform: scale(1.05);
+      }
+
+      .orbit-node:hover .orbit-node-label {
+        color: var(--primary-gold);
+        text-shadow: 0 0 8px rgba(212, 175, 55, 0.3);
+      }
+
+      /* ---- Entrance animations ---- */
+      .crisis-anim {
+        will-change: transform, opacity;
+      }
+
+      .crisis-anim.in-view {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      /* ---- Responsive Design ---- */
+      @media (max-width: 1199px) {
+        .crisis-orbit-container {
+          width: 500px;
+          height: 500px;
+        }
+
+        .crisis-figure {
+          width: 270px;
+          height: 270px;
+        }
+
+        .orbit-node-circle {
+          width: 58px;
+          height: 58px;
+        }
+
+        .orbit-node-circle svg {
+          width: 24px;
+          height: 24px;
+        }
+
+        .orbit-node {
+          width: 110px;
+        }
+      }
+
+      @media (max-width: 991px) {
+        .crisis-grid {
+          grid-template-columns: 1fr;
+          gap: 3rem;
+          min-height: auto;
+        }
+
+        .crisis-right {
+          order: -1;
+          min-height: auto;
+          margin-bottom: 2rem;
+        }
+
+        .crisis-left {
+          padding-right: 0;
+          text-align: center;
+          align-items: center;
+        }
+
+        .crisis-eyebrow-pill {
+          margin-left: auto;
+          margin-right: auto;
+        }
+
+        .crisis-divider-flourish {
+          margin-left: auto;
+          margin-right: auto;
+        }
+
+        .crisis-features-row {
+          justify-content: center;
+          gap: 1.5rem;
+        }
+
+        .crisis-feature-item {
+          flex: none;
+        }
+
+        .crisis-orbit-container {
+          width: 480px;
+          height: 480px;
+          margin: 0 auto;
+        }
+
+        .crisis-figure {
+          width: 260px;
+          height: 260px;
+        }
+      }
+
+      @media (max-width: 575px) {
+        .crisis-section {
+          padding: 5rem 0 3.5rem;
+        }
+
+        .crisis-heading {
+          font-size: 2.3rem !important;
+        }
+
+        .crisis-cta {
+          width: 100%;
+          justify-content: center;
+        }
+
+        /* Mobile grid layout instead of circle */
+        .crisis-orbit-container {
+          width: 100%;
+          height: auto;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          position: relative;
+        }
+
+        .crisis-figure {
+          position: relative;
+          width: 220px;
+          height: 220px;
+          margin-bottom: 2rem;
+        }
+
+        .crisis-orbit-ring-glow,
+        .crisis-orbit-ring,
+        .crisis-curves {
+          display: none !important;
+        }
+
+        .crisis-orbit-nodes {
+          position: relative;
+          inset: auto;
+          width: 100%;
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+          gap: 1.8rem 1rem;
+          pointer-events: auto;
+          margin-top: 1rem;
+          animation: none !important;
+        }
+
+        .orbit-node {
+          position: relative;
+          top: auto !important;
+          left: auto !important;
+          transform: none !important;
+          width: 100%;
+          animation: none !important;
+        }
+
+        .orbit-node-circle {
+          width: 60px;
+          height: 60px;
+          margin-left: auto;
+          margin-right: auto;
+        }
+
+        .crisis-features-row {
+          flex-direction: column;
+          align-items: flex-start;
+          gap: 1rem;
+          padding-left: 1rem;
+        }
+      }
+    </style>
+
   </section>
 
   <hr class="premium-divider">
 
   <!-- Ingredients Section -->
+  <!-- Ingredients Section -->
   <section class="section" id="ingredients">
     <div class="luxury-leaf-decor top-left"></div>
     <div class="luxury-leaf-decor top-right"></div>
-    
+
     <div class="container position-relative z-3">
-      
+
       <!-- Top Header Area -->
       <div class="sec-header sec-header-anim">
         <span class="sec-eyebrow"><i data-lucide="leaf"></i> ONE FORMULA. TOTAL WELLNESS.</span>
@@ -757,13 +2092,14 @@
 
       <!-- Main Three-Column Grid -->
       <div class="luxury-ingredients-grid">
-        
+
         <!-- Left Column: 4 Cards (Staggered scroll reveal) -->
         <div class="luxury-grid-column">
           <!-- Card 1: Vitamins & Minerals -->
           <div class="luxury-ingredient-card reveal-left stagger-1" data-node="node-top-left" data-glow="gold">
             <div class="card-img-wrap">
-              <img src="https://images.unsplash.com/photo-1584017911766-d451b3d0e843?auto=format&fit=crop&q=80&w=150" alt="Vitamins & Minerals">
+              <img src="https://images.unsplash.com/photo-1584017911766-d451b3d0e843?auto=format&fit=crop&q=80&w=150"
+                alt="Vitamins & Minerals">
             </div>
             <div class="card-text-block">
               <h3>Vitamins &amp; Minerals</h3>
@@ -777,7 +2113,8 @@
           <!-- Card 2: Antioxidant Superfoods -->
           <div class="luxury-ingredient-card reveal-left stagger-2" data-node="node-top-left" data-glow="green">
             <div class="card-img-wrap">
-              <img src="https://images.unsplash.com/photo-1615485290382-441e4d049cb5?auto=format&fit=crop&q=80&w=150" alt="Superfoods">
+              <img src="https://images.unsplash.com/photo-1615485290382-441e4d049cb5?auto=format&fit=crop&q=80&w=150"
+                alt="Superfoods">
             </div>
             <div class="card-text-block">
               <h3>Antioxidant Superfoods</h3>
@@ -791,7 +2128,8 @@
           <!-- Card 3: Digestive Supports -->
           <div class="luxury-ingredient-card reveal-left stagger-3" data-node="node-bottom-left" data-glow="green">
             <div class="card-img-wrap">
-              <img src="https://images.unsplash.com/photo-1543257580-7269da773bf5?auto=format&fit=crop&q=80&w=150" alt="Digestive Support">
+              <img src="https://images.unsplash.com/photo-1543257580-7269da773bf5?auto=format&fit=crop&q=80&w=150"
+                alt="Digestive Support">
             </div>
             <div class="card-text-block">
               <h3>Digestive Support</h3>
@@ -805,7 +2143,8 @@
           <!-- Card 4: Brain & Focus -->
           <div class="luxury-ingredient-card reveal-left stagger-4" data-node="node-bottom" data-glow="green">
             <div class="card-img-wrap">
-              <img src="https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&q=80&w=150" alt="Brain & Focus">
+              <img src="https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&q=80&w=150"
+                alt="Brain & Focus">
             </div>
             <div class="card-text-block">
               <h3>Brain &amp; Focus</h3>
@@ -821,17 +2160,17 @@
         <div class="luxury-grid-center reveal-scale">
           <!-- Soft radial lighting behind -->
           <div class="luxury-radial-glow"></div>
-          
+
           <!-- Concentric rotating rings -->
           <div class="orbit-circle outer-orbit"></div>
           <div class="orbit-circle middle-orbit"></div>
           <div class="orbit-circle inner-orbit"></div>
-          
+
           <!-- Glowing wireframe body -->
           <div class="luxury-center-body-wrap">
             <img src="assets/human_body.png?v=2.0" alt="Human Body Energetic System">
           </div>
-          
+
           <!-- Orbiting Badges -->
           <!-- Badge 1: Shield (Top center) -->
           <div class="orbit-node node-top" data-bs-toggle="tooltip" title="Immunity Support">
@@ -839,7 +2178,7 @@
               <i data-lucide="shield-check" style="width:20px;height:20px;"></i>
             </div>
           </div>
-          
+
           <!-- Badge 2: DNA (Top Right) -->
           <div class="orbit-node node-top-right" data-bs-toggle="tooltip" title="Cellular Vitality">
             <div class="orbit-icon-badge green-glow">
@@ -885,21 +2224,23 @@
         <!-- Right Column: 4 Cards (Staggered scroll reveal) -->
         <div class="luxury-grid-column">
           <!-- Card 1: Plant Based Extracts -->
-          <div class="luxury-ingredient-card card-reversed reveal-right stagger-1" data-node="node-top-right" data-glow="green">
-            <div class="card-arrow-btn">
-              <i class="fa-solid fa-chevron-left"></i>
+          <div class="luxury-ingredient-card card-reversed reveal-right stagger-1" data-node="node-top-right"
+            data-glow="green">
+            <div class="card-img-wrap">
+              <img src="assets/plant_extracts.png?v=1.0" alt="Plant Extracts">
             </div>
             <div class="card-text-block text-lg-end text-center">
               <h3>Plant Based Extracts</h3>
               <p>16+ natural plant power for better health.</p>
             </div>
-            <div class="card-img-wrap">
-              <img src="assets/plant_extracts.png?v=1.0" alt="Plant Extracts">
+            <div class="card-arrow-btn">
+              <i class="fa-solid fa-chevron-left"></i>
             </div>
           </div>
 
           <!-- Card 2: Amino Acids & Enzymes -->
-          <div class="luxury-ingredient-card card-reversed reveal-right stagger-2" data-node="node-bottom-right" data-glow="gold">
+          <div class="luxury-ingredient-card card-reversed reveal-right stagger-2" data-node="node-bottom-right"
+            data-glow="gold">
             <div class="card-arrow-btn">
               <i class="fa-solid fa-chevron-left"></i>
             </div>
@@ -908,12 +2249,14 @@
               <p>6+ supports recovery &amp; performance.</p>
             </div>
             <div class="card-img-wrap">
-              <img src="https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&q=80&w=150" alt="Amino Acids">
+              <img src="https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&q=80&w=150"
+                alt="Amino Acids">
             </div>
           </div>
 
           <!-- Card 3: Energy & Metabolism -->
-          <div class="luxury-ingredient-card card-reversed reveal-right stagger-3" data-node="node-bottom-right" data-glow="green">
+          <div class="luxury-ingredient-card card-reversed reveal-right stagger-3" data-node="node-bottom-right"
+            data-glow="green">
             <div class="card-arrow-btn">
               <i class="fa-solid fa-chevron-left"></i>
             </div>
@@ -922,12 +2265,14 @@
               <p>Boosts energy, reduces fatigue &amp; metabolism.</p>
             </div>
             <div class="card-img-wrap">
-              <img src="https://images.unsplash.com/photo-1476480862126-209bfaa8edc8?auto=format&fit=crop&q=80&w=150" alt="Energy & Metabolism">
+              <img src="https://images.unsplash.com/photo-1476480862126-209bfaa8edc8?auto=format&fit=crop&q=80&w=150"
+                alt="Energy & Metabolism">
             </div>
           </div>
 
           <!-- Card 4: Hormonal Balance -->
-          <div class="luxury-ingredient-card card-reversed reveal-right stagger-4" data-node="node-top" data-glow="gold">
+          <div class="luxury-ingredient-card card-reversed reveal-right stagger-4" data-node="node-top"
+            data-glow="gold">
             <div class="card-arrow-btn">
               <i class="fa-solid fa-chevron-left"></i>
             </div>
@@ -936,7 +2281,8 @@
               <p>Supports hormonal harmony &amp; overall well-being.</p>
             </div>
             <div class="card-img-wrap">
-              <img src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?auto=format&fit=crop&q=80&w=150" alt="Hormonal Balance">
+              <img src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?auto=format&fit=crop&q=80&w=150"
+                alt="Hormonal Balance">
             </div>
           </div>
         </div>
@@ -949,7 +2295,8 @@
 
 
   <!-- Real Support, Real Results Grid -->
-  <section class="section" id="science" style="background: var(--bg-gradient-section); position: relative; overflow: hidden; padding: 8.5rem 0;">
+  <section class="section" id="science"
+    style="background: var(--bg-gradient-section); position: relative; overflow: hidden; padding: 8.5rem 0;">
     <!-- Magic UI Dot Background Pattern -->
     <div class="magic-dot-pattern"></div>
 
@@ -965,7 +2312,7 @@
           Scientifically formulated to support your mind, body and overall well-being with the power of nature.
         </p>
       </div>
-      
+
       <!-- Advantage 4-Column Grid -->
       <div class="advantage-new-grid">
         <!-- Column 1: Brain Support -->
@@ -975,7 +2322,7 @@
             <div class="advantage-image-header">
               <img src="assets/brain_support.jpg" alt="Brain Support">
             </div>
-            
+
             <div class="advantage-card-body">
               <h3 class="advantage-col-title"><span>Brain</span> Support</h3>
               <div style="display: flex; justify-content: center; width: 100%;">
@@ -988,7 +2335,7 @@
             </div>
           </div>
         </div>
-        
+
         <!-- Column 2: Stress Support -->
         <div class="advantage-col spotlight-card reveal stagger-2">
           <div class="spotlight-card-content flex-column align-items-stretch text-center">
@@ -996,7 +2343,7 @@
             <div class="advantage-image-header">
               <img src="assets/stress_support.jpg" alt="Stress Support">
             </div>
-            
+
             <div class="advantage-card-body">
               <h3 class="advantage-col-title"><span>Stress</span> Support</h3>
               <div style="display: flex; justify-content: center; width: 100%;">
@@ -1009,7 +2356,7 @@
             </div>
           </div>
         </div>
-        
+
         <!-- Column 3: Eye Protection -->
         <div class="advantage-col spotlight-card reveal stagger-3">
           <div class="spotlight-card-content flex-column align-items-stretch text-center">
@@ -1017,7 +2364,7 @@
             <div class="advantage-image-header">
               <img src="assets/eye_protection.jpg" alt="Eye Protection">
             </div>
-            
+
             <div class="advantage-card-body">
               <h3 class="advantage-col-title"><span>Eye</span> Protection</h3>
               <div style="display: flex; justify-content: center; width: 100%;">
@@ -1030,7 +2377,7 @@
             </div>
           </div>
         </div>
-        
+
         <!-- Column 4: Energy Support -->
         <div class="advantage-col spotlight-card reveal stagger-4">
           <div class="spotlight-card-content flex-column align-items-stretch text-center">
@@ -1038,7 +2385,7 @@
             <div class="advantage-image-header">
               <img src="assets/energy_support.jpg" alt="Energy Support">
             </div>
-            
+
             <div class="advantage-card-body">
               <h3 class="advantage-col-title"><span>Energy</span> Support</h3>
               <div style="display: flex; justify-content: center; width: 100%;">
@@ -1058,7 +2405,8 @@
   <hr class="premium-divider">
 
   <!-- How to Use Section -->
-  <section class="section" id="story" style="background-color: var(--bg-secondary); position: relative; overflow: hidden; padding: 8.5rem 0;">
+  <section class="section" id="story"
+    style="background-color: var(--bg-secondary); position: relative; overflow: hidden; padding: 8.5rem 0;">
     <!-- Magic UI Dot Background Pattern -->
     <div class="magic-dot-pattern"></div>
 
@@ -1074,70 +2422,80 @@
           Small steps, powerful changes. Build a healthier you every day.
         </p>
       </div>
-      
+
       <!-- Steps Container -->
       <div class="steps-new-container">
-        <!-- Connecting Line Overlay -->
-        <div class="steps-connecting-line"></div>
-        
         <!-- Step 1 -->
-        <div class="step-new-card spotlight-card reveal stagger-1">
-          <div class="spotlight-card-content flex-column align-items-center text-center">
-            <div class="step-badge">01</div>
-            <div class="step-orbit-wrap">
-              <div class="step-orbit-ring-outer"></div>
-              <div class="step-circle-inner" style="display: flex; align-items: center; justify-content: center;">
-                <i data-lucide="pill" style="width:24px;height:24px;"></i>
-              </div>
+        <div class="step-wellness-card step-card-green reveal stagger-1">
+          <div class="step-number-corner step-number-green">01</div>
+          <div class="step-graphic-wrap">
+            <div class="step-outer-glow glow-green"></div>
+            <div class="step-graphic-circle step-graphic-green">
+              <img class="step-graphic-img" src="assets/step_capsule.jpg" alt="Take Capsule">
             </div>
-            <h4 class="step-card-title">Take Capsule</h4>
-            <p class="step-card-desc">Take one capsule daily with water.</p>
+          </div>
+          <h4 class="step-card-title">Take Capsule</h4>
+          <p class="step-card-desc">Take one capsule daily<br>with water.</p>
+        </div>
+
+        <!-- Arrow 1 -> 2 -->
+        <div class="step-card-divider">
+          <div class="divider-arrow-circle arrow-green">
+            <i data-lucide="arrow-right" style="width: 14px; height: 14px;"></i>
           </div>
         </div>
-        
+
         <!-- Step 2 -->
-        <div class="step-new-card spotlight-card reveal stagger-2">
-          <div class="spotlight-card-content flex-column align-items-center text-center">
-            <div class="step-badge">02</div>
-            <div class="step-orbit-wrap">
-              <div class="step-orbit-ring-outer"></div>
-              <div class="step-circle-inner" style="display: flex; align-items: center; justify-content: center;">
-                <i data-lucide="glass-water" style="width:24px;height:24px;"></i>
-              </div>
+        <div class="step-wellness-card step-card-blue reveal stagger-2">
+          <div class="step-number-corner step-number-blue">02</div>
+          <div class="step-graphic-wrap">
+            <div class="step-outer-glow glow-blue"></div>
+            <div class="step-graphic-circle step-graphic-blue">
+              <img class="step-graphic-img" src="assets/step_water.jpg" alt="Drink Water">
             </div>
-            <h4 class="step-card-title">Drink Water</h4>
-            <p class="step-card-desc">Drink a glass of water after taking the capsule.</p>
+          </div>
+          <h4 class="step-card-title">Drink Water</h4>
+          <p class="step-card-desc">Drink a glass of water<br>after taking the capsule.</p>
+        </div>
+
+        <!-- Arrow 2 -> 3 -->
+        <div class="step-card-divider">
+          <div class="divider-arrow-circle arrow-blue">
+            <i data-lucide="arrow-right" style="width: 14px; height: 14px;"></i>
           </div>
         </div>
-        
+
         <!-- Step 3 -->
-        <div class="step-new-card spotlight-card reveal stagger-3">
-          <div class="spotlight-card-content flex-column align-items-center text-center">
-            <div class="step-badge">03</div>
-            <div class="step-orbit-wrap">
-              <div class="step-orbit-ring-outer"></div>
-              <div class="step-circle-inner" style="display: flex; align-items: center; justify-content: center;">
-                <i data-lucide="calendar-check" style="width:24px;height:24px;"></i>
-              </div>
+        <div class="step-wellness-card step-card-purple reveal stagger-3">
+          <div class="step-number-corner step-number-purple">03</div>
+          <div class="step-graphic-wrap">
+            <div class="step-outer-glow glow-purple"></div>
+            <div class="step-graphic-circle step-graphic-purple">
+              <img class="step-graphic-img" src="assets/step_calendar.jpg" alt="Be Consistent">
             </div>
-            <h4 class="step-card-title">Be Consistent</h4>
-            <p class="step-card-desc">Use consistently for best results.</p>
+          </div>
+          <h4 class="step-card-title">Be Consistent</h4>
+          <p class="step-card-desc">Use consistently for<br>best results.</p>
+        </div>
+
+        <!-- Arrow 3 -> 4 -->
+        <div class="step-card-divider">
+          <div class="divider-arrow-circle arrow-purple">
+            <i data-lucide="arrow-right" style="width: 14px; height: 14px;"></i>
           </div>
         </div>
-        
+
         <!-- Step 4 -->
-        <div class="step-new-card spotlight-card reveal stagger-4">
-          <div class="spotlight-card-content flex-column align-items-center text-center">
-            <div class="step-badge">04</div>
-            <div class="step-orbit-wrap">
-              <div class="step-orbit-ring-outer"></div>
-              <div class="step-circle-inner" style="display: flex; align-items: center; justify-content: center;">
-                <i data-lucide="award" style="width:24px;height:24px;"></i>
-              </div>
+        <div class="step-wellness-card step-card-gold reveal stagger-4">
+          <div class="step-number-corner step-number-gold">04</div>
+          <div class="step-graphic-wrap">
+            <div class="step-outer-glow glow-gold"></div>
+            <div class="step-graphic-circle step-graphic-gold">
+              <img class="step-graphic-img" src="assets/step_success.jpg" alt="Feel The Difference">
             </div>
-            <h4 class="step-card-title">Feel The Difference</h4>
-            <p class="step-card-desc">Make it a part of your daily routine and feel the difference.</p>
           </div>
+          <h4 class="step-card-title">Feel The Difference</h4>
+          <p class="step-card-desc">Make it a part of your daily<br>routine and feel the difference.</p>
         </div>
       </div>
     </div>
@@ -1146,7 +2504,8 @@
   <hr class="premium-divider">
 
   <!-- Reviews Section -->
-  <section class="section" id="reviews" style="background: var(--bg-gradient-section); position: relative; overflow: hidden;">
+  <section class="section" id="reviews"
+    style="background: var(--bg-gradient-section); position: relative; overflow: hidden;">
     <!-- Magic UI Dot Background Pattern -->
     <div class="magic-dot-pattern"></div>
 
@@ -1157,102 +2516,133 @@
         <div class="sec-divider"><i data-lucide="leaf"></i></div>
         <p class="sec-subtitle">Real people. Real results. See what our community has to say.</p>
       </div>
-      
+
       <div class="testimonials-carousel-wrap">
         <!-- Prev Button -->
         <button class="carousel-nav-btn prev-btn" id="prev-btn" aria-label="Previous Review">
           <i data-lucide="chevron-left" style="width:20px;height:20px;"></i>
         </button>
-        
+
         <!-- Carousel Track -->
         <div class="testimonials-track-container">
           <div class="testimonials-track" id="testimonials-track">
-            
+
             <!-- Card 1 -->
             <div class="testimonial-card-mirror spotlight-card reveal">
               <div class="spotlight-card-content flex-column align-items-start text-start w-100">
-                <i data-lucide="quote" class="quote-bubble-icon" style="width:24px;height:24px;transform:scaleX(-1);color:var(--primary-gold);opacity:0.2;margin-bottom:0.75rem;"></i>
+                <i data-lucide="quote" class="quote-bubble-icon"
+                  style="width:24px;height:24px;transform:scaleX(-1);color:var(--primary-gold);opacity:0.2;margin-bottom:0.75rem;"></i>
                 <div class="testimonial-stars-gold d-flex gap-1 mb-2">
-                  <i data-lucide="star" style="width:16px;height:16px;fill:var(--primary-gold);color:var(--primary-gold);"></i>
-                  <i data-lucide="star" style="width:16px;height:16px;fill:var(--primary-gold);color:var(--primary-gold);"></i>
-                  <i data-lucide="star" style="width:16px;height:16px;fill:var(--primary-gold);color:var(--primary-gold);"></i>
-                  <i data-lucide="star" style="width:16px;height:16px;fill:var(--primary-gold);color:var(--primary-gold);"></i>
-                  <i data-lucide="star" style="width:16px;height:16px;fill:var(--primary-gold);color:var(--primary-gold);"></i>
+                  <i data-lucide="star"
+                    style="width:16px;height:16px;fill:var(--primary-gold);color:var(--primary-gold);"></i>
+                  <i data-lucide="star"
+                    style="width:16px;height:16px;fill:var(--primary-gold);color:var(--primary-gold);"></i>
+                  <i data-lucide="star"
+                    style="width:16px;height:16px;fill:var(--primary-gold);color:var(--primary-gold);"></i>
+                  <i data-lucide="star"
+                    style="width:16px;height:16px;fill:var(--primary-gold);color:var(--primary-gold);"></i>
+                  <i data-lucide="star"
+                    style="width:16px;height:16px;fill:var(--primary-gold);color:var(--primary-gold);"></i>
                 </div>
                 <p style="font-size:0.95rem; line-height:1.6; color:#ffffff; margin-bottom:1.5rem; font-style:italic;">
-                  "Fifty One has become a vital part of my morning routine. I feel more energetic, my sleep quality has improved, and I stay active all day."
+                  "Fifty One has become a vital part of my morning routine. I feel more energetic, my sleep quality has
+                  improved, and I stay active all day."
                 </p>
                 <div class="testimonial-author-meta d-flex align-items-center gap-3">
-                  <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=100" alt="Rahul Sharma" class="author-avatar-img">
+                  <img
+                    src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=100"
+                    alt="Rahul Sharma" class="author-avatar-img">
                   <div class="author-meta-text">
-                    <h4 style="font-family:var(--font-subheading); font-size:0.95rem; font-weight:700; color:#ffffff; margin:0;">Rahul Sharma</h4>
+                    <h4
+                      style="font-family:var(--font-subheading); font-size:0.95rem; font-weight:700; color:#ffffff; margin:0;">
+                      Rahul Sharma</h4>
                     <p style="font-size:0.75rem; color:var(--text-secondary); margin:0;">Verified Buyer</p>
                   </div>
                 </div>
               </div>
             </div>
-            
+
             <!-- Card 2 -->
             <div class="testimonial-card-mirror spotlight-card reveal">
               <div class="spotlight-card-content flex-column align-items-start text-start w-100">
-                <i data-lucide="quote" class="quote-bubble-icon" style="width:24px;height:24px;transform:scaleX(-1);color:var(--primary-gold);opacity:0.2;margin-bottom:0.75rem;"></i>
+                <i data-lucide="quote" class="quote-bubble-icon"
+                  style="width:24px;height:24px;transform:scaleX(-1);color:var(--primary-gold);opacity:0.2;margin-bottom:0.75rem;"></i>
                 <div class="testimonial-stars-gold d-flex gap-1 mb-2">
-                  <i data-lucide="star" style="width:16px;height:16px;fill:var(--primary-gold);color:var(--primary-gold);"></i>
-                  <i data-lucide="star" style="width:16px;height:16px;fill:var(--primary-gold);color:var(--primary-gold);"></i>
-                  <i data-lucide="star" style="width:16px;height:16px;fill:var(--primary-gold);color:var(--primary-gold);"></i>
-                  <i data-lucide="star" style="width:16px;height:16px;fill:var(--primary-gold);color:var(--primary-gold);"></i>
-                  <i data-lucide="star" style="width:16px;height:16px;fill:var(--primary-gold);color:var(--primary-gold);"></i>
+                  <i data-lucide="star"
+                    style="width:16px;height:16px;fill:var(--primary-gold);color:var(--primary-gold);"></i>
+                  <i data-lucide="star"
+                    style="width:16px;height:16px;fill:var(--primary-gold);color:var(--primary-gold);"></i>
+                  <i data-lucide="star"
+                    style="width:16px;height:16px;fill:var(--primary-gold);color:var(--primary-gold);"></i>
+                  <i data-lucide="star"
+                    style="width:16px;height:16px;fill:var(--primary-gold);color:var(--primary-gold);"></i>
+                  <i data-lucide="star"
+                    style="width:16px;height:16px;fill:var(--primary-gold);color:var(--primary-gold);"></i>
                 </div>
                 <p style="font-size:0.95rem; line-height:1.6; color:#ffffff; margin-bottom:1.5rem; font-style:italic;">
-                  "The blend of 51 natural extracts and vitamins is highly effective. I've noticed a significant boost in concentration and mental focus."
+                  "The blend of 51 natural extracts and vitamins is highly effective. I've noticed a significant boost
+                  in concentration and mental focus."
                 </p>
                 <div class="testimonial-author-meta d-flex align-items-center gap-3">
-                  <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&q=80&w=100" alt="Priya Mehta" class="author-avatar-img">
+                  <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&q=80&w=100"
+                    alt="Priya Mehta" class="author-avatar-img">
                   <div class="author-meta-text">
-                    <h4 style="font-family:var(--font-subheading); font-size:0.95rem; font-weight:700; color:#ffffff; margin:0;">Priya Mehta</h4>
+                    <h4
+                      style="font-family:var(--font-subheading); font-size:0.95rem; font-weight:700; color:#ffffff; margin:0;">
+                      Priya Mehta</h4>
                     <p style="font-size:0.75rem; color:var(--text-secondary); margin:0;">Verified Buyer</p>
                   </div>
                 </div>
               </div>
             </div>
-            
+
             <!-- Card 3 -->
             <div class="testimonial-card-mirror spotlight-card reveal">
               <div class="spotlight-card-content flex-column align-items-start text-start w-100">
-                <i data-lucide="quote" class="quote-bubble-icon" style="width:24px;height:24px;transform:scaleX(-1);color:var(--primary-gold);opacity:0.2;margin-bottom:0.75rem;"></i>
+                <i data-lucide="quote" class="quote-bubble-icon"
+                  style="width:24px;height:24px;transform:scaleX(-1);color:var(--primary-gold);opacity:0.2;margin-bottom:0.75rem;"></i>
                 <div class="testimonial-stars-gold d-flex gap-1 mb-2">
-                  <i data-lucide="star" style="width:16px;height:16px;fill:var(--primary-gold);color:var(--primary-gold);"></i>
-                  <i data-lucide="star" style="width:16px;height:16px;fill:var(--primary-gold);color:var(--primary-gold);"></i>
-                  <i data-lucide="star" style="width:16px;height:16px;fill:var(--primary-gold);color:var(--primary-gold);"></i>
-                  <i data-lucide="star" style="width:16px;height:16px;fill:var(--primary-gold);color:var(--primary-gold);"></i>
-                  <i data-lucide="star" style="width:16px;height:16px;fill:var(--primary-gold);color:var(--primary-gold);"></i>
+                  <i data-lucide="star"
+                    style="width:16px;height:16px;fill:var(--primary-gold);color:var(--primary-gold);"></i>
+                  <i data-lucide="star"
+                    style="width:16px;height:16px;fill:var(--primary-gold);color:var(--primary-gold);"></i>
+                  <i data-lucide="star"
+                    style="width:16px;height:16px;fill:var(--primary-gold);color:var(--primary-gold);"></i>
+                  <i data-lucide="star"
+                    style="width:16px;height:16px;fill:var(--primary-gold);color:var(--primary-gold);"></i>
+                  <i data-lucide="star"
+                    style="width:16px;height:16px;fill:var(--primary-gold);color:var(--primary-gold);"></i>
                 </div>
                 <p style="font-size:0.95rem; line-height:1.6; color:#ffffff; margin-bottom:1.5rem; font-style:italic;">
-                  "Excellent daily supplement. It has strengthened my immune defense, and I don't feel exhausted in the afternoon anymore."
+                  "Excellent daily supplement. It has strengthened my immune defense, and I don't feel exhausted in the
+                  afternoon anymore."
                 </p>
                 <div class="testimonial-author-meta d-flex align-items-center gap-3">
-                <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&q=80&w=100" alt="Amit Verma" class="author-avatar-img">
-                <div class="author-meta-text">
-                  <h4>Amit Verma</h4>
-                  <p>Verified Buyer</p>
+                  <img
+                    src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&q=80&w=100"
+                    alt="Amit Verma" class="author-avatar-img">
+                  <div class="author-meta-text">
+                    <h4>Amit Verma</h4>
+                    <p>Verified Buyer</p>
+                  </div>
                 </div>
               </div>
+
             </div>
-            
           </div>
+
+          <!-- Next Button -->
+          <button class="carousel-nav-btn next-btn" id="next-btn" aria-label="Next Review">
+            <i data-lucide="chevron-right" style="width:20px;height:20px;"></i>
+          </button>
         </div>
-        
-        <!-- Next Button -->
-        <button class="carousel-nav-btn next-btn" id="next-btn" aria-label="Next Review">
-          <i data-lucide="chevron-right" style="width:20px;height:20px;"></i>
-        </button>
-      </div>
-      
-      <!-- Indicators -->
-      <div class="carousel-indicators">
-        <span class="indicator-dot active" data-slide="0"></span>
-        <span class="indicator-dot" data-slide="1"></span>
-        <span class="indicator-dot" data-slide="2"></span>
+
+        <!-- Indicators -->
+        <div class="carousel-indicators">
+          <span class="indicator-dot active" data-slide="0"></span>
+          <span class="indicator-dot" data-slide="1"></span>
+          <span class="indicator-dot" data-slide="2"></span>
+        </div>
       </div>
     </div>
   </section>
@@ -1260,25 +2650,28 @@
   <hr class="premium-divider">
 
   <!-- Pre-Footer Preorder Card & Footer -->
-  <section class="section" id="order" style="padding: 0; background: radial-gradient(circle at 70% 30%, rgba(12,26,17,0.98), rgba(5,10,7,1)); position: relative; overflow: hidden;">
+  <section class="section" id="order"
+    style="padding: 0; background: radial-gradient(circle at 70% 30%, rgba(12,26,17,0.98), rgba(5,10,7,1)); position: relative; overflow: hidden;">
     <!-- Magic UI Dot Background Pattern -->
     <div class="magic-dot-pattern"></div>
 
     <div style="position: relative; z-index: 1; width: 100%;">
-      
+
       <!-- Pre-Footer Contact Banner (Full Width) -->
       <div class="prefooter-contact-wrap">
-        
+
         <!-- Top Contact Card -->
         <div class="contact-master-card">
-          
+
           <!-- Left Column: Contact Info & Leaf Art -->
           <div class="contact-left-col">
             <!-- Background Gold Leaf Line Art -->
             <div class="contact-leaf-bg">
               <svg viewBox="0 0 200 300" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M20 280 C40 200, 150 160, 170 30 C130 110, 60 140, 20 280 Z" stroke="url(#contactLeafGrad)" stroke-width="1.5" fill="none"></path>
-                <path d="M20 280 C0 200, 40 120, 100 60 C50 120, 30 180, 20 280 Z" stroke="url(#contactLeafGrad)" stroke-width="1.5" fill="none"></path>
+                <path d="M20 280 C40 200, 150 160, 170 30 C130 110, 60 140, 20 280 Z" stroke="url(#contactLeafGrad)"
+                  stroke-width="1.5" fill="none"></path>
+                <path d="M20 280 C0 200, 40 120, 100 60 C50 120, 30 180, 20 280 Z" stroke="url(#contactLeafGrad)"
+                  stroke-width="1.5" fill="none"></path>
                 <defs>
                   <linearGradient id="contactLeafGrad" x1="0" y1="1" x2="1" y2="0">
                     <stop offset="0%" stop-color="#D4AF37" stop-opacity="0.05"></stop>
@@ -1287,21 +2680,21 @@
                 </defs>
               </svg>
             </div>
-            
+
             <div class="contact-eyebrow">WE'RE HERE FOR YOU</div>
-            
+
             <h3 class="contact-heading">
               We'd Love to<br>
               <span class="gold-text-glow">Hear From You</span>
             </h3>
-            
+
             <div class="contact-heading-line"></div>
-            
+
             <p class="contact-desc">
               Have a question, suggestion, or just want to say hello?<br>
               Our team is always happy to help.
             </p>
-            
+
             <!-- 2x2 Contact Info Grid -->
             <div class="contact-info-grid">
               <!-- Item 1: Email -->
@@ -1312,7 +2705,7 @@
                   <p>hello@rootonwellness.com</p>
                 </div>
               </div>
-              
+
               <!-- Item 2: Call -->
               <div class="contact-info-item">
                 <div class="contact-icon-circle"><i data-lucide="phone"></i></div>
@@ -1321,7 +2714,7 @@
                   <p>+91 98765 43210</p>
                 </div>
               </div>
-              
+
               <!-- Item 3: Location -->
               <div class="contact-info-item">
                 <div class="contact-icon-circle"><i data-lucide="map-pin"></i></div>
@@ -1330,7 +2723,7 @@
                   <p>India</p>
                 </div>
               </div>
-              
+
               <!-- Item 4: Hours -->
               <div class="contact-info-item">
                 <div class="contact-icon-circle"><i data-lucide="clock"></i></div>
@@ -1341,18 +2734,19 @@
               </div>
             </div>
           </div>
-          
+
           <!-- Middle Vertical Divider -->
           <div class="contact-card-divider"></div>
-          
+
           <!-- Right Column: Contact Form & Response Badge -->
           <div class="contact-right-col">
             <h4 class="form-title">Send Us a Message</h4>
             <div class="form-title-line"></div>
-            
+
             <div class="form-layout-wrap">
-              <form class="contact-form-main" action="#" onsubmit="event.preventDefault(); alert('Message sent successfully! We will get back to you within 24 hours.');">
-                
+              <form class="contact-form-main" action="#"
+                onsubmit="event.preventDefault(); alert('Message sent successfully! We will get back to you within 24 hours.');">
+
                 <!-- Row 1: Name & Email -->
                 <div class="form-row-dual">
                   <div class="form-input-box">
@@ -1364,26 +2758,27 @@
                     <input type="email" placeholder="Your Email" required class="contact-input">
                   </div>
                 </div>
-                
+
                 <!-- Row 2: Subject -->
                 <div class="form-input-box full-width">
                   <i data-lucide="tag" class="input-icon"></i>
                   <input type="text" placeholder="Subject" required class="contact-input">
                 </div>
-                
+
                 <!-- Row 3: Message -->
                 <div class="form-input-box full-width text-area-box">
                   <i data-lucide="edit-3" class="input-icon textarea-icon"></i>
-                  <textarea placeholder="Your Message" rows="3" required class="contact-input contact-textarea"></textarea>
+                  <textarea placeholder="Your Message" rows="3" required
+                    class="contact-input contact-textarea"></textarea>
                 </div>
-                
+
                 <!-- Submit Button -->
                 <button type="submit" class="contact-submit-btn">
                   <span>Send Message</span>
                   <i data-lucide="arrow-right" class="btn-arrow"></i>
                 </button>
               </form>
-              
+
               <!-- Response Time Badge on the right -->
               <div class="response-time-badge">
                 <div class="badge-leaf-circle">
@@ -1394,349 +2789,553 @@
               </div>
             </div>
           </div>
-          
+
+        </div>
       </div>
-    </div>
-    
-    <!-- Footer -->
-    <footer class="footer-2026" id="site-footer">
-      <!-- Animated Canvas Fireflies & Background Spotlight -->
-      <canvas id="footer-fireflies-canvas" class="footer-fireflies-canvas"></canvas>
-      <div class="footer-background-glow"></div>
-      
-      <!-- Flanking botanical leaves peaking from left and right edges -->
-      <div class="footer-leaf-decor footer-leaf-left">
-        <img src="assets/footer_leaf.jpg" alt="Botanical Leaf Decor Left">
-      </div>
-      <div class="footer-leaf-decor footer-leaf-right">
-        <img src="assets/footer_leaf.jpg" alt="Botanical Leaf Decor Right">
-      </div>
-      
-      <div class="footer-inner-wrap" style="position: relative; z-index: 2;">
-        
-        <!-- Main 4-Column Footer Grid -->
-        <div class="footer-main-grid">
-          
-          <!-- Column 1: Brand -->
-          <div class="footer-brand-col">
-            <div class="footer-logo-wrap">
-              <img src="assets/logo-green-gold.png" alt="Rooton Wellness" class="footer-logo-img">
-            </div>
-            
-            <p class="footer-brand-desc">
-              Rooted in <span class="highlight-green">Nature</span>.<br>
-              Backed by <span class="highlight-green">Science</span>.
-            </p>
-            
-            <p class="footer-brand-subdesc">
-              Premium plant-based wellness solutions for a healthier you.
-            </p>
-            
-            <!-- Trust Badge Capsule -->
-            <div class="footer-trust-badge-capsule">
-              <div class="badge-capsule-icon-wrap">
-                <i data-lucide="leaf"></i>
-              </div>
-              <div class="badge-capsule-text">
-                <h6>100% Plant Based</h6>
-                <p>Clean. Natural. Effective.</p>
+
+
+      <!-- ===== EXTRAORDINARY CTA SECTION ===== -->
+      <section id="cta-extraordinary" class="extraordinary-cta-section">
+        <!-- Botanical Leaf Decor Left -->
+        <div class="ecta-leaf ecta-leaf-left">
+          <img src="assets/footer_leaf.jpg" alt="Botanical leaf decoration">
+        </div>
+        <!-- Botanical Leaf Decor Right -->
+        <div class="ecta-leaf ecta-leaf-right">
+          <img src="assets/footer_leaf.jpg" alt="Botanical leaf decoration">
+        </div>
+
+        <!-- Background radial glow -->
+        <div class="ecta-radial-glow"></div>
+
+        <!-- Inner container -->
+        <div class="container ecta-inner">
+
+          <!-- Certification Badges Row -->
+          <div class="ecta-badges">
+            <div class="ecta-badge">
+              <div class="ecta-badge-ring">
+                <span class="ecta-badge-top">GOOD MANUFACTURING</span>
+                <span class="ecta-badge-main">GMP</span>
+                <span class="ecta-badge-sub">CERTIFIED</span>
+                <span class="ecta-badge-bot">PRACTICE</span>
               </div>
             </div>
-            
-            <div class="footer-social-wrap">
-              <a href="#" class="social-icon-btn" aria-label="Instagram">
-                <i class="fa-brands fa-instagram"></i>
-              </a>
-              <a href="#" class="social-icon-btn" aria-label="Facebook">
-                <i class="fa-brands fa-facebook-f"></i>
-              </a>
-              <a href="#" class="social-icon-btn" aria-label="YouTube">
-                <i class="fa-brands fa-youtube"></i>
-              </a>
-              <a href="#" class="social-icon-btn" aria-label="WhatsApp">
-                <i class="fa-brands fa-whatsapp"></i>
-              </a>
+            <div class="ecta-badge-divider"></div>
+            <div class="ecta-badge">
+              <div class="ecta-badge-ring">
+                <span class="ecta-badge-top">QUALITY MANAGEMENT</span>
+                <span class="ecta-badge-main">ISO</span>
+                <span class="ecta-badge-sub">CERTIFIED</span>
+                <span class="ecta-badge-bot">SYSTEM</span>
+              </div>
+            </div>
+            <div class="ecta-badge-divider"></div>
+            <div class="ecta-badge">
+              <div class="ecta-badge-ring ecta-badge-ring--fssai">
+                <span class="ecta-badge-top">FOOD SAFETY</span>
+                <span class="ecta-badge-main ecta-fssai">fssai</span>
+                <span class="ecta-badge-bot">APPROVED</span>
+              </div>
+            </div>
+            <div class="ecta-badge-divider"></div>
+            <div class="ecta-badge">
+              <div class="ecta-badge-ring">
+                <span class="ecta-badge-top">FOOD SAFETY</span>
+                <span class="ecta-badge-main">HACCP</span>
+                <span class="ecta-badge-sub">COMPLIANT</span>
+                <span class="ecta-badge-bot">CERTIFIED</span>
+              </div>
             </div>
           </div>
-          
-          <!-- Column 2: Quick Links -->
-          <div class="footer-nav-col">
-            <div class="footer-header-wrap">
-              <h4 class="footer-col-title">Quick Links</h4>
-              <i data-lucide="leaf" class="footer-header-leaf"></i>
+
+          <!-- Heading Block -->
+          <div class="ecta-heading-block">
+            <div class="ecta-eyebrow">
+              <span class="ecta-line"></span>
+              <span class="ecta-eyebrow-text">BE A PART OF</span>
+              <span class="ecta-line"></span>
             </div>
-            <div class="footer-title-line"></div>
-            <ul class="footer-nav-list">
-              <li>
-                <a href="#hero">
-                  <div class="link-item-left">
-                    <i data-lucide="home"></i>
-                    <span>Home</span>
-                  </div>
-                  <i data-lucide="chevron-right" class="link-arrow"></i>
-                </a>
-              </li>
-              <li>
-                <a href="#order">
-                  <div class="link-item-left">
-                    <i data-lucide="shopping-bag"></i>
-                    <span>Shop</span>
-                  </div>
-                  <i data-lucide="chevron-right" class="link-arrow"></i>
-                </a>
-              </li>
-              <li>
-                <a href="#ingredients">
-                  <div class="link-item-left">
-                    <i data-lucide="leaf"></i>
-                    <span>Ingredients</span>
-                  </div>
-                  <i data-lucide="chevron-right" class="link-arrow"></i>
-                </a>
-              </li>
-              <li>
-                <a href="#science">
-                  <div class="link-item-left">
-                    <i data-lucide="flask-conical"></i>
-                    <span>Science</span>
-                  </div>
-                  <i data-lucide="chevron-right" class="link-arrow"></i>
-                </a>
-              </li>
-              <li>
-                <a href="#mission">
-                  <div class="link-item-left">
-                    <i data-lucide="users"></i>
-                    <span>About Us</span>
-                  </div>
-                  <i data-lucide="chevron-right" class="link-arrow"></i>
-                </a>
-              </li>
-            </ul>
+            <h2 class="ecta-title">SOMETHING <span class="ecta-gold">EXTRAORDINARY</span></h2>
           </div>
-          
-          <!-- Column 3: Help & Support -->
-          <div class="footer-nav-col">
-            <div class="footer-header-wrap">
-              <h4 class="footer-col-title">Help & Support</h4>
-              <i data-lucide="leaf" class="footer-header-leaf"></i>
-            </div>
-            <div class="footer-title-line"></div>
-            <ul class="footer-nav-list">
-              <li>
-                <a href="#order">
-                  <div class="link-item-left">
-                    <i data-lucide="phone"></i>
-                    <span>Contact Us</span>
-                  </div>
-                  <i data-lucide="chevron-right" class="link-arrow"></i>
-                </a>
-              </li>
-              <li>
-                <a href="#">
-                  <div class="link-item-left">
-                    <i data-lucide="truck"></i>
-                    <span>Shipping</span>
-                  </div>
-                  <i data-lucide="chevron-right" class="link-arrow"></i>
-                </a>
-              </li>
-              <li>
-                <a href="#">
-                  <div class="link-item-left">
-                    <i data-lucide="package"></i>
-                    <span>Returns</span>
-                  </div>
-                  <i data-lucide="chevron-right" class="link-arrow"></i>
-                </a>
-              </li>
-              <li>
-                <a href="#">
-                  <div class="link-item-left">
-                    <i data-lucide="shield-check"></i>
-                    <span>Privacy Policy</span>
-                  </div>
-                  <i data-lucide="chevron-right" class="link-arrow"></i>
-                </a>
-              </li>
-              <li>
-                <a href="#">
-                  <div class="link-item-left">
-                    <i data-lucide="help-circle"></i>
-                    <span>FAQ</span>
-                  </div>
-                  <i data-lucide="chevron-right" class="link-arrow"></i>
-                </a>
-              </li>
-            </ul>
+
+          <!-- CTA Button -->
+          <a href="#order" class="ecta-btn" aria-label="Join Rooton Family">
+            <span class="ecta-btn-icon"><i data-lucide="leaf"></i></span>
+            <span>JOIN ROOTON FAMILY</span>
+            <i data-lucide="arrow-right" class="ecta-btn-arrow"></i>
+          </a>
+
+          <!-- Hashtag -->
+          <div class="ecta-hashtag">
+            <span class="ecta-hash-deco">— 🌿</span>
+            <span class="ecta-hash-text">#GrowTogetherRiseTogether</span>
+            <span class="ecta-hash-deco">🌿 —</span>
           </div>
-          
-          <!-- Column 4: Newsletter & Stay Connected -->
-          <div class="footer-newsletter-col">
-            <div class="footer-header-wrap">
-              <h4 class="footer-col-title">Stay Connected</h4>
-              <i data-lucide="leaf" class="footer-header-leaf"></i>
-            </div>
-            <div class="footer-title-line"></div>
-            <p class="footer-newsletter-subtitle">
-              Exclusive wellness offers.<br>
-              No spam. Just goodness.
-            </p>
-            
-            <form class="footer-newsletter-form-premium" action="#" onsubmit="event.preventDefault(); alert('Thank you for subscribing to Rooton Wellness!');">
-              <div class="premium-newsletter-input-wrap">
-                <i data-lucide="mail" class="mail-icon"></i>
-                <input type="email" placeholder="Enter your email" required class="premium-newsletter-input">
-                <button type="submit" class="premium-newsletter-btn" aria-label="Subscribe">
-                  <span>Subscribe</span>
-                  <i data-lucide="arrow-right" class="btn-arrow"></i>
-                </button>
+
+        </div>
+      </section>
+      <!-- ===== END EXTRAORDINARY CTA SECTION ===== -->
+
+      <!-- Footer -->
+      <footer class="footer-2026" id="site-footer">
+        <!-- Animated Canvas Fireflies & Background Spotlight -->
+        <canvas id="footer-fireflies-canvas" class="footer-fireflies-canvas"></canvas>
+        <div class="footer-background-glow"></div>
+
+        <!-- Flanking botanical leaves peaking from left and right edges -->
+        <div class="footer-leaf-decor footer-leaf-left">
+          <img src="assets/footer_leaf.jpg" alt="Botanical Leaf Decor Left">
+        </div>
+        <div class="footer-leaf-decor footer-leaf-right">
+          <img src="assets/footer_leaf.jpg" alt="Botanical Leaf Decor Right">
+        </div>
+
+        <div class="footer-inner-wrap" style="position: relative; z-index: 2;">
+
+          <!-- Main 4-Column Footer Grid -->
+          <div class="footer-main-grid">
+
+            <!-- Column 1: Brand -->
+            <div class="footer-brand-col">
+              <div class="footer-logo-wrap">
+                <img src="assets/logo-green-gold.png" alt="Rooton Wellness" class="footer-logo-img">
               </div>
-            </form>
-            
-            <!-- Capsule Info Pill below newsletter -->
-            <div class="footer-info-pill">
-              <div class="info-pill-icon-wrap">
-                <i data-lucide="leaf"></i>
-              </div>
-              <p class="info-pill-text">
-                Be the first to know about<br>
-                <span>new products, offers &amp; health tips.</span>
+
+              <p class="footer-brand-desc">
+                Rooted in <span class="highlight-green">Nature</span>.<br>
+                Backed by <span class="highlight-green">Science</span>.
               </p>
+
+              <p class="footer-brand-subdesc">
+                Premium plant-based wellness solutions for a healthier you.
+              </p>
+
+              <!-- Trust Badge Capsule -->
+              <div class="footer-trust-badge-capsule">
+                <div class="badge-capsule-icon-wrap">
+                  <i data-lucide="leaf"></i>
+                </div>
+                <div class="badge-capsule-text">
+                  <h6>100% Plant Based</h6>
+                  <p>Clean. Natural. Effective.</p>
+                </div>
+              </div>
+
+              <div class="footer-social-wrap">
+                <a href="#" class="social-icon-btn" aria-label="Instagram">
+                  <i class="fa-brands fa-instagram"></i>
+                </a>
+                <a href="#" class="social-icon-btn" aria-label="Facebook">
+                  <i class="fa-brands fa-facebook-f"></i>
+                </a>
+                <a href="#" class="social-icon-btn" aria-label="YouTube">
+                  <i class="fa-brands fa-youtube"></i>
+                </a>
+                <a href="#" class="social-icon-btn" aria-label="WhatsApp">
+                  <i class="fa-brands fa-whatsapp"></i>
+                </a>
+              </div>
+            </div>
+
+            <!-- Column 2: Quick Links -->
+            <div class="footer-nav-col">
+              <div class="footer-header-wrap">
+                <h4 class="footer-col-title">Quick Links</h4>
+                <i data-lucide="leaf" class="footer-header-leaf"></i>
+              </div>
+              <div class="footer-title-line"></div>
+              <ul class="footer-nav-list">
+                <li>
+                  <a href="#hero">
+                    <div class="link-item-left">
+                      <i data-lucide="home"></i>
+                      <span>Home</span>
+                    </div>
+                    <i data-lucide="chevron-right" class="link-arrow"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="#order">
+                    <div class="link-item-left">
+                      <i data-lucide="shopping-bag"></i>
+                      <span>Shop</span>
+                    </div>
+                    <i data-lucide="chevron-right" class="link-arrow"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="#ingredients">
+                    <div class="link-item-left">
+                      <i data-lucide="leaf"></i>
+                      <span>Ingredients</span>
+                    </div>
+                    <i data-lucide="chevron-right" class="link-arrow"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="#science">
+                    <div class="link-item-left">
+                      <i data-lucide="flask-conical"></i>
+                      <span>Science</span>
+                    </div>
+                    <i data-lucide="chevron-right" class="link-arrow"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="#mission">
+                    <div class="link-item-left">
+                      <i data-lucide="users"></i>
+                      <span>About Us</span>
+                    </div>
+                    <i data-lucide="chevron-right" class="link-arrow"></i>
+                  </a>
+                </li>
+              </ul>
+            </div>
+
+            <!-- Column 3: Help & Support -->
+            <div class="footer-nav-col">
+              <div class="footer-header-wrap">
+                <h4 class="footer-col-title">Help & Support</h4>
+                <i data-lucide="leaf" class="footer-header-leaf"></i>
+              </div>
+              <div class="footer-title-line"></div>
+              <ul class="footer-nav-list">
+                <li>
+                  <a href="#order">
+                    <div class="link-item-left">
+                      <i data-lucide="phone"></i>
+                      <span>Contact Us</span>
+                    </div>
+                    <i data-lucide="chevron-right" class="link-arrow"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <div class="link-item-left">
+                      <i data-lucide="truck"></i>
+                      <span>Shipping</span>
+                    </div>
+                    <i data-lucide="chevron-right" class="link-arrow"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <div class="link-item-left">
+                      <i data-lucide="package"></i>
+                      <span>Returns</span>
+                    </div>
+                    <i data-lucide="chevron-right" class="link-arrow"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <div class="link-item-left">
+                      <i data-lucide="shield-check"></i>
+                      <span>Privacy Policy</span>
+                    </div>
+                    <i data-lucide="chevron-right" class="link-arrow"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <div class="link-item-left">
+                      <i data-lucide="help-circle"></i>
+                      <span>FAQ</span>
+                    </div>
+                    <i data-lucide="chevron-right" class="link-arrow"></i>
+                  </a>
+                </li>
+              </ul>
+            </div>
+
+            <!-- Column 4: Newsletter & Stay Connected -->
+            <div class="footer-newsletter-col">
+              <div class="footer-header-wrap">
+                <h4 class="footer-col-title">Stay Connected</h4>
+                <i data-lucide="leaf" class="footer-header-leaf"></i>
+              </div>
+              <div class="footer-title-line"></div>
+              <p class="footer-newsletter-subtitle">
+                Exclusive wellness offers.<br>
+                No spam. Just goodness.
+              </p>
+
+              <form class="footer-newsletter-form-premium" action="#"
+                onsubmit="event.preventDefault(); alert('Thank you for subscribing to Rooton Wellness!');">
+                <div class="premium-newsletter-input-wrap">
+                  <i data-lucide="mail" class="mail-icon"></i>
+                  <input type="email" placeholder="Enter your email" required class="premium-newsletter-input">
+                  <button type="submit" class="premium-newsletter-btn" aria-label="Subscribe">
+                    <span>Subscribe</span>
+                    <i data-lucide="arrow-right" class="btn-arrow"></i>
+                  </button>
+                </div>
+              </form>
+
+              <!-- Capsule Info Pill below newsletter -->
+              <div class="footer-info-pill">
+                <div class="info-pill-icon-wrap">
+                  <i data-lucide="leaf"></i>
+                </div>
+                <p class="info-pill-text">
+                  Be the first to know about<br>
+                  <span>new products, offers &amp; health tips.</span>
+                </p>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Animated Gradient Divider Line -->
+          <div class="footer-animated-divider"></div>
+
+          <!-- Premium Certification Trust Bar (Reference Image Match) -->
+          <div class="cert-trust-bar">
+
+            <!-- Item 1 -->
+            <div class="cert-trust-item">
+              <div class="cert-icon-wrap">
+                <i data-lucide="leaf"></i>
+              </div>
+              <div class="cert-label">
+                <span>100% NATURAL</span>
+                <span>INGREDIENTS</span>
+                <span class="cert-subtext">Pure &amp; Safe</span>
+              </div>
+            </div>
+
+            <div class="cert-trust-sep"></div>
+
+            <!-- Item 2 -->
+            <div class="cert-trust-item">
+              <div class="cert-icon-wrap">
+                <i data-lucide="shield-check"></i>
+              </div>
+              <div class="cert-label">
+                <span>PREMIUM</span>
+                <span>QUALITY</span>
+                <span class="cert-subtext">Best You Deserve</span>
+              </div>
+            </div>
+
+            <div class="cert-trust-sep"></div>
+
+            <!-- Item 3 -->
+            <div class="cert-trust-item">
+              <div class="cert-icon-wrap">
+                <i data-lucide="flask-conical"></i>
+              </div>
+              <div class="cert-label">
+                <span>SCIENCE</span>
+                <span>BACKED</span>
+                <span class="cert-subtext">Proven Results</span>
+              </div>
+            </div>
+
+            <div class="cert-trust-sep"></div>
+
+            <!-- Item 4 -->
+            <div class="cert-trust-item">
+              <div class="cert-icon-wrap">
+                <i data-lucide="microscope"></i>
+              </div>
+              <div class="cert-label">
+                <span>THIRD PARTY</span>
+                <span>TESTED</span>
+                <span class="cert-subtext">Trusted &amp; Verified</span>
+              </div>
+            </div>
+
+            <div class="cert-trust-sep"></div>
+
+            <!-- Item 5: GMP Badge -->
+            <div class="cert-trust-item cert-badge-item">
+              <div class="cert-badge-ring">
+                <span class="cert-badge-text">GMP</span>
+                <span class="cert-badge-sub">CERTIFIED</span>
+              </div>
+            </div>
+
+            <div class="cert-trust-sep"></div>
+
+            <!-- Item 6: ISO Badge -->
+            <div class="cert-trust-item cert-badge-item">
+              <div class="cert-badge-ring">
+                <span class="cert-badge-text">ISO</span>
+                <span class="cert-badge-sub">CERTIFIED</span>
+              </div>
+            </div>
+
+            <div class="cert-trust-sep"></div>
+
+            <!-- Item 7: FSSAI Badge -->
+            <div class="cert-trust-item cert-badge-item">
+              <div class="cert-badge-ring cert-badge-fssai">
+                <span class="cert-badge-text">fssai</span>
+                <span class="cert-badge-sub">APPROVED</span>
+              </div>
+            </div>
+
+            <div class="cert-trust-sep"></div>
+
+            <!-- Item 8: HACCP Badge -->
+            <div class="cert-trust-item cert-badge-item">
+              <div class="cert-badge-ring">
+                <span class="cert-badge-text" style="font-size:0.65rem;">HACCP</span>
+                <span class="cert-badge-sub">CERTIFIED</span>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Clean Copyright Bar with Mortar & Pestle overlapping -->
+          <div class="footer-copyright-bar">
+            <div class="copyright-bar-left">
+              <div class="copyright-leaf-btn">
+                <i data-lucide="leaf"></i>
+              </div>
+              <p>&copy; 2026 Rooton Wellness. All Rights Reserved.</p>
+            </div>
+
+            <div class="copyright-bar-right">
+              <!-- Overlapping mortar and pestle artwork -->
+              <img src="assets/mortar_pestle.jpg" alt="Mortar and Pestle" class="footer-mortar-img">
             </div>
           </div>
-          
+
         </div>
-        
-        <!-- Animated Gradient Divider Line -->
-        <div class="footer-animated-divider"></div>
-        
-        <!-- Premium Certification Trust Bar (Reference Image Match) -->
-        <div class="cert-trust-bar">
-
-          <!-- Item 1 -->
-          <div class="cert-trust-item">
-            <div class="cert-icon-wrap">
-              <i data-lucide="leaf"></i>
-            </div>
-            <div class="cert-label">
-              <span>100% NATURAL</span>
-              <span>INGREDIENTS</span>
-              <span class="cert-subtext">Pure &amp; Safe</span>
-            </div>
-          </div>
-
-          <div class="cert-trust-sep"></div>
-
-          <!-- Item 2 -->
-          <div class="cert-trust-item">
-            <div class="cert-icon-wrap">
-              <i data-lucide="shield-check"></i>
-            </div>
-            <div class="cert-label">
-              <span>PREMIUM</span>
-              <span>QUALITY</span>
-              <span class="cert-subtext">Best You Deserve</span>
-            </div>
-          </div>
-
-          <div class="cert-trust-sep"></div>
-
-          <!-- Item 3 -->
-          <div class="cert-trust-item">
-            <div class="cert-icon-wrap">
-              <i data-lucide="flask-conical"></i>
-            </div>
-            <div class="cert-label">
-              <span>SCIENCE</span>
-              <span>BACKED</span>
-              <span class="cert-subtext">Proven Results</span>
-            </div>
-          </div>
-
-          <div class="cert-trust-sep"></div>
-
-          <!-- Item 4 -->
-          <div class="cert-trust-item">
-            <div class="cert-icon-wrap">
-              <i data-lucide="microscope"></i>
-            </div>
-            <div class="cert-label">
-              <span>THIRD PARTY</span>
-              <span>TESTED</span>
-              <span class="cert-subtext">Trusted &amp; Verified</span>
-            </div>
-          </div>
-
-          <div class="cert-trust-sep"></div>
-
-          <!-- Item 5: GMP Badge -->
-          <div class="cert-trust-item cert-badge-item">
-            <div class="cert-badge-ring">
-              <span class="cert-badge-text">GMP</span>
-              <span class="cert-badge-sub">CERTIFIED</span>
-            </div>
-          </div>
-
-          <div class="cert-trust-sep"></div>
-
-          <!-- Item 6: ISO Badge -->
-          <div class="cert-trust-item cert-badge-item">
-            <div class="cert-badge-ring">
-              <span class="cert-badge-text">ISO</span>
-              <span class="cert-badge-sub">CERTIFIED</span>
-            </div>
-          </div>
-
-          <div class="cert-trust-sep"></div>
-
-          <!-- Item 7: FSSAI Badge -->
-          <div class="cert-trust-item cert-badge-item">
-            <div class="cert-badge-ring cert-badge-fssai">
-              <span class="cert-badge-text">fssai</span>
-              <span class="cert-badge-sub">APPROVED</span>
-            </div>
-          </div>
-
-          <div class="cert-trust-sep"></div>
-
-          <!-- Item 8: HACCP Badge -->
-          <div class="cert-trust-item cert-badge-item">
-            <div class="cert-badge-ring">
-              <span class="cert-badge-text" style="font-size:0.65rem;">HACCP</span>
-              <span class="cert-badge-sub">CERTIFIED</span>
-            </div>
-          </div>
-
-        </div>
-        
-        <!-- Clean Copyright Bar with Mortar & Pestle overlapping -->
-        <div class="footer-copyright-bar">
-          <div class="copyright-bar-left">
-            <div class="copyright-leaf-btn">
-              <i data-lucide="leaf"></i>
-            </div>
-            <p>&copy; 2026 Rooton Wellness. All Rights Reserved.</p>
-          </div>
-          
-          <div class="copyright-bar-right">
-            <!-- Overlapping mortar and pestle artwork -->
-            <img src="assets/mortar_pestle.jpg" alt="Mortar and Pestle" class="footer-mortar-img">
-          </div>
-        </div>
-        
-      </div>
-    </footer>
+      </footer>
+    </div>
   </section>
 
   <!-- Bootstrap 5 JS Bundle -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-  
+
   <!-- GSAP Animation Library -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
-  
+
   <!-- Script File -->
   <script src="script.js?v=2026.3"></script>
+
+  <script>
+    window.addEventListener("load", function () {
+      if (typeof gsap === "undefined" || typeof ScrollTrigger === "undefined") return;
+
+      gsap.registerPlugin(ScrollTrigger);
+
+      // --- Crisis Section 2026 UI Animations ---
+
+      // Left column: Staggered fade-up
+      const leftElements = gsap.utils.toArray("#crisis .crisis-anim");
+      gsap.from(leftElements, {
+        scrollTrigger: {
+          trigger: "#crisis",
+          start: "top 75%",
+          once: true
+        },
+        y: 35,
+        opacity: 0,
+        duration: 0.9,
+        stagger: 0.1,
+        ease: "power3.out"
+      });
+
+      // Right column: Rings and illustration fade-in/scale
+      gsap.from("#crisis .crisis-figure", {
+        scrollTrigger: {
+          trigger: "#crisis",
+          start: "top 70%",
+          once: true
+        },
+        scale: 0.9,
+        opacity: 0,
+        duration: 1.2,
+        ease: "power3.out"
+      });
+
+      gsap.from("#crisis .crisis-orbit-ring, #crisis .crisis-orbit-ring-glow", {
+        scrollTrigger: {
+          trigger: "#crisis",
+          start: "top 70%",
+          once: true
+        },
+        scale: 0.85,
+        opacity: 0,
+        duration: 1.4,
+        stagger: 0.12,
+        ease: "power2.out"
+      });
+
+      // Orbit nodes entrance animation removed per user request
+
+      // Connecting curves reveal
+      gsap.from("#crisis .crisis-curves path", {
+        scrollTrigger: {
+          trigger: "#crisis",
+          start: "top 70%",
+          once: true
+        },
+        strokeDashoffset: 100,
+        opacity: 0,
+        duration: 2,
+        stagger: 0.2,
+        ease: "power2.out"
+      });
+
+      // Parallax effect on scroll between left content and right illustration
+      gsap.to("#crisis .crisis-figure", {
+        scrollTrigger: {
+          trigger: "#crisis",
+          start: "top bottom",
+          end: "bottom top",
+          scrub: true
+        },
+        y: 45
+      });
+
+      gsap.to("#crisis .crisis-left", {
+        scrollTrigger: {
+          trigger: "#crisis",
+          start: "top bottom",
+          end: "bottom top",
+          scrub: true
+        },
+        y: -35
+      });
+
+      // Magnetic hover effect for CTA button
+      const ctaBtn = document.getElementById("crisis-magnetic-btn");
+      if (ctaBtn) {
+        ctaBtn.addEventListener("mousemove", function (e) {
+          const rect = ctaBtn.getBoundingClientRect();
+          const x = e.clientX - rect.left - rect.width / 2;
+          const y = e.clientY - rect.top - rect.height / 2;
+
+          gsap.to(ctaBtn, {
+            x: x * 0.38,
+            y: y * 0.38,
+            scale: 1.03,
+            duration: 0.35,
+            ease: "power2.out"
+          });
+        });
+        ctaBtn.addEventListener("mouseleave", function () {
+          gsap.to(ctaBtn, {
+            x: 0,
+            y: 0,
+            scale: 1,
+            duration: 0.5,
+            ease: "elastic.out(1.1, 0.38)"
+          });
+        });
+      }
+
+    });
+  </script>
+
 </body>
+
 </html>
